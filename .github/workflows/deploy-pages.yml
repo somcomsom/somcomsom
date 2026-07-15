@@ -1,6 +1,8 @@
 name: Validate and deploy SOM COM SOM
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -25,21 +27,40 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate data and JavaScript
+      - name: Validate data, layout and editor
         run: |
-          python tools/validate_data.py
-          python tools/export_gedcom.py
+          set -euo pipefail
+          test -s index.html
+          test -s styles.css
+          test -s app.js
+          test -s data-loader.js
+          test -s admin.html
+          test -s admin.css
+          test -s admin.js
+          test -s admin-editor.js
+          test -s admin-preview.js
+          test -s publisher.js
+          python3 tools/validate_data.py
+          python3 tools/export_gedcom.py
           node --check data-loader.js
           node --check app.js
           node --check admin.js
+          node --check admin-editor.js
+          node --check admin-preview.js
+          node --check publisher.js
+          test -s data/somcomsom.ged
           test -s assets/background-manifest.json
           test -s assets/background-01.svgpart
-          ! grep -R "jan""dboxing" index.html admin.html app.js admin.js data-loader.js styles.css admin.css README.md data assets
+          forbidden='jan''dboxing'
+          ! grep -R "$forbidden" index.html admin.html app.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css admin.css README.md data assets
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: .
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
