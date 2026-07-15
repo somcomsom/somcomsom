@@ -1,0 +1,15 @@
+.viewer,
+.viewer svg,
+.viewer svg *,
+.preview,
+.preview svg,
+.preview svg * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.viewer svg,
+.preview svg {
+  -webkit-user-drag: none;
+}
