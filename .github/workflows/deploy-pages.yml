@@ -1,6 +1,8 @@
-name: Deploy SOM COM SOM
+name: Validate and deploy SOM COM SOM
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
@@ -11,33 +13,60 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - name: Validate site
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate data, layout and editor
         run: |
+          set -euo pipefail
           test -s index.html
           test -s styles.css
           test -s app.js
-          test -s app-core.js
-          test -s data/tree-part-1.mmd
-          ! grep -R "jandboxing" index.html app.js app-core.js styles.css README.md data
-      - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
+          test -s data-loader.js
+          test -s admin.html
+          test -s admin.css
+          test -s admin.js
+          test -s admin-editor.js
+          test -s admin-preview.js
+          test -s publisher.js
+          python3 tools/validate_data.py
+          python3 tools/export_gedcom.py
+          node --check data-loader.js
+          node --check app.js
+          node --check admin.js
+          node --check admin-editor.js
+          node --check admin-preview.js
+          node --check publisher.js
+          test -s data/somcomsom.ged
+          test -s assets/background-manifest.json
+          test -s assets/background-01.svgpart
+          forbidden='jan''dboxing'
+          ! grep -R "$forbidden" index.html admin.html app.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css admin.css README.md data assets
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: .
-          include-hidden-files: true
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: validate
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
