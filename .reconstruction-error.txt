@@ -1,31 +1,9 @@
-part-00.csv: 4096 bytes
-part-01.csv: 4096 bytes
-part-02.csv: 4096 bytes
-part-03.csv: 3616 bytes
-part-04.csv: 3136 bytes
-total: 19040 bytes
-magic: fd377a585a000004
+part-00.csv: 4096 bytes; first=fd377a585a000004; last=bb037cf3cf7c3e75
+part-01.csv: 4096 bytes; first=6bac7bbb3ccff799; last=75cd11e305141658
+part-02.csv: 4096 bytes; first=2fdb1c85fa6733e7; last=9e2de5d169f779c0
+part-03.csv: 3616 bytes; first=16df56cc11995398; last=b5ee7ee70dffd7c4
+part-04.csv: 3136 bytes; first=c9bf1775064d44d1; last=52ccd61348183312
 
 Traceback (most recent call last):
-  File "<stdin>", line 31, in <module>
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2055, in getnames
-    return [tarinfo.name for tarinfo in self.getmembers()]
-                                        ^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2047, in getmembers
-    self._load()        # all members, we first have to
-    ^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2827, in _load
-    while self.next() is not None:
-          ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2733, in next
-    self.fileobj.seek(self.offset - 1)
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/lzma.py", line 261, in seek
-    return self._buffer.seek(offset, whence)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/_compression.py", line 153, in seek
-    data = self.read(min(io.DEFAULT_BUFFER_SIZE, offset))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/_compression.py", line 103, in read
-    data = self._decompressor.decompress(rawblock, size)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-_lzma.LZMAError: Corrupt input data
+  File "<stdin>", line 50, in <module>
+RuntimeError: No valid XZ/TAR combination among 65 candidates
