@@ -34,46 +34,70 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          import shutil, tarfile, tempfile, traceback
+          from io import BytesIO
+          from itertools import permutations, combinations
+          import lzma, shutil, tarfile, tempfile, traceback
 
           root = Path.cwd()
           diagnostic = root / '.reconstruction-error.txt'
+          report = []
           try:
-              chunks = sorted((root / 'payload-final').glob('part-*.csv'))
-              if not chunks:
+              paths = sorted((root / 'payload-final').glob('part-*.csv'))
+              if not paths:
                   raise RuntimeError('No payload chunks found')
 
-              packed = bytearray()
-              report = []
-              for path in chunks:
-                  before = len(packed)
+              pieces = {}
+              for path in paths:
+                  data = bytearray()
                   for line in path.read_text(encoding='utf-8').splitlines():
                       line = line.strip()
                       if line:
                           values = [int(value) for value in line.split(',')]
                           if any(value < 0 or value > 255 for value in values):
                               raise ValueError(f'Byte outside range in {path}')
-                          packed.extend(values)
-                  report.append(f'{path.name}: {len(packed)-before} bytes')
+                          data.extend(values)
+                  pieces[path.name] = bytes(data)
+                  report.append(f'{path.name}: {len(data)} bytes; first={bytes(data[:8]).hex()}; last={bytes(data[-8:]).hex()}')
 
+              valid = None
+              names = list(pieces)
+              starters = [name for name in names if pieces[name].startswith(b'\xfd7zXZ\x00')]
+              candidates = []
+              for starter in starters:
+                  rest = [name for name in names if name != starter]
+                  for length in range(0, len(rest) + 1):
+                      for tail in permutations(rest, length):
+                          candidates.append((starter, *tail))
+
+              for order in candidates:
+                  packed = b''.join(pieces[name] for name in order)
+                  try:
+                      tar_bytes = lzma.decompress(packed)
+                      with tarfile.open(fileobj=BytesIO(tar_bytes), mode='r:') as bundle:
+                          members = bundle.getmembers()
+                          if members:
+                              valid = (order, tar_bytes, members)
+                              break
+                  except Exception:
+                      continue
+
+              if valid is None:
+                  raise RuntimeError(f'No valid XZ/TAR combination among {len(candidates)} candidates')
+
+              order, tar_bytes, members = valid
+              report.append('valid order: ' + ', '.join(order))
+              report.append(f'archive entries: {len(members)}')
               work = Path(tempfile.mkdtemp(prefix='somcomsom-'))
-              archive = work / 'site.tar.xz'
-              archive.write_bytes(bytes(packed))
-              report.append(f'total: {len(packed)} bytes')
-              report.append(f'magic: {bytes(packed[:8]).hex()}')
-
-              with tarfile.open(archive, mode='r:xz') as bundle:
-                  names = bundle.getnames()
-                  report.append(f'archive entries: {len(names)}')
+              with tarfile.open(fileobj=BytesIO(tar_bytes), mode='r:') as bundle:
                   bundle.extractall(work)
 
               source = work / 'somcomsom_site'
               if not source.is_dir():
-                  candidates = [p for p in work.iterdir() if p.is_dir()]
-                  report.append('directories: ' + ', '.join(p.name for p in candidates))
-                  if len(candidates) != 1:
+                  candidates_dirs = [p for p in work.iterdir() if p.is_dir()]
+                  report.append('directories: ' + ', '.join(p.name for p in candidates_dirs))
+                  if len(candidates_dirs) != 1:
                       raise RuntimeError('Cannot identify extracted site directory')
-                  source = candidates[0]
+                  source = candidates_dirs[0]
 
               keep_git = root / '.git'
               for item in list(root.iterdir()):
@@ -91,7 +115,7 @@ jobs:
                   else:
                       shutil.copy2(item, target)
           except Exception:
-              diagnostic.write_text('\n'.join(locals().get('report', [])) + '\n\n' + traceback.format_exc(), encoding='utf-8')
+              diagnostic.write_text('\n'.join(report) + '\n\n' + traceback.format_exc(), encoding='utf-8')
               raise
           PY
 
@@ -102,7 +126,7 @@ jobs:
           git config user.name 'somcomsom'
           git config user.email '305458386+somcomsom@users.noreply.github.com'
           git add .reconstruction-error.txt
-          git commit -m 'Registra el diagnòstic de reconstrucció' || true
+          git commit -m 'Actualitza el diagnòstic de reconstrucció' || true
           git push origin HEAD:final-svg-site || true
 
       - name: Keep only the production workflow
