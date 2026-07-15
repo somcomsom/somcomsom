@@ -34,49 +34,76 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          import lzma, shutil, tarfile, tempfile
+          import shutil, tarfile, tempfile, traceback
 
           root = Path.cwd()
-          chunks = sorted((root / 'payload-final').glob('part-*.csv'))
-          if not chunks:
-              raise SystemExit('No payload chunks found')
+          diagnostic = root / '.reconstruction-error.txt'
+          try:
+              chunks = sorted((root / 'payload-final').glob('part-*.csv'))
+              if not chunks:
+                  raise RuntimeError('No payload chunks found')
 
-          packed = bytearray()
-          for path in chunks:
-              for line in path.read_text(encoding='utf-8').splitlines():
-                  line = line.strip()
-                  if line:
-                      packed.extend(int(value) for value in line.split(','))
+              packed = bytearray()
+              report = []
+              for path in chunks:
+                  before = len(packed)
+                  for line in path.read_text(encoding='utf-8').splitlines():
+                      line = line.strip()
+                      if line:
+                          values = [int(value) for value in line.split(',')]
+                          if any(value < 0 or value > 255 for value in values):
+                              raise ValueError(f'Byte outside range in {path}')
+                          packed.extend(values)
+                  report.append(f'{path.name}: {len(packed)-before} bytes')
 
-          work = Path(tempfile.mkdtemp(prefix='somcomsom-'))
-          archive = work / 'site.tar.xz'
-          archive.write_bytes(bytes(packed))
-          with tarfile.open(archive, mode='r:xz') as bundle:
-              bundle.extractall(work)
+              work = Path(tempfile.mkdtemp(prefix='somcomsom-'))
+              archive = work / 'site.tar.xz'
+              archive.write_bytes(bytes(packed))
+              report.append(f'total: {len(packed)} bytes')
+              report.append(f'magic: {bytes(packed[:8]).hex()}')
 
-          source = work / 'somcomsom_site'
-          if not source.is_dir():
-              candidates = [p for p in work.iterdir() if p.is_dir()]
-              if len(candidates) != 1:
-                  raise SystemExit('Cannot identify extracted site directory')
-              source = candidates[0]
+              with tarfile.open(archive, mode='r:xz') as bundle:
+                  names = bundle.getnames()
+                  report.append(f'archive entries: {len(names)}')
+                  bundle.extractall(work)
 
-          keep_git = root / '.git'
-          for item in list(root.iterdir()):
-              if item == keep_git:
-                  continue
-              if item.is_dir():
-                  shutil.rmtree(item)
-              else:
-                  item.unlink()
+              source = work / 'somcomsom_site'
+              if not source.is_dir():
+                  candidates = [p for p in work.iterdir() if p.is_dir()]
+                  report.append('directories: ' + ', '.join(p.name for p in candidates))
+                  if len(candidates) != 1:
+                      raise RuntimeError('Cannot identify extracted site directory')
+                  source = candidates[0]
 
-          for item in source.iterdir():
-              target = root / item.name
-              if item.is_dir():
-                  shutil.copytree(item, target)
-              else:
-                  shutil.copy2(item, target)
+              keep_git = root / '.git'
+              for item in list(root.iterdir()):
+                  if item == keep_git:
+                      continue
+                  if item.is_dir():
+                      shutil.rmtree(item)
+                  else:
+                      item.unlink()
+
+              for item in source.iterdir():
+                  target = root / item.name
+                  if item.is_dir():
+                      shutil.copytree(item, target)
+                  else:
+                      shutil.copy2(item, target)
+          except Exception:
+              diagnostic.write_text('\n'.join(locals().get('report', [])) + '\n\n' + traceback.format_exc(), encoding='utf-8')
+              raise
           PY
+
+      - name: Preserve reconstruction diagnostics
+        if: failure()
+        shell: bash
+        run: |
+          git config user.name 'somcomsom'
+          git config user.email '305458386+somcomsom@users.noreply.github.com'
+          git add .reconstruction-error.txt
+          git commit -m 'Registra el diagnòstic de reconstrucció' || true
+          git push origin HEAD:final-svg-site || true
 
       - name: Keep only the production workflow
         shell: bash
