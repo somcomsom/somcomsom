@@ -1,5 +1,5 @@
 import {loadAll} from './data-loader.js';
-import {startEditor} from './admin-editor.js';
+import {startEditor} from './admin-editor.js?v=20260715-6';
 
 try{
   const {family,layout}=await loadAll();
