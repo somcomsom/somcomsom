@@ -1,5 +1,5 @@
 import {normalize,personText,buildGedcom,downloadText} from './data-loader.js';
-import {createPreview} from './admin-preview.js';
+import {createPreview} from './admin-preview.js?v=20260715-6';
 import {publishChanges} from './publisher.js';
 const $=selector=>document.querySelector(selector),ids=value=>String(value||'').split(',').map(item=>item.trim()).filter(Boolean),nextId=(prefix,items)=>prefix+(Math.max(0,...items.map(item=>Number(item.id.slice(1))||0))+1);
 
