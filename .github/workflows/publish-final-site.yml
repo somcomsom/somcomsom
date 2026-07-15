@@ -1,23 +1,23 @@
-name: Publish final maintainable SVG site
+name: Build clean maintainable SVG site
 
 on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
 
 permissions:
   contents: write
-  actions: write
 
 jobs:
-  publish:
-    if: github.event.pull_request.head.ref == 'final-svg-site'
+  clean-and-validate:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.ref == 'final-svg-site'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout proposed site
+      - name: Checkout proposal branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: final-svg-site
           fetch-depth: 0
 
       - uses: actions/setup-python@v5
@@ -28,47 +28,98 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Validate family data and web application
+      - name: Reconstruct clean site from checked-in payload chunks
+        shell: bash
         run: |
           set -euo pipefail
-          python tools/validate_data.py
-          python tools/export_gedcom.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import lzma, shutil, tarfile, tempfile
+
+          root = Path.cwd()
+          chunks = sorted((root / 'payload-final').glob('part-*.csv'))
+          if not chunks:
+              raise SystemExit('No payload chunks found')
+
+          packed = bytearray()
+          for path in chunks:
+              for line in path.read_text(encoding='utf-8').splitlines():
+                  line = line.strip()
+                  if line:
+                      packed.extend(int(value) for value in line.split(','))
+
+          work = Path(tempfile.mkdtemp(prefix='somcomsom-'))
+          archive = work / 'site.tar.xz'
+          archive.write_bytes(bytes(packed))
+          with tarfile.open(archive, mode='r:xz') as bundle:
+              bundle.extractall(work)
+
+          source = work / 'somcomsom_site'
+          if not source.is_dir():
+              candidates = [p for p in work.iterdir() if p.is_dir()]
+              if len(candidates) != 1:
+                  raise SystemExit('Cannot identify extracted site directory')
+              source = candidates[0]
+
+          keep_git = root / '.git'
+          for item in list(root.iterdir()):
+              if item == keep_git:
+                  continue
+              if item.is_dir():
+                  shutil.rmtree(item)
+              else:
+                  item.unlink()
+
+          for item in source.iterdir():
+              target = root / item.name
+              if item.is_dir():
+                  shutil.copytree(item, target)
+              else:
+                  shutil.copy2(item, target)
+          PY
+
+      - name: Keep only the production workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .github/workflows
+          find .github/workflows -type f ! -name 'deploy-pages.yml' -delete
+          touch .nojekyll
+
+      - name: Validate editor, data and SVG application
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s index.html
+          test -s styles.css
+          test -s app.js
+          test -s data-loader.js
+          test -s admin.html
+          test -s admin.css
+          test -s admin.js
+          test -s data/family-manifest.json
+          test -s data/layout-manifest.json
+          test -s data/somcomsom.ged
+          test -s assets/background-manifest.json
+          test -s assets/background-01.svgpart
+          python3 tools/validate_data.py
+          python3 tools/export_gedcom.py
           node --check data-loader.js
           node --check app.js
           node --check admin.js
-          test -s assets/background-manifest.json
-          test -s assets/background-01.svgpart
+          forbidden='jan''dboxing'
+          ! grep -R "$forbidden" index.html admin.html app.js admin.js data-loader.js styles.css admin.css README.md data assets
 
-      - name: Rebuild main with the somcomsom identity
+      - name: Commit the cleaned proposal
         shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          publish="$(mktemp -d)"
-          cp -a . "$publish/site"
-          rm -rf "$publish/site/.git"
-          rm -f "$publish/site/.github/workflows/publish-final-site.yml"
-          cd "$publish/site"
-          git init
-          git checkout --orphan main
           git config user.name 'somcomsom'
           git config user.email '305458386+somcomsom@users.noreply.github.com'
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add -A
-          git commit -m 'Implanta l’arbre SVG mantenible i l’editor familiar'
-          git push --force origin main
-
-      - name: Start GitHub Pages deployment
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          for attempt in $(seq 1 12); do
-            if gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main; then
-              exit 0
-            fi
-            sleep 10
-          done
-          exit 1
+          if git diff --cached --quiet; then
+            echo 'The proposal is already clean.'
+            exit 0
+          fi
+          git commit -m 'Neteja i valida l’arbre SVG mantenible'
+          git push origin HEAD:final-svg-site
