@@ -1,0 +1,69 @@
+name: Apply maintainable SVG architecture
+
+on:
+  push:
+    branches: [migration-svg-layout]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout migration payload
+        uses: actions/checkout@v4
+
+      - name: Extract and validate new site
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          tar -xJf payload.tar.xz -C "$work"
+          site="$work/somcomsom_site"
+          test -s "$site/index.html"
+          test -s "$site/admin.html"
+          test -s "$site/data/family.json"
+          test -s "$site/data/layout.json"
+          test -s "$site/assets/original-layout.svg"
+          python "$site/tools/validate_data.py" --root "$site"
+          python "$site/tools/export_gedcom.py" --root "$site" --output "$site/data/somcomsom.ged"
+          node --check "$site/app.js"
+          node --check "$site/admin.js"
+          ! grep -R "jandboxing" "$site" --exclude-dir='__pycache__'
+          echo "SITE_DIR=$site" >> "$GITHUB_ENV"
+
+      - name: Publish a clean main branch as somcomsom
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --orphan publish-svg
+          git rm -rf . || true
+          git clean -fdx
+          cp -a "$SITE_DIR"/. .
+          find . -type d -name '__pycache__' -prune -exec rm -rf {} +
+          git config user.name 'somcomsom'
+          git config user.email '305458386+somcomsom@users.noreply.github.com'
+          git add -A
+          git commit -m 'Implanta l’arbre SVG mantenible i l’editor familiar'
+          git branch -M main
+          git push --force origin main
+
+      - name: Start GitHub Pages deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 12); do
+            if gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo 'No s’ha pogut iniciar el desplegament de Pages.' >&2
+          exit 1
