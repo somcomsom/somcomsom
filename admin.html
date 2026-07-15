@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Actualitza SOM COM SOM</title>
+  <link rel="stylesheet" href="./admin.css?v=20260715-5">
+</head>
+<body>
+<header>
+  <div><h1>Actualitza l’arbre</h1><p>Dades genealògiques i posicions separades de la làmina original</p></div>
+  <nav><a href="./">Torna a l’arbre</a><button id="export-family">Baixa family.json</button><button id="export-layout">Baixa layout.json</button><button id="export-gedcom">Baixa GEDCOM</button></nav>
+</header>
+<main>
+  <aside class="library">
+    <div class="tabs"><button class="active" data-tab="people">Persones</button><button data-tab="relations">Relacions</button></div>
+    <div class="search"><input id="library-search" type="search" placeholder="Cerca…"><button id="new-person">+ Persona</button><button id="new-relation">+ Relació</button></div>
+    <div id="library-list" class="library-list"></div>
+  </aside>
+
+  <section class="editor">
+    <div id="person-editor" class="editor-panel">
+      <div class="panel-heading"><div><p class="eyebrow">Persona</p><h2 id="person-title">Selecciona una persona</h2></div><button id="delete-person" class="danger" disabled>Elimina</button></div>
+      <div class="form-grid">
+        <label>ID<input id="person-id" readonly></label>
+        <label class="wide">Nom complet<input id="person-name"></label>
+        <label class="wide">Text original / alternatiu<textarea id="person-details" rows="3" placeholder="Una línia per detall"></textarea></label>
+        <label>Lloc de naixement<input id="birth-place"></label><label>Data de naixement<input id="birth-date" placeholder="dd/mm/aaaa"></label>
+        <label>Lloc de defunció<input id="death-place"></label><label>Data de defunció<input id="death-date" placeholder="dd/mm/aaaa"></label>
+        <label class="wide">Pares (IDs separats per comes)<input id="person-parents" placeholder="p129, p118"></label>
+        <label class="wide">Notes internes<textarea id="person-notes" rows="2"></textarea></label>
+        <label class="check"><input id="person-focus" type="checkbox"> Destacada</label>
+        <label class="check"><input id="person-render" type="checkbox"> Dibuixa l’etiqueta actualitzada sobre la làmina</label>
+      </div>
+      <div class="position-grid"><label>X<input id="pos-x" type="number" step="0.1"></label><label>Y<input id="pos-y" type="number" step="0.1"></label><label>Amplada<input id="pos-w" type="number" step="0.1"></label><label>Alçada<input id="pos-h" type="number" step="0.1"></label></div>
+      <div class="actions"><button id="save-person" class="primary" disabled>Desa persona</button><button id="center-selected" disabled>Centra a la previsualització</button></div>
+    </div>
+
+    <div id="relation-editor" class="editor-panel" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">Relació</p><h2 id="relation-title">Selecciona una relació</h2></div><button id="delete-relation" class="danger" disabled>Elimina</button></div>
+      <div class="form-grid">
+        <label>ID<input id="relation-id" readonly></label>
+        <label>Tipus<select id="relation-type"><option value="married">Casats</option><option value="separated">Separats</option><option value="partner">Ajuntats</option></select></label>
+        <label>Lloc<input id="relation-place"></label><label>Data<input id="relation-date"></label>
+        <label class="wide">Text original / alternatiu<textarea id="relation-label" rows="2"></textarea></label>
+        <label class="wide">Parella (IDs separats per comes)<input id="relation-partners" placeholder="p141, p149"></label>
+        <label class="wide">Fills (IDs separats per comes)<input id="relation-children" placeholder="p150, p151"></label>
+        <label class="check"><input id="relation-render" type="checkbox"> Dibuixa la relació actualitzada</label>
+      </div>
+      <div class="position-grid"><label>X<input id="rel-x" type="number" step="0.1"></label><label>Y<input id="rel-y" type="number" step="0.1"></label></div>
+      <div class="actions"><button id="save-relation" class="primary" disabled>Desa relació</button><button id="center-relation" disabled>Centra a la previsualització</button></div>
+    </div>
+
+    <section class="publish-panel">
+      <div><p class="eyebrow">Publicació directa</p><h2>Publica a GitHub</h2><p>Enganxa un token fi amb permís <strong>Contents: Read and write</strong> només per a <code>somcomsom/somcomsom</code>. El token no es desa.</p></div>
+      <div class="publish-row"><input id="github-token" type="password" autocomplete="off" placeholder="github_pat_…"><button id="publish-github" class="primary">Publica els canvis</button></div>
+      <p id="publish-status" class="status-line"></p>
+    </section>
+  </section>
+
+  <section class="preview">
+    <div class="preview-toolbar"><strong>Previsualització</strong><span>Arrossega la persona seleccionada per ajustar-ne la posició.</span><button id="preview-fit">Encaixa</button></div>
+    <svg id="preview-svg"></svg>
+  </section>
+</main>
+<script type="module" src="./admin.js?v=20260715-5"></script>
+</body>
+</html>

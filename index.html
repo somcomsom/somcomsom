@@ -2,28 +2,54 @@
 <html lang="ca">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arbre familiar Escorihuela–Magrinyà, navegable i interactiu.">
-  <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Arbre familiar Escorihuela–Magrinyà</title>
-  <link rel="stylesheet" href="./styles.css?v=20260715-3">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="Arbre familiar interactiu Escorihuela - Magrinyà">
+  <title>SOM COM SOM · Arbre familiar</title>
+  <link rel="stylesheet" href="./styles.css?v=20260715-5">
 </head>
 <body>
-  <header class="topbar">
-    <button class="icon-button sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Obre o tanca el panell">☰</button>
-    <div class="brand"><span class="brand-mark" aria-hidden="true">⌘</span><div><h1>Arbre familiar</h1><p>Escorihuela · Magrinyà</p></div></div>
-    <div class="topbar-actions"><button class="text-button" id="theme-button" type="button">Tema</button><a class="text-button" href="https://github.com/somcomsom/somcomsom" rel="noreferrer">GitHub</a></div>
-  </header>
-  <main class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <section class="sidebar-section search-section"><label for="search-input">Cerca una persona</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" autocomplete="off" placeholder="Nom, cognom, lloc o any…"><button id="clear-search" type="button">×</button></div><p class="search-summary" id="search-summary">Carregant l’arbre…</p><div class="results" id="search-results"></div></section>
-      <section class="sidebar-section details-section"><p class="eyebrow">Persona seleccionada</p><h2 id="details-name">Selecciona un nom</h2><div id="details-lines" class="details-lines"><p>Fes clic sobre qualsevol persona de l’arbre per veure’n la informació i centrar-la.</p></div><button class="secondary-button" id="copy-link" type="button" disabled>Copia l’enllaç</button></section>
-      <section class="sidebar-section"><p class="eyebrow">Llegenda</p><div class="legend-row"><span class="legend-symbol married">⚭</span><span>Casats</span></div><div class="legend-row"><span class="legend-symbol separated">○ ○</span><span>Separats</span></div><div class="legend-row"><span class="legend-symbol partner">♡</span><span>Ajuntats</span></div></section>
-      <section class="sidebar-section help-section"><p class="eyebrow">Navegació</p><p>Arrossega per moure’t. Utilitza la roda o els botons per ampliar. El botó de casa mostra l’arbre complet.</p><p>La cerca ressalta les coincidències sense ocultar la resta.</p><p><kbd>/</kbd> cerca · <kbd>+</kbd>/<kbd>−</kbd> zoom · <kbd>0</kbd> encaixa</p></section>
-    </aside>
-    <section class="viewer" id="viewer"><div class="viewer-status" id="viewer-status"><div class="spinner"></div><p>Preparant l’arbre familiar…</p></div><div class="diagram" id="diagram" tabindex="0"></div><nav class="zoom-controls"><button id="zoom-in">+</button><button id="zoom-out">−</button><button id="fit-view">⌂</button><button id="fullscreen">⛶</button><button id="download-svg">↓</button></nav><div class="zoom-label" id="zoom-label">100%</div></section>
-  </main>
-  <noscript>Aquesta pàgina necessita JavaScript.</noscript>
-  <script type="module" src="./app.js?v=20260715-4"></script>
+<header class="topbar">
+  <button id="sidebar-toggle" class="icon-button mobile-only" aria-label="Obre el panell">☰</button>
+  <div class="brand"><span class="brand-mark">⌘</span><div><h1>SOM COM SOM</h1><p>Escorihuela · Magrinyà</p></div></div>
+  <div class="top-actions">
+    <button id="theme-button" class="text-button">Fosc</button>
+    <a class="text-button" href="./admin.html">Actualitza</a>
+    <a class="text-button" href="https://github.com/somcomsom/somcomsom" rel="noreferrer">GitHub</a>
+  </div>
+</header>
+<main class="shell">
+  <aside id="sidebar" class="sidebar">
+    <section>
+      <label class="field-label" for="search">Cerca una persona</label>
+      <div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Nom, lloc o data…" autocomplete="off"><button id="clear-search">×</button></div>
+      <p id="summary" class="muted">Carregant…</p>
+      <div id="results" class="results"></div>
+    </section>
+    <section>
+      <p class="eyebrow">Persona seleccionada</p>
+      <h2 id="person-name">Selecciona un nom</h2>
+      <div id="person-details" class="details"><p>Fes clic sobre una persona de la làmina.</p></div>
+      <button id="copy-link" class="secondary" disabled>Copia l’enllaç</button>
+    </section>
+    <section>
+      <p class="eyebrow">Llegenda</p>
+      <p>⚭ Casats · ○ ○ Separats · ♡ Ajuntats</p>
+    </section>
+    <section class="help">
+      <p class="eyebrow">Navegació</p>
+      <p>Arrossega per moure’t. Utilitza la roda o els controls per ampliar. La làmina conserva la composició exacta del PDF original.</p>
+    </section>
+  </aside>
+  <section id="viewer" class="viewer">
+    <div id="status" class="status">Preparant la làmina original…</div>
+    <svg id="tree" aria-label="Arbre familiar interactiu"></svg>
+    <div class="zoom-controls">
+      <button id="zoom-in" title="Amplia">+</button><button id="zoom-out" title="Redueix">−</button><button id="fit" title="Encaixa">⌂</button><button id="fullscreen" title="Pantalla completa">⛶</button>
+    </div>
+    <span id="zoom-label" class="zoom-label">100%</span>
+  </section>
+</main>
+<script type="module" src="./app.js?v=20260715-5"></script>
 </body>
 </html>
