@@ -1,0 +1,74 @@
+name: Publish final maintainable SVG site
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish:
+    if: github.event.pull_request.head.ref == 'final-svg-site'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout proposed site
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate family data and web application
+        run: |
+          set -euo pipefail
+          python tools/validate_data.py
+          python tools/export_gedcom.py
+          node --check data-loader.js
+          node --check app.js
+          node --check admin.js
+          test -s assets/background-manifest.json
+          test -s assets/background-01.svgpart
+
+      - name: Rebuild main with the somcomsom identity
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          publish="$(mktemp -d)"
+          cp -a . "$publish/site"
+          rm -rf "$publish/site/.git"
+          rm -f "$publish/site/.github/workflows/publish-final-site.yml"
+          cd "$publish/site"
+          git init
+          git checkout --orphan main
+          git config user.name 'somcomsom'
+          git config user.email '305458386+somcomsom@users.noreply.github.com'
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add -A
+          git commit -m 'Implanta l’arbre SVG mantenible i l’editor familiar'
+          git push --force origin main
+
+      - name: Start GitHub Pages deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 12); do
+            if gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY" --ref main; then
+              exit 0
+            fi
+            sleep 10
+          done
+          exit 1
