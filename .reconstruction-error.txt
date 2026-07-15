@@ -1,0 +1,31 @@
+part-00.csv: 4096 bytes
+part-01.csv: 4096 bytes
+part-02.csv: 4096 bytes
+part-03.csv: 3616 bytes
+part-04.csv: 3136 bytes
+total: 19040 bytes
+magic: fd377a585a000004
+
+Traceback (most recent call last):
+  File "<stdin>", line 31, in <module>
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2055, in getnames
+    return [tarinfo.name for tarinfo in self.getmembers()]
+                                        ^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2047, in getmembers
+    self._load()        # all members, we first have to
+    ^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2827, in _load
+    while self.next() is not None:
+          ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/tarfile.py", line 2733, in next
+    self.fileobj.seek(self.offset - 1)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/lzma.py", line 261, in seek
+    return self._buffer.seek(offset, whence)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/_compression.py", line 153, in seek
+    data = self.read(min(io.DEFAULT_BUFFER_SIZE, offset))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/_compression.py", line 103, in read
+    data = self._decompressor.decompress(rawblock, size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_lzma.LZMAError: Corrupt input data
