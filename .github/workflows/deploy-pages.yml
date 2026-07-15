@@ -1,0 +1,51 @@
+name: Validate and deploy SOM COM SOM
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate data and JavaScript
+        run: |
+          python tools/validate_data.py
+          python tools/export_gedcom.py
+          node --check data-loader.js
+          node --check app.js
+          node --check admin.js
+          test -s assets/background-manifest.json
+          test -s assets/background-01.svgpart
+          ! grep -R "jan""dboxing" index.html admin.html app.js admin.js data-loader.js styles.css admin.css README.md data assets
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
