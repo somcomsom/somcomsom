@@ -27,12 +27,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate data, layout and editor
+      - name: Validate data, layout, mobile view and editor
         run: |
           set -euo pipefail
           test -s index.html
           test -s styles.css
+          test -s interaction.css
+          test -s mobile.css
           test -s app.js
+          test -s drag-guard.js
+          test -s mobile.js
           test -s relation-router.js
           test -s data-loader.js
           test -s admin.html
@@ -46,15 +50,20 @@ jobs:
           node --check data-loader.js
           node --check relation-router.js
           node --check app.js
+          node --check drag-guard.js
+          node --check mobile.js
           node --check admin.js
           node --check admin-editor.js
           node --check admin-preview.js
           node --check publisher.js
+          grep -q 'viewport-fit=cover' index.html
+          grep -q 'orientation: portrait' mobile.css
+          grep -q 'mobile-backdrop' index.html
           test -s data/somcomsom.ged
           test -s assets/background-manifest.json
           test -s assets/background-01.svgpart
           forbidden='jan''dboxing'
-          ! grep -R "$forbidden" index.html admin.html app.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css admin.css README.md data assets
+          ! grep -R "$forbidden" index.html admin.html app.js drag-guard.js mobile.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css interaction.css mobile.css admin.css README.md data assets
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
