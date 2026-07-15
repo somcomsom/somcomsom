@@ -1,0 +1,23 @@
+.diagram g.node.is-selected .nodeLabel,
+.diagram g.node.is-selected .nodeLabel *,
+.diagram g.node.is-selected foreignObject * {
+  color: var(--node-text) !important;
+  opacity: 1 !important;
+}
+
+.diagram g.node.is-selected text,
+.diagram g.node.is-selected tspan {
+  fill: var(--node-text) !important;
+  opacity: 1 !important;
+}
+
+:root[data-theme="dark"] .diagram g.node.is-selected.is-match .nodeLabel,
+:root[data-theme="dark"] .diagram g.node.is-selected.is-match .nodeLabel *,
+:root[data-theme="dark"] .diagram g.node.is-selected.is-match foreignObject * {
+  color: #fffaf5 !important;
+}
+
+:root[data-theme="dark"] .diagram g.node.is-selected.is-match text,
+:root[data-theme="dark"] .diagram g.node.is-selected.is-match tspan {
+  fill: #fffaf5 !important;
+}
