@@ -1,8 +1,6 @@
 name: Apply maintainable SVG architecture
 
 on:
-  push:
-    branches: [migration-svg-layout]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -15,23 +13,23 @@ jobs:
   migrate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout migration payload
-        uses: actions/checkout@v4
-
-      - name: Extract and validate new site
+      - name: Download and validate the new site
         shell: bash
         run: |
           set -euo pipefail
           work="$(mktemp -d)"
-          tar -xJf payload.tar.xz -C "$work"
+          curl --fail --silent --show-error --location \
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/payload.tar.xz" \
+            --output "$work/payload.tar.xz"
+          tar -xJf "$work/payload.tar.xz" -C "$work"
           site="$work/somcomsom_site"
           test -s "$site/index.html"
           test -s "$site/admin.html"
           test -s "$site/data/family.json"
           test -s "$site/data/layout.json"
           test -s "$site/assets/original-layout.svg"
-          python "$site/tools/validate_data.py" --root "$site"
-          python "$site/tools/export_gedcom.py" --root "$site" --output "$site/data/somcomsom.ged"
+          python3 "$site/tools/validate_data.py" --root "$site"
+          python3 "$site/tools/export_gedcom.py" --root "$site" --output "$site/data/somcomsom.ged"
           node --check "$site/app.js"
           node --check "$site/admin.js"
           ! grep -R "jandboxing" "$site" --exclude-dir='__pycache__'
@@ -39,18 +37,21 @@ jobs:
 
       - name: Publish a clean main branch as somcomsom
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          git checkout --orphan publish-svg
-          git rm -rf . || true
-          git clean -fdx
-          cp -a "$SITE_DIR"/. .
-          find . -type d -name '__pycache__' -prune -exec rm -rf {} +
+          publish="$(mktemp -d)"
+          cp -a "$SITE_DIR"/. "$publish"/
+          find "$publish" -type d -name '__pycache__' -prune -exec rm -rf {} +
+          cd "$publish"
+          git init
+          git checkout --orphan main
           git config user.name 'somcomsom'
           git config user.email '305458386+somcomsom@users.noreply.github.com'
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add -A
           git commit -m 'Implanta l’arbre SVG mantenible i l’editor familiar'
-          git branch -M main
           git push --force origin main
 
       - name: Start GitHub Pages deployment
