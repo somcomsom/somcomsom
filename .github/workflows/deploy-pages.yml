@@ -33,6 +33,7 @@ jobs:
           test -s index.html
           test -s styles.css
           test -s app.js
+          test -s relation-router.js
           test -s data-loader.js
           test -s admin.html
           test -s admin.css
@@ -43,6 +44,7 @@ jobs:
           python3 tools/validate_data.py
           python3 tools/export_gedcom.py
           node --check data-loader.js
+          node --check relation-router.js
           node --check app.js
           node --check admin.js
           node --check admin-editor.js
@@ -52,7 +54,7 @@ jobs:
           test -s assets/background-manifest.json
           test -s assets/background-01.svgpart
           forbidden='jan''dboxing'
-          ! grep -R "$forbidden" index.html admin.html app.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css admin.css README.md data assets
+          ! grep -R "$forbidden" index.html admin.html app.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css admin.css README.md data assets
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
