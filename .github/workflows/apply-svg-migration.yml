@@ -3,6 +3,8 @@ name: Apply maintainable SVG architecture
 on:
   push:
     branches: [migration-svg-layout]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
