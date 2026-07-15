@@ -1,0 +1,254 @@
+@media (max-width: 820px) and (orientation: portrait) {
+  :root {
+    --top: 56px;
+    --mobile-edge: 10px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    overscroll-behavior: none;
+  }
+
+  .topbar {
+    height: var(--top);
+    gap: 9px;
+    padding: 0 10px;
+  }
+
+  .mobile-only {
+    display: grid;
+    place-items: center;
+    flex: 0 0 42px;
+  }
+
+  .icon-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-mark,
+  .brand p {
+    display: none;
+  }
+
+  .brand h1 {
+    overflow: hidden;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .top-actions {
+    flex: 0 0 auto;
+    gap: 5px;
+  }
+
+  .top-actions a {
+    display: none;
+  }
+
+  .top-actions .text-button {
+    min-height: 40px;
+    padding: 0 11px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+
+  .shell {
+    display: block;
+    height: calc(100dvh - var(--top));
+  }
+
+  .viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .viewer svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-backdrop {
+    position: fixed;
+    z-index: 31;
+    inset: var(--top) 0 0;
+    border: 0;
+    background: rgba(28, 21, 17, .42);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+
+  .mobile-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 40;
+    top: auto;
+    right: var(--mobile-edge);
+    bottom: calc(var(--mobile-edge) + env(safe-area-inset-bottom));
+    left: var(--mobile-edge);
+    width: auto;
+    max-height: min(76dvh, 680px);
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--panel);
+    box-shadow: 0 24px 70px rgba(30, 20, 14, .32);
+    transform: translateY(calc(100% + 28px));
+    transition: transform .24s cubic-bezier(.2, .75, .3, 1);
+    overscroll-behavior: contain;
+  }
+
+  .sidebar.open {
+    transform: translateY(0);
+  }
+
+  .mobile-sheet-head {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 8px 10px 8px 18px;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--panel) 94%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-sheet-head::before {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    width: 42px;
+    height: 4px;
+    border-radius: 99px;
+    background: var(--border);
+    content: '';
+    transform: translateX(-50%);
+  }
+
+  .mobile-sheet-head strong {
+    padding-top: 4px;
+    font-size: 13px;
+  }
+
+  .mobile-sheet-close {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--text);
+    font-size: 21px;
+    cursor: pointer;
+  }
+
+  .sidebar section {
+    padding: 15px 17px;
+  }
+
+  .sidebar section:nth-of-type(4),
+  .sidebar section:nth-of-type(5) {
+    display: none;
+  }
+
+  .field-label {
+    font-size: 12px;
+  }
+
+  .searchbox {
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .searchbox input {
+    font-size: 16px;
+  }
+
+  .results {
+    max-height: 31dvh;
+  }
+
+  .result {
+    min-height: 48px;
+    padding: 9px 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .secondary {
+    min-height: 42px;
+  }
+
+  .zoom-controls {
+    right: auto;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    left: 50%;
+    grid-template-columns: repeat(4, 46px);
+    gap: 5px;
+    padding: 6px;
+    border-radius: 16px;
+    transform: translateX(-50%);
+  }
+
+  .zoom-controls button {
+    width: 46px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+
+  .zoom-label {
+    right: auto;
+    bottom: calc(70px + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  body.sheet-open .zoom-controls,
+  body.sheet-open .zoom-label {
+    opacity: .25;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 390px) and (orientation: portrait) {
+  .brand h1 {
+    font-size: 15px;
+  }
+
+  .top-actions .text-button {
+    padding: 0 9px;
+  }
+
+  .zoom-controls {
+    grid-template-columns: repeat(4, 43px);
+  }
+
+  .zoom-controls button {
+    width: 43px;
+  }
+}

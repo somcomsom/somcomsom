@@ -2,16 +2,17 @@
 <html lang="ca">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="description" content="Arbre familiar interactiu Escorihuela - Magrinyà">
   <title>SOM COM SOM · Arbre familiar</title>
   <link rel="stylesheet" href="./styles.css?v=20260715-5">
   <link rel="stylesheet" href="./interaction.css?v=20260715-1">
+  <link rel="stylesheet" href="./mobile.css?v=20260715-1">
 </head>
 <body>
 <header class="topbar">
-  <button id="sidebar-toggle" class="icon-button mobile-only" aria-label="Obre el panell">☰</button>
+  <button id="sidebar-toggle" class="icon-button mobile-only" aria-label="Obre la cerca i la fitxa" aria-controls="sidebar" aria-expanded="false">☰</button>
   <div class="brand"><span class="brand-mark">⌘</span><div><h1>SOM COM SOM</h1><p>Escorihuela · Magrinyà</p></div></div>
   <div class="top-actions">
     <button id="theme-button" class="text-button">Fosc</button>
@@ -20,7 +21,12 @@
   </div>
 </header>
 <main class="shell">
-  <aside id="sidebar" class="sidebar">
+  <button id="mobile-backdrop" class="mobile-backdrop" type="button" aria-label="Tanca el panell" aria-hidden="true"></button>
+  <aside id="sidebar" class="sidebar" aria-label="Cerca i informació familiar">
+    <div class="mobile-sheet-head mobile-only">
+      <strong>Cerca i fitxa</strong>
+      <button id="sidebar-close" class="mobile-sheet-close" type="button" aria-label="Tanca el panell">×</button>
+    </div>
     <section>
       <label class="field-label" for="search">Cerca una persona</label>
       <div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Nom, lloc o data…" autocomplete="off"><button id="clear-search">×</button></div>
@@ -46,12 +52,13 @@
     <div id="status" class="status">Preparant la làmina original…</div>
     <svg id="tree" aria-label="Arbre familiar interactiu"></svg>
     <div class="zoom-controls">
-      <button id="zoom-in" title="Amplia">+</button><button id="zoom-out" title="Redueix">−</button><button id="fit" title="Encaixa">⌂</button><button id="fullscreen" title="Pantalla completa">⛶</button>
+      <button id="zoom-in" title="Amplia" aria-label="Amplia">+</button><button id="zoom-out" title="Redueix" aria-label="Redueix">−</button><button id="fit" title="Encaixa" aria-label="Encaixa l’arbre">⌂</button><button id="fullscreen" title="Pantalla completa" aria-label="Pantalla completa">⛶</button>
     </div>
     <span id="zoom-label" class="zoom-label">100%</span>
   </section>
 </main>
 <script type="module" src="./drag-guard.js?v=20260715-1"></script>
 <script type="module" src="./app.js?v=20260715-6"></script>
+<script type="module" src="./mobile.js?v=20260715-1"></script>
 </body>
 </html>
