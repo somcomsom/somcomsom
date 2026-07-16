@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate data, desktop layout, mobile gestures and editor
+      - name: Validate data, responsive layout, export and editor
         run: |
           set -euo pipefail
           test -s index.html
@@ -36,6 +36,7 @@ jobs:
           test -s mobile.css
           test -s desktop-layout-guard.css
           test -s app.js
+          test -s export.js
           test -s drag-guard.js
           test -s mobile.js
           test -s pinch-zoom.js
@@ -52,6 +53,7 @@ jobs:
           node --check data-loader.js
           node --check relation-router.js
           node --check app.js
+          node --check export.js
           node --check drag-guard.js
           node --check mobile.js
           node --check pinch-zoom.js
@@ -61,15 +63,18 @@ jobs:
           node --check publisher.js
           grep -q 'viewport-fit=cover' index.html
           grep -q 'orientation: portrait' mobile.css
-          grep -q 'mobile-backdrop' index.html
+          grep -q 'sidebar-toggle' index.html
+          grep -q 'export-svg' index.html
+          grep -q 'export-png' index.html
           grep -q 'mobile-backdrop' desktop-layout-guard.css
-          grep -q 'grid-column:2' desktop-layout-guard.css
+          grep -q 'grid-template-columns:minmax(0,1fr)' desktop-layout-guard.css
+          grep -q 'sidebar.open' desktop-layout-guard.css
           grep -q 'pinch-zoom.js' mobile.js
           test -s data/somcomsom.ged
           test -s assets/background-manifest.json
           test -s assets/background-01.svgpart
           forbidden='jan''dboxing'
-          ! grep -R "$forbidden" index.html admin.html app.js drag-guard.js mobile.js pinch-zoom.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css interaction.css mobile.css desktop-layout-guard.css admin.css README.md data assets
+          ! grep -R "$forbidden" index.html admin.html app.js export.js drag-guard.js mobile.js pinch-zoom.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css interaction.css mobile.css desktop-layout-guard.css admin.css README.md data assets
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3

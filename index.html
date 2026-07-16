@@ -8,12 +8,12 @@
   <title>SOM COM SOM · Arbre familiar</title>
   <link rel="stylesheet" href="./styles.css?v=20260715-5">
   <link rel="stylesheet" href="./interaction.css?v=20260715-1">
-  <link rel="stylesheet" href="./mobile.css?v=20260715-1">
-  <link rel="stylesheet" href="./desktop-layout-guard.css?v=20260715-1">
+  <link rel="stylesheet" href="./mobile.css?v=20260716-2">
+  <link rel="stylesheet" href="./desktop-layout-guard.css?v=20260716-2">
 </head>
 <body>
 <header class="topbar">
-  <button id="sidebar-toggle" class="icon-button mobile-only" aria-label="Obre la cerca i la fitxa" aria-controls="sidebar" aria-expanded="false">☰</button>
+  <button id="sidebar-toggle" class="icon-button" type="button" aria-label="Obre el menú" aria-controls="sidebar" aria-expanded="false">☰</button>
   <div class="brand"><span class="brand-mark">⌘</span><div><h1>SOM COM SOM</h1><p>Escorihuela · Magrinyà</p></div></div>
   <div class="top-actions">
     <button id="theme-button" class="text-button">Fosc</button>
@@ -22,11 +22,11 @@
   </div>
 </header>
 <main class="shell">
-  <button id="mobile-backdrop" class="mobile-backdrop" type="button" aria-label="Tanca el panell" aria-hidden="true"></button>
-  <aside id="sidebar" class="sidebar" aria-label="Cerca i informació familiar">
-    <div class="mobile-sheet-head mobile-only">
-      <strong>Cerca i fitxa</strong>
-      <button id="sidebar-close" class="mobile-sheet-close" type="button" aria-label="Tanca el panell">×</button>
+  <button id="mobile-backdrop" class="mobile-backdrop" type="button" aria-label="Tanca el menú" aria-hidden="true"></button>
+  <aside id="sidebar" class="sidebar" aria-label="Cerca, informació i exportació" aria-hidden="true">
+    <div class="mobile-sheet-head">
+      <strong>Cerca, fitxa i exportació</strong>
+      <button id="sidebar-close" class="mobile-sheet-close" type="button" aria-label="Tanca el menú">×</button>
     </div>
     <section>
       <label class="field-label" for="search">Cerca una persona</label>
@@ -44,6 +44,15 @@
       <p class="eyebrow">Llegenda</p>
       <p>⚭ Casats · ○ ○ Separats · ♡ Ajuntats</p>
     </section>
+    <section class="export-section">
+      <p class="eyebrow">Exportació</p>
+      <p class="details">SVG conserva tota la qualitat i és la millor opció per imprimir. PNG és més pràctic per compartir.</p>
+      <div class="export-actions">
+        <button id="export-svg" class="secondary" type="button">Descarrega SVG</button>
+        <button id="export-png" class="secondary" type="button">Descarrega PNG</button>
+      </div>
+      <p id="export-status" class="muted" role="status" aria-live="polite"></p>
+    </section>
     <section class="help">
       <p class="eyebrow">Navegació</p>
       <p>Arrossega per moure’t. Utilitza la roda o els controls per ampliar. La làmina conserva la composició exacta del PDF original.</p>
@@ -60,6 +69,7 @@
 </main>
 <script type="module" src="./drag-guard.js?v=20260715-1"></script>
 <script type="module" src="./app.js?v=20260715-6"></script>
-<script type="module" src="./mobile.js?v=20260715-1"></script>
+<script type="module" src="./export.js?v=20260716-1"></script>
+<script type="module" src="./mobile.js?v=20260716-2"></script>
 </body>
 </html>
