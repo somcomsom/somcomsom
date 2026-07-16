@@ -1,7 +1,1355 @@
 0 HEAD
 1 SOUR SOMCOMSOM
-1 NOTE Regenerated from structured family data during deployment
 1 GEDC
 2 VERS 5.5.1
 1 CHAR UTF-8
+0 @P1@ INDI
+1 NAME Miguel Escorihuela
+0 @P2@ INDI
+1 NAME Maria Martín Buj
+0 @P3@ INDI
+1 NAME Miguel Escorihuela Martín
+1 BIRT
+2 DATE 1814
+2 PLAC Fortanete
+0 @P4@ INDI
+1 NAME Joaquín Escorihuela Martín
+1 BIRT
+2 DATE 1820
+2 PLAC Fortanete
+0 @P5@ INDI
+1 NAME Rafael Escorihuela Martín
+1 BIRT
+2 DATE 1822
+2 PLAC Fortanete
+1 DEAT
+2 DATE 28/12/1878
+0 @P6@ INDI
+1 NAME Maria Apolonia Escorihuela Martín
+1 BIRT
+2 DATE 1827
+2 PLAC Fortanete
+0 @P7@ INDI
+1 NAME Sixta Escorihuela Martín
+1 BIRT
+2 DATE 1829
+2 PLAC Fortanete
+1 DEAT
+2 DATE 04/02/1886
+0 @P8@ INDI
+1 NAME Florencia Escorihuela Martín
+1 BIRT
+2 DATE 1833
+2 PLAC Fortanete
+1 DEAT
+2 DATE 10/04/1892
+0 @P9@ INDI
+1 NAME Francisco Herrero Cañada
+0 @P10@ INDI
+1 NAME Marcelina Cano
+0 @P11@ INDI
+1 NAME Benigna Herrero Cano
+1 BIRT
+2 DATE 1824
+2 PLAC Fortanete
+1 DEAT
+2 DATE 22/06/1882
+0 @P12@ INDI
+1 NAME Rafael Herrero Cano
+1 BIRT
+2 DATE 1836
+2 PLAC Fortanete
+0 @P13@ INDI
+1 NAME ? Herrero Cano
+0 @P14@ INDI
+1 NAME Serafín Escorihuela Herrero
+1 BIRT
+2 DATE 17/06/1846
+2 PLAC Fortanete
+0 @P15@ INDI
+1 NAME Juana Maria Escorihuela Herrero
+1 BIRT
+2 DATE 26/02/1847
+2 PLAC Fortanete
+1 DEAT
+2 DATE 18/02/1849
+0 @P16@ INDI
+1 NAME Ramona Escorihuela Herrero
+1 BIRT
+2 DATE 1848
+2 PLAC Fortanete
+1 DEAT
+2 DATE Abans 06/1882
+0 @P17@ INDI
+1 NAME Juan Bautista Escorihuela Herrero
+1 BIRT
+2 DATE 1852
+2 PLAC Fortanete
+1 DEAT
+2 DATE Abans 06/1882
+0 @P18@ INDI
+1 NAME Maria Joaquina Escorihuela Herrero
+1 BIRT
+2 DATE Abans 06/1882
+2 PLAC Fortanete
+0 @P19@ INDI
+1 NAME Francisca Escorihuela Herrero
+1 BIRT
+2 DATE 1853
+2 PLAC Fortanete
+0 @P20@ INDI
+1 NAME ? Escorihuela Herrero
+0 @P21@ INDI
+1 NAME Rafael Escorihuela Herrero
+1 BIRT
+2 DATE 1858
+2 PLAC Fortanete
+1 DEAT
+2 DATE 17/05/1932
+0 @P22@ INDI
+1 NAME Pasqual Oliver Buj
+0 @P23@ INDI
+1 NAME Carmela Castel
+0 @P24@ INDI
+1 NAME Melchor Oliver Castel
+1 BIRT
+2 DATE 1798/1802
+1 DEAT
+2 DATE 18/09/1881
+0 @P25@ INDI
+1 NAME Joaquin Buj Gascón
+0 @P26@ INDI
+1 NAME Rosa Carod Perez
+0 @P27@ INDI
+1 NAME Paula Buj Carod
+1 BIRT
+2 DATE 1802
+1 DEAT
+2 DATE 23/07/1877
+0 @P28@ INDI
+1 NAME Estefania Oliver Buj
+0 @P29@ INDI
+1 NAME Mariana Oliver Buj
+1 BIRT
+2 DATE 1825
+1 DEAT
+2 DATE 09/06/1885
+0 @P30@ INDI
+1 NAME Mariano Oliver Buj
+1 BIRT
+2 DATE 1827
+2 PLAC Cantavieja
+1 DEAT
+2 DATE 1897-1900
+0 @P31@ INDI
+1 NAME Maria Andresa Oliver Buj
+0 @P32@ INDI
+1 NAME Maria Oliver Buj
+0 @P33@ INDI
+1 NAME Rafael Oliver Buj
+0 @P34@ INDI
+1 NAME Pascual Oliver Buj
+0 @P35@ INDI
+1 NAME ? Oliver Buj
+0 @P36@ INDI
+1 NAME José Altaba
+0 @P37@ INDI
+1 NAME Úrsula Mestre
+0 @P38@ INDI
+1 NAME Francisca Altaba Mestre
+1 BIRT
+2 DATE 1825
+2 PLAC Cantavieja
+0 @P39@ INDI
+1 NAME Valero Altaba Mestre
+0 @P40@ INDI
+1 NAME Miguela Altaba Mestre
+0 @P41@ INDI
+1 NAME José Altaba Mestre
+0 @P42@ INDI
+1 NAME ...
+0 @P43@ INDI
+1 NAME Mariano Oliver Altaba
+1 BIRT
+2 DATE 1849
+2 PLAC Cantavieja
+1 DEAT
+2 DATE 03/02/1932
+0 @P44@ INDI
+1 NAME Manuel Oliver Altaba
+0 @P45@ INDI
+1 NAME Maria Oliver Altaba
+0 @P46@ INDI
+1 NAME Miguela Oliver Altaba
+0 @P47@ INDI
+1 NAME Andresa Oliver Altaba
+0 @P48@ INDI
+1 NAME Josefa Oliver Altaba
+0 @P49@ INDI
+1 NAME Rosa Oliver Altaba
+1 BIRT
+2 DATE 1859
+2 PLAC Cantavieja
+1 DEAT
+2 DATE 05/02/1939
+2 PLAC Fortanete
+0 @P50@ INDI
+1 NAME Benigno Escorihuela Oliver
+1 BIRT
+2 DATE 13/02/1884
+2 PLAC Fortanete
+1 DEAT
+2 DATE 18/12/1956
+0 @P51@ INDI
+1 NAME Martín Escorihuela Oliver
+1 BIRT
+2 DATE 11/11/1885
+2 PLAC Fortanete
+1 DEAT
+2 DATE 24/03/1890
+0 @P52@ INDI
+1 NAME Juan Escorihuela Oliver
+1 BIRT
+2 DATE 23/06/1887
+2 PLAC Fortanete
+1 DEAT
+2 DATE 20/01/1889
+0 @P53@ INDI
+1 NAME Maria Escorihuela Oliver
+1 BIRT
+2 DATE 26/11/1889
+2 PLAC Fortanete
+1 DEAT
+2 DATE 31/03/1920
+0 @P54@ INDI
+1 NAME Benita Escorihuela Oliver
+1 BIRT
+2 DATE 21/03/1893
+2 PLAC Fortanete
+1 DEAT
+2 DATE 29/10/1983
+2 PLAC Sabadell
+0 @P55@ INDI
+1 NAME Isidre Escorihuela Oliver
+1 BIRT
+2 DATE 14/05/1895
+2 PLAC Fortanete
+1 DEAT
+2 DATE 06/05/1967
+2 PLAC Sabadell
+0 @P56@ INDI
+1 NAME Estanislau Escorihuela Oliver
+1 BIRT
+2 DATE 07/05/1897
+2 PLAC Fortanete
+1 DEAT
+2 DATE 01/07/1984
+2 PLAC Sabadell
+0 @P57@ INDI
+1 NAME Rafael Escorihuela Oliver
+1 BIRT
+2 DATE 21/09/1900
+2 PLAC Fortanete
+1 DEAT
+2 DATE 02/02/1977
+2 PLAC Sabadell
+0 @P58@ INDI
+1 NAME Anunciación Escorihuela Oliver
+1 BIRT
+2 DATE 18/11/1902
+2 PLAC Fortanete
+1 DEAT
+2 DATE 12/01/1926
+2 PLAC Fortanete
+0 @P59@ INDI
+1 NAME Joan Lloberas
+0 @P60@ INDI
+1 NAME Catarina Poal
+0 @P61@ INDI
+1 NAME Pau Lloberas i Poal
+1 BIRT
+2 DATE 27/07/1810
+2 PLAC Terrassa
+0 @P62@ INDI
+1 NAME Marc Lloberas i Poal
+1 BIRT
+2 DATE 04/09/1813
+2 PLAC Terrassa
+0 @P63@ INDI
+1 NAME Antònia Lloberas i Poal
+1 BIRT
+2 DATE 05/06/1816
+2 PLAC Terrassa
+0 @P64@ INDI
+1 NAME Teresa Lloberas i Poal
+1 BIRT
+2 DATE 08/01/1819
+2 PLAC Terrassa
+0 @P65@ INDI
+1 NAME Jaume Lloberas i Poal
+1 BIRT
+2 DATE 01/03/1821
+2 PLAC Terrassa
+0 @P66@ INDI
+1 NAME Narcís Lloberas i Poal
+1 BIRT
+2 DATE 12/12/1823
+2 PLAC Terrassa
+0 @P67@ INDI
+1 NAME Josep Argelaguet
+0 @P68@ INDI
+1 NAME Antonia Ramoneda
+0 @P69@ INDI
+1 NAME Mª Àngela Argelaguet i Ramoneda
+1 BIRT
+2 DATE 18/01/1798
+2 PLAC Terrassa
+0 @P70@ INDI
+1 NAME Anton Argelaguet i Ramoneda
+1 BIRT
+2 DATE 03/01/1802
+2 PLAC Terrassa
+0 @P71@ INDI
+1 NAME Baltazar Argelaguet i Ramoneda
+1 BIRT
+2 DATE 28/02/1804
+2 PLAC Terrassa
+0 @P72@ INDI
+1 NAME Mª Anna Argelaguet i Ramoneda
+1 BIRT
+2 DATE 26/05/1806
+2 PLAC Terrassa
+0 @P73@ INDI
+1 NAME Catarina Argelaguet i Ramoneda
+1 BIRT
+2 DATE 25/04/1810
+2 PLAC Terrassa
+0 @P74@ INDI
+1 NAME Pau Argelaguet i Ramoneda
+1 BIRT
+2 DATE 18/06/1812
+2 PLAC Terrassa
+0 @P75@ INDI
+1 NAME Joan Lloberas i Argelaguet
+1 BIRT
+2 DATE 1835/1885
+0 @P76@ INDI
+1 NAME Josep Badiella
+0 @P77@ INDI
+1 NAME Mariana Duran
+0 @P78@ INDI
+1 NAME Jacint Badiella i Duran
+1 BIRT
+2 DATE 1814
+2 PLAC Terrassa
+0 @P79@ INDI
+1 NAME Ramón Badiella i Duran
+1 BIRT
+2 DATE 1821
+2 PLAC Terrassa
+0 @P80@ INDI
+1 NAME Elies Badiella i Duran
+1 BIRT
+2 DATE 1826
+2 PLAC Terrassa
+0 @P81@ INDI
+1 NAME Josep Llongueras
+0 @P82@ INDI
+1 NAME Ignàsia Santandreu
+0 @P83@ INDI
+1 NAME Mª Teresa Llongueras i Santandreu
+1 BIRT
+2 DATE 1824
+2 PLAC Terrassa
+0 @P84@ INDI
+1 NAME Ignàsia Badiella i Llongueras
+1 BIRT
+2 DATE 1839
+0 @P85@ INDI
+1 NAME Rita Badiella i Llongueras
+1 BIRT
+2 DATE 1842
+2 PLAC Terrassa
+0 @P86@ INDI
+1 NAME Jacint Badiella i Llongueras
+1 BIRT
+2 DATE 30/10/1843
+2 PLAC Terrassa
+0 @P87@ INDI
+1 NAME Anna Badiella i Llongueras
+1 BIRT
+2 DATE 22/06/1851
+2 PLAC Terrassa
+0 @P88@ INDI
+1 NAME Josep Badiella i Llongueras
+1 BIRT
+2 DATE 18/11/1854
+2 PLAC Terrassa
+0 @P89@ INDI
+1 NAME Mariana Badiella i Llongueras
+1 BIRT
+2 DATE 12/1857
+2 PLAC Terrassa
+0 @P90@ INDI
+1 NAME Pau Lloberas Badiella
+1 BIRT
+2 DATE 11/06/1857
+2 PLAC Terrassa
+0 @P91@ INDI
+1 NAME Jacint Lloberas Badiella
+1 BIRT
+2 DATE 01/09/1859
+2 PLAC Terrassa
+0 @P92@ INDI
+1 NAME Assumpció Lloberas Badiella
+1 BIRT
+2 DATE 11/05/1861
+2 PLAC Terrassa
+0 @P93@ INDI
+1 NAME Josep Lloberas Badiella
+1 BIRT
+2 DATE 18/12/1863
+2 PLAC Terrassa
+0 @P94@ INDI
+1 NAME Joan Lloberas Badiella
+1 BIRT
+2 DATE 23/06/1870
+2 PLAC Terrassa
+1 DEAT
+2 DATE 20/06/1936
+0 @P95@ INDI
+1 NAME Josepa Margarit i Figueras
+1 BIRT
+2 DATE 04/1874
+2 PLAC Terrassa
+1 DEAT
+2 DATE 03/06/1966
+0 @P96@ INDI
+1 NAME Assumpció Lloveras i Margarit
+1 BIRT
+2 DATE 12/05/1897
+2 PLAC Terrassa
+1 DEAT
+2 DATE 20/07/1975
+2 PLAC Sabadell
+0 @P97@ INDI
+1 NAME Ramón Magrinyà
+0 @P98@ INDI
+1 NAME Maria Vives
+0 @P99@ INDI
+1 NAME Ramón Magrinyà Vives
+0 @P100@ INDI
+1 NAME Pere Brunet
+0 @P101@ INDI
+1 NAME Maria Gispert
+0 @P102@ INDI
+1 NAME Rosa Brunet Gispert
+0 @P103@ INDI
+1 NAME Francisco Magrinyà Brunet
+1 BIRT
+2 DATE 05/09/1872
+2 PLAC Valls
+0 @P104@ INDI
+1 NAME Florentina Salbatella Casamitjana
+1 BIRT
+2 DATE 25/02/1871
+2 PLAC Mas Rampinyo
+0 @P105@ INDI
+1 NAME Francisco Magriñà Salbatella
+1 BIRT
+2 DATE 26/03/1901
+2 PLAC Sabadell
+1 DEAT
+2 DATE 25/01/1939
+2 PLAC Sant Feliu de Llobregat
+0 @P106@ INDI
+1 NAME Jaume Magriñà Salbatella
+0 @P107@ INDI
+1 NAME Ramón Mallofré Martí
+1 BIRT
+2 DATE 12/08/1907
+0 @P108@ INDI
+1 NAME Francisca Capdevila Valls
+1 BIRT
+2 DATE 21/06/1908
+0 @P109@ INDI
+1 NAME Joan Mallofré Capdevila
+0 @P110@ INDI
+1 NAME Ramón Mallofré Capdevila
+0 @P111@ INDI
+1 NAME Pere Mallofré Capdevila
+1 BIRT
+2 DATE 1874
+2 PLAC Sabadell
+1 DEAT
+2 DATE 05/01/1940
+0 @P112@ INDI
+1 NAME Esperança Marcet Serra
+1 BIRT
+2 DATE 1878
+2 PLAC Sabadell
+1 DEAT
+2 DATE 05/10/1938
+0 @P113@ INDI
+1 NAME Ramón Mallofré Marcet
+1 BIRT
+2 DATE 04/03/1901
+1 DEAT
+2 DATE 15/05/1981
+0 @P114@ INDI
+1 NAME Francisca Mallofré Marcet
+1 BIRT
+2 DATE 13/02/1904
+2 PLAC Sabadell
+1 DEAT
+2 DATE 08/05/1995
+2 PLAC Sabadell
+0 @P115@ INDI
+1 NAME Josep Mallofré Marcet
+1 BIRT
+2 DATE 19/03/1908
+1 DEAT
+2 DATE 20/07/1995
+0 @P116@ INDI
+1 NAME Peret Mallofré Marcet
+1 BIRT
+2 DATE 1911
+1 DEAT
+2 DATE 22/06/1999
+0 @P117@ INDI
+1 NAME Esperança Magriñà Mallofré
+1 BIRT
+2 DATE 08/06/1928
+2 PLAC Sabadell
+1 DEAT
+2 DATE 09/02/1992
+2 PLAC Barcelona
+0 @P118@ INDI
+1 NAME Montserrat Magriñà Mallofré
+1 BIRT
+2 DATE 29/01/1930
+2 PLAC Sabadell
+0 @P119@ INDI
+1 NAME Roser Magriñà Mallofré
+1 BIRT
+2 DATE 11/05/1932
+2 PLAC Sabadell
+0 @P120@ INDI
+1 NAME Ramón Magriñà Mallofré
+1 BIRT
+2 DATE 08/05/1935
+2 PLAC Sabadell
+1 DEAT
+2 DATE 25/02/2013
+2 PLAC Valladolid
+0 @P121@ INDI
+1 NAME Àngel Homedes Castells
+0 @P122@ INDI
+1 NAME Àngel Homedes Magrinyà
+0 @P123@ INDI
+1 NAME Andreu Capdevila Ustrell
+0 @P124@ INDI
+1 NAME Eulàlia
+0 @P125@ INDI
+1 NAME Mª Pilar Contreras López
+0 @P126@ INDI
+1 NAME Marta Magriñà Contreras
+0 @P127@ INDI
+1 NAME David Magriñà Contreras
+0 @P128@ INDI
+1 NAME Pepita Escorihuela Lloveras
+1 BIRT
+2 DATE 12/08/1923
+2 PLAC Sabadell
+1 DEAT
+2 DATE 05/01/2015
+0 @P129@ INDI
+1 NAME Joan Escorihuela Lloveras
+1 BIRT
+2 DATE 24/07/1927
+2 PLAC Sabadell
+1 DEAT
+2 DATE 14/12/2006
+0 @P130@ INDI
+1 NAME Rosa Escorihuela Lloveras
+1 BIRT
+2 DATE 15/03/1933
+2 PLAC Sabadell
+0 @P131@ INDI
+1 NAME Josep Argelaguet i Badia
+1 BIRT
+2 DATE 03/10/1917
+2 PLAC Sabadell
+1 DEAT
+2 DATE 06/12/2007
+0 @P132@ INDI
+1 NAME Susi Argelaguet Escorihuela
+1 BIRT
+2 DATE 21/09/1946
+2 PLAC Sabadell
+0 @P133@ INDI
+1 NAME Mercè Argelaguet Escorihuela
+1 BIRT
+2 DATE 02/03/1948
+2 PLAC Sabadell
+0 @P134@ INDI
+1 NAME Maria Rosa Argelaguet Escorihuela
+1 BIRT
+2 DATE 07/10/1949
+2 PLAC Sabadell
+0 @P135@ INDI
+1 NAME Anna Argelaguet Escorihuela
+1 BIRT
+2 DATE 29/10/1953
+2 PLAC Sabadell
+0 @P136@ INDI
+1 NAME Joan Argelaguet Escorihuela
+1 BIRT
+2 DATE 04/09/1955
+2 PLAC Sabadell
+0 @P137@ INDI
+1 NAME Pepe Argelaguet Escorihuela
+1 BIRT
+2 DATE 03/08/1965
+2 PLAC Sabadell
+0 @P138@ INDI
+1 NAME Joan Borràs Massagué
+1 BIRT
+2 DATE 16/08/1932
+2 PLAC Sabadell
+0 @P139@ INDI
+1 NAME Susi Borràs Escorihuela
+0 @P140@ INDI
+1 NAME Toni Borràs Escorihuela
+0 @P141@ INDI
+1 NAME Joan Escorihuela Magriñà
+1 BIRT
+2 DATE 14/03/1953
+2 PLAC Sabadell
+0 @P142@ INDI
+1 NAME Sisco Escorihuela Magriñà
+1 BIRT
+2 DATE 15/01/1955
+2 PLAC Sabadell
+0 @P143@ INDI
+1 NAME Montse Escorihuela Magriñà
+1 BIRT
+2 DATE 22/04/1957
+2 PLAC Sabadell
+0 @P144@ INDI
+1 NAME Jordi Escorihuela Magriñà
+1 BIRT
+2 DATE 22/02/1962
+2 PLAC Sabadell
+0 @P145@ INDI
+1 NAME Isidre Escorihuela Magriñà
+1 BIRT
+2 DATE 15/11/1964
+2 PLAC Sabadell
+0 @P146@ INDI
+1 NAME Isabel Escorihuela Magriñà
+1 BIRT
+2 DATE 22/01/1973
+2 PLAC Sabadell
+0 @P147@ INDI
+1 NAME Encarnita Navarro Zafra
+1 BIRT
+2 DATE 17/02/1956
+2 PLAC Sabadell
+1 DEAT
+2 DATE 18/04/2022
+2 PLAC Puig-Reig
+0 @P148@ INDI
+1 NAME Francesc Escorihuela Navarro
+1 BIRT
+2 DATE 30/10/1976
+2 PLAC Sabadell
+0 @P149@ INDI
+1 NAME Dolors Martí Monrabà
+1 BIRT
+2 DATE 23/03/1959
+2 PLAC Sabadell
+0 @P150@ INDI
+1 NAME Joan Escorihuela Martí
+1 BIRT
+2 DATE 13/04/1983
+2 PLAC Sabadell
+0 @P151@ INDI
+1 NAME Anna Escorihuela Martí
+1 BIRT
+2 DATE 09/10/1990
+2 PLAC La Seu d’Urgell
+0 @P152@ INDI
+1 NAME Irene Armengol Martí
+1 BIRT
+2 DATE 17/03/1980
+2 PLAC Sabadell
+0 @P153@ INDI
+1 NAME Sebastià Domenjó Solé
+1 BIRT
+2 DATE 16/06/1977
+2 PLAC Lleida
+0 @P154@ INDI
+1 NAME Clàudia Domenjó Armengol
+1 BIRT
+2 DATE 25/11/2013
+2 PLAC Lleida
+0 @P155@ INDI
+1 NAME Ramón Segarra Oromí
+1 BIRT
+2 DATE 28/07/1986
+2 PLAC Montoliu de Segarra
+0 @P156@ INDI
+1 NAME Montse Auladell Garriga
+1 BIRT
+2 DATE 14/11/1954
+2 PLAC Sabadell
+1 DEAT
+2 DATE 20/12/2020
+0 @P157@ INDI
+1 NAME Cristina Escorihuela Auladell
+1 BIRT
+2 DATE 07/12/1981
+2 PLAC Sabadell
+0 @P158@ INDI
+1 NAME Albert Escorihuela Auladell
+1 BIRT
+2 DATE 16/08/1983
+2 PLAC Sabadell
+0 @P159@ INDI
+1 NAME Toni Vila Perdiguero
+1 BIRT
+2 DATE 03/10/1963
+2 PLAC Tona
+0 @P160@ INDI
+1 NAME Lia Vila Escorihuela
+1 BIRT
+2 DATE 20/01/2016
+2 PLAC Barcelona
+0 @P161@ INDI
+1 NAME Noah Vila Escorihuela
+1 BIRT
+2 DATE 20/01/2016
+2 PLAC Barcelona
+0 @P162@ INDI
+1 NAME Genevieve Thibault
+1 BIRT
+2 DATE 10/10/1982
+2 PLAC Montreal
+0 @P163@ INDI
+1 NAME Alexandre Escorihuela Thibault
+1 BIRT
+2 DATE 26/04/2015
+2 PLAC Terrassa
+0 @P164@ INDI
+1 NAME Chloé Escorihuela Thibault
+1 BIRT
+2 DATE 21/05/2017
+2 PLAC Terrassa
+0 @P165@ INDI
+1 NAME Santi Casamada Molins
+1 BIRT
+2 DATE 01/08/1949
+2 PLAC Barcelona
+1 DEAT
+2 DATE ?
+0 @P166@ INDI
+1 NAME Glòria Escorihuela Casamada
+1 BIRT
+2 DATE 09/04/1980
+2 PLAC Sabadell
+0 @P167@ INDI
+1 NAME Marta Escorihuela Casamada
+1 BIRT
+2 DATE 07/08/1984
+2 PLAC Sabadell
+0 @P168@ INDI
+1 NAME Conxa Cequiel Casañas
+1 BIRT
+2 DATE 04/07/1949
+2 PLAC Barcelona
+0 @P169@ INDI
+1 NAME Josep Mª Cercuns Parés
+1 BIRT
+2 DATE 21/03/1975
+2 PLAC Vic
+0 @P170@ INDI
+1 NAME Laia Cercuns Escorihuela
+1 BIRT
+2 DATE 26/01/2005
+2 PLAC Vic
+0 @P171@ INDI
+1 NAME Clara Cercuns Escorihuela
+1 BIRT
+2 DATE 15/02/2008
+2 PLAC Vic
+0 @P172@ INDI
+1 NAME Paulí Vela Muñoz
+1 BIRT
+2 DATE 16/09/1958
+2 PLAC Torelló
+0 @P173@ INDI
+1 NAME Toni Valor Mena
+1 BIRT
+2 DATE 20/03/1984
+0 @P174@ INDI
+1 NAME Georgina Valor Escorihuela
+1 BIRT
+2 DATE 27/04/2009
+2 PLAC Sant Pere de Vilamajor
+0 @P175@ INDI
+1 NAME Oriol Valor Escorihuela
+1 BIRT
+2 DATE 28/02/2012
+2 PLAC Sant Pere de Vilamajor
+0 @P176@ INDI
+1 NAME Andreu Bonet Fort
+1 BIRT
+2 DATE 12/09/1984
+0 @P177@ INDI
+1 NAME Mariana Sánchez Villarejo
+1 BIRT
+2 DATE 09/02/1966
+2 PLAC Antequera
+0 @P178@ INDI
+1 NAME Marc Escorihuela Sánchez
+1 BIRT
+2 DATE 26/02/1992
+2 PLAC Sabadell
+0 @P179@ INDI
+1 NAME Clara Escorihuela Sànchez
+1 BIRT
+2 DATE 08/04/1994
+2 PLAC Sabadell
+0 @P180@ INDI
+1 NAME Sergi Escorihuela Sánchez
+1 BIRT
+2 DATE 29/11/2002
+2 PLAC Sabadell
+0 @P181@ INDI
+1 NAME Edith Hilares Guillen
+1 BIRT
+2 DATE 23/06/1972
+2 PLAC Lima
+0 @P182@ INDI
+1 NAME Arlet Escorihuela Hilares
+1 BIRT
+2 DATE 26/08/2019
+2 PLAC Sabadell
+0 @P183@ INDI
+1 NAME Laura del Paso Martínez
+1 BIRT
+2 DATE 10/04/1993
+2 PLAC Manresa
+0 @P184@ INDI
+1 NAME Roger Guil Ribera
+1 BIRT
+2 DATE 05/10/1988
+2 PLAC Rellinars
+0 @P185@ INDI
+1 NAME Sara Cabestany Chifoni
+1 BIRT
+2 DATE 12/10/1963
+2 PLAC Zurich
+0 @P186@ INDI
+1 NAME Bernat Escorihuela Cabestany
+1 BIRT
+2 DATE 21/06/1994
+2 PLAC La Bastida d’Hortons
+0 @P187@ INDI
+1 NAME Ester Segura Lanao
+1 BIRT
+2 DATE 27/09/1976
+2 PLAC Escaldes-Engordany
+0 @P188@ INDI
+1 NAME Gil Escorihuela Segura
+1 BIRT
+2 DATE 24/03/2012
+2 PLAC Anyós
+0 @P189@ INDI
+1 NAME Martí Escorihuela Segura
+1 BIRT
+2 DATE 28/02/2015
+2 PLAC Anyós
+0 @P190@ INDI
+1 NAME Josep Rovira Pastor
+1 BIRT
+2 DATE 19/03/1962
+0 @P191@ INDI
+1 NAME Pau Rovira Escorihuela
+1 BIRT
+2 DATE 28/05/2002
+2 PLAC Sabadell
+0 @P192@ INDI
+1 NAME Marta Rovira Escorihuela
+1 BIRT
+2 DATE 07/07/2005
+2 PLAC Sabadell
+0 @P193@ INDI
+1 NAME Clàudia Rovira Vives
+1 BIRT
+2 DATE 21/09/1995
+2 PLAC Barcelona
+0 @P194@ INDI
+1 NAME Cristian Pérez Ponce
+1 BIRT
+2 DATE 22/11/1994
+0 @P195@ INDI
+1 NAME Judith Albaladejo de la Torre
+1 BIRT
+2 DATE 24/02/1994
+2 PLAC Sabadell
+0 @P196@ INDI
+1 NAME Oliver Rovira Pérez
+1 BIRT
+2 DATE 14/02/2024
+2 PLAC Barcelona
+0 @P197@ INDI
+1 NAME Biel Segarra Escorihuela
+1 BIRT
+2 DATE 30/07/2023
+0 @P198@ INDI
+1 NAME Bruna Escorihuela del Paso
+1 BIRT
+2 DATE 30/10/2021
+0 @P199@ INDI
+1 NAME Roc Escorihuela del Paso
+1 BIRT
+2 DATE 27/02/2024
+0 @P200@ INDI
+1 NAME Pep Guil Escorihuela
+1 BIRT
+2 DATE 17/07/2024
+2 PLAC Terrassa
+0 @P201@ INDI
+1 NAME Meritxell Melero M
+0 @P202@ INDI
+1 NAME Esteve Armengol
+0 @R1@ FAM
+1 HUSB @P1@
+1 WIFE @P2@
+1 CHIL @P3@
+1 CHIL @P4@
+1 CHIL @P5@
+1 CHIL @P6@
+1 CHIL @P7@
+1 CHIL @P8@
+1 MARR
+2 NOTE ⚭
+0 @R2@ FAM
+1 HUSB @P9@
+1 WIFE @P10@
+1 CHIL @P11@
+1 CHIL @P12@
+1 CHIL @P13@
+1 MARR
+2 NOTE ⚭
+0 @R3@ FAM
+1 HUSB @P5@
+1 WIFE @P11@
+1 CHIL @P14@
+1 CHIL @P15@
+1 CHIL @P16@
+1 CHIL @P17@
+1 CHIL @P18@
+1 CHIL @P19@
+1 CHIL @P20@
+1 CHIL @P21@
+1 MARR
+2 NOTE 24/03/1845 / ⚭
+0 @R4@ FAM
+1 HUSB @P22@
+1 WIFE @P23@
+1 CHIL @P24@
+1 MARR
+2 NOTE ⚭
+0 @R5@ FAM
+1 HUSB @P25@
+1 WIFE @P26@
+1 CHIL @P27@
+1 MARR
+2 NOTE ⚭
+0 @R6@ FAM
+1 HUSB @P24@
+1 WIFE @P27@
+1 CHIL @P28@
+1 CHIL @P29@
+1 CHIL @P30@
+1 CHIL @P31@
+1 CHIL @P32@
+1 CHIL @P33@
+1 CHIL @P34@
+1 CHIL @P35@
+1 MARR
+2 NOTE 23/12/1818 / ⚭
+0 @R7@ FAM
+1 HUSB @P36@
+1 WIFE @P37@
+1 CHIL @P38@
+1 CHIL @P39@
+1 CHIL @P40@
+1 CHIL @P41@
+1 CHIL @P42@
+1 MARR
+2 NOTE ⚭
+0 @R8@ FAM
+1 HUSB @P30@
+1 WIFE @P38@
+1 CHIL @P43@
+1 CHIL @P44@
+1 CHIL @P45@
+1 CHIL @P46@
+1 CHIL @P47@
+1 CHIL @P48@
+1 CHIL @P49@
+1 MARR
+2 NOTE 02/12/1848 / ⚭
+0 @R9@ FAM
+1 HUSB @P21@
+1 WIFE @P49@
+1 CHIL @P50@
+1 CHIL @P51@
+1 CHIL @P52@
+1 CHIL @P53@
+1 CHIL @P54@
+1 CHIL @P55@
+1 CHIL @P56@
+1 CHIL @P57@
+1 CHIL @P58@
+1 MARR
+2 NOTE 22/11/1882 / ⚭
+0 @R10@ FAM
+1 HUSB @P59@
+1 WIFE @P60@
+1 CHIL @P61@
+1 CHIL @P62@
+1 CHIL @P63@
+1 CHIL @P64@
+1 CHIL @P65@
+1 CHIL @P66@
+1 MARR
+2 NOTE ⚭
+0 @R11@ FAM
+1 HUSB @P67@
+1 WIFE @P68@
+1 CHIL @P69@
+1 CHIL @P70@
+1 CHIL @P71@
+1 CHIL @P72@
+1 CHIL @P73@
+1 CHIL @P74@
+1 MARR
+2 NOTE ⚭
+0 @R12@ FAM
+1 HUSB @P61@
+1 WIFE @P73@
+1 CHIL @P75@
+1 MARR
+2 NOTE (09/05/1817) / ⚭
+0 @R13@ FAM
+1 HUSB @P76@
+1 WIFE @P77@
+1 CHIL @P78@
+1 CHIL @P79@
+1 CHIL @P80@
+1 MARR
+2 NOTE ⚭
+0 @R14@ FAM
+1 HUSB @P81@
+1 WIFE @P82@
+1 CHIL @P83@
+1 MARR
+2 NOTE ⚭
+0 @R15@ FAM
+1 HUSB @P78@
+1 WIFE @P83@
+1 CHIL @P84@
+1 CHIL @P85@
+1 CHIL @P86@
+1 CHIL @P87@
+1 CHIL @P88@
+1 CHIL @P89@
+1 MARR
+2 NOTE ⚭
+0 @R16@ FAM
+1 HUSB @P75@
+1 WIFE @P84@
+1 CHIL @P90@
+1 CHIL @P91@
+1 CHIL @P92@
+1 CHIL @P93@
+1 CHIL @P94@
+1 MARR
+2 NOTE ⚭
+0 @R17@ FAM
+1 HUSB @P94@
+1 WIFE @P95@
+1 CHIL @P96@
+1 MARR
+2 NOTE 11/10/1894 / ⚭
+0 @R18@ FAM
+1 HUSB @P97@
+1 WIFE @P98@
+1 CHIL @P99@
+1 MARR
+2 NOTE ⚭
+0 @R19@ FAM
+1 HUSB @P100@
+1 WIFE @P101@
+1 CHIL @P102@
+1 MARR
+2 NOTE ⚭
+0 @R20@ FAM
+1 HUSB @P99@
+1 WIFE @P102@
+1 CHIL @P103@
+1 MARR
+2 NOTE ⚭
+0 @R21@ FAM
+1 HUSB @P103@
+1 WIFE @P104@
+1 CHIL @P105@
+1 CHIL @P106@
+1 MARR
+2 NOTE ⚭
+0 @R22@ FAM
+1 HUSB @P107@
+1 WIFE @P108@
+1 CHIL @P109@
+1 CHIL @P110@
+1 CHIL @P111@
+1 MARR
+2 NOTE ⚭
+0 @R23@ FAM
+1 HUSB @P111@
+1 WIFE @P112@
+1 CHIL @P113@
+1 CHIL @P114@
+1 CHIL @P115@
+1 CHIL @P116@
+1 MARR
+2 NOTE ⚭
+0 @R24@ FAM
+1 HUSB @P105@
+1 WIFE @P114@
+1 CHIL @P117@
+1 CHIL @P118@
+1 CHIL @P119@
+1 CHIL @P120@
+1 MARR
+2 NOTE La Salut (24/01/1927) / ⚭
+0 @R25@ FAM
+1 HUSB @P117@
+1 WIFE @P121@
+1 CHIL @P122@
+1 MARR
+2 NOTE La Salut (10/05/1958) / ⚭
+0 @R26@ FAM
+1 HUSB @P119@
+1 WIFE @P123@
+1 MARR
+2 NOTE (15/05/1976) / ⚭
+0 @R27@ FAM
+1 HUSB @P120@
+1 WIFE @P124@
+1 MARR
+2 NOTE ♡
+0 @R28@ FAM
+1 HUSB @P120@
+1 WIFE @P125@
+1 CHIL @P126@
+1 CHIL @P127@
+1 MARR
+2 NOTE Saragossa (30/05/1961) / ○ ○
+0 @R29@ FAM
+1 HUSB @P55@
+1 WIFE @P96@
+1 CHIL @P128@
+1 CHIL @P129@
+1 CHIL @P130@
+1 MARR
+2 NOTE St. Julià d’Altura (15/12/1920) / ⚭
+0 @R30@ FAM
+1 HUSB @P128@
+1 WIFE @P131@
+1 CHIL @P132@
+1 CHIL @P133@
+1 CHIL @P134@
+1 CHIL @P135@
+1 CHIL @P136@
+1 CHIL @P137@
+1 MARR
+2 NOTE 12/08/1945 / ⚭
+0 @R31@ FAM
+1 HUSB @P130@
+1 WIFE @P138@
+1 CHIL @P139@
+1 CHIL @P140@
+1 MARR
+2 NOTE 10/07/1964 / ⚭
+0 @R32@ FAM
+1 HUSB @P129@
+1 WIFE @P118@
+1 CHIL @P141@
+1 CHIL @P142@
+1 CHIL @P143@
+1 CHIL @P144@
+1 CHIL @P145@
+1 CHIL @P146@
+1 MARR
+2 NOTE La Salut (07/05/1952) / ⚭
+0 @R33@ FAM
+1 HUSB @P141@
+1 WIFE @P147@
+1 CHIL @P148@
+1 MARR
+2 NOTE La Creu Alta (Maig 1976) / ○ ○
+0 @R34@ FAM
+1 HUSB @P141@
+1 WIFE @P149@
+1 CHIL @P150@
+1 CHIL @P151@
+1 MARR
+2 NOTE 1981 / ♡
+0 @R35@ FAM
+1 HUSB @P152@
+1 WIFE @P153@
+1 CHIL @P154@
+1 MARR
+2 NOTE Bellvís (19/06/2016) / ⚭
+0 @R36@ FAM
+1 HUSB @P151@
+1 WIFE @P155@
+1 CHIL @P197@
+1 MARR
+2 NOTE (13/06/2015) / ♡
+0 @R37@ FAM
+1 HUSB @P142@
+1 WIFE @P156@
+1 CHIL @P157@
+1 CHIL @P158@
+1 MARR
+2 NOTE La Saut (18/04/1979) / ⚭
+0 @R38@ FAM
+1 HUSB @P157@
+1 WIFE @P159@
+1 CHIL @P160@
+1 CHIL @P161@
+1 MARR
+2 NOTE (15/04/2010) / ♡
+0 @R39@ FAM
+1 HUSB @P158@
+1 WIFE @P162@
+1 CHIL @P163@
+1 CHIL @P164@
+1 MARR
+2 NOTE Matadepera (05/12/2007) / ⚭
+0 @R40@ FAM
+1 HUSB @P143@
+1 WIFE @P165@
+1 CHIL @P166@
+1 CHIL @P167@
+1 MARR
+2 NOTE Seva (09/09/1978) / ○ ○
+0 @R41@ FAM
+1 HUSB @P143@
+1 WIFE @P168@
+1 MARR
+2 NOTE (04/08/1988) / ♡
+0 @R42@ FAM
+1 HUSB @P166@
+1 WIFE @P169@
+1 CHIL @P170@
+1 CHIL @P171@
+1 MARR
+2 NOTE (11/09/2001) / ○ ○
+0 @R43@ FAM
+1 HUSB @P166@
+1 WIFE @P172@
+1 MARR
+2 NOTE (23/04/2014) / ♡
+0 @R44@ FAM
+1 HUSB @P167@
+1 WIFE @P173@
+1 CHIL @P174@
+1 CHIL @P175@
+1 MARR
+2 NOTE (10/03/2007) / ○ ○
+0 @R45@ FAM
+1 HUSB @P167@
+1 WIFE @P176@
+1 MARR
+2 NOTE (15/07/2016) / ○ ○
+0 @R46@ FAM
+1 HUSB @P144@
+1 WIFE @P177@
+1 CHIL @P178@
+1 CHIL @P179@
+1 CHIL @P180@
+1 MARR
+2 NOTE El Brull (15/07/1989) / ○ ○
+0 @R47@ FAM
+1 HUSB @P144@
+1 WIFE @P181@
+1 CHIL @P182@
+1 MARR
+2 NOTE Sabadell 05/04/2019 / ⚭
+0 @R48@ FAM
+1 HUSB @P178@
+1 WIFE @P183@
+1 CHIL @P198@
+1 CHIL @P199@
+1 MARR
+2 NOTE (08/03/2018) / ♡
+0 @R49@ FAM
+1 HUSB @P179@
+1 WIFE @P184@
+1 CHIL @P200@
+1 MARR
+2 NOTE (19/08/2012) / ♡
+0 @R50@ FAM
+1 HUSB @P145@
+1 WIFE @P185@
+1 CHIL @P186@
+1 MARR
+2 NOTE Arsèguel (07/07/1990) / ○ ○
+0 @R51@ FAM
+1 HUSB @P145@
+1 WIFE @P187@
+1 CHIL @P188@
+1 CHIL @P189@
+1 MARR
+2 NOTE La Cortinada 02/10/2009 / ⚭
+0 @R52@ FAM
+1 HUSB @P146@
+1 WIFE @P190@
+1 CHIL @P191@
+1 CHIL @P192@
+1 MARR
+2 NOTE St. Vicenç de Montalt (17/06/2001) / ⚭
+0 @R53@ FAM
+1 HUSB @P193@
+1 WIFE @P194@
+1 CHIL @P196@
+1 MARR
+2 DATE 19/06/2022
+2 PLAC Vilafranca del Penedès
+2 NOTE Vilafranca del Penedès (19/06/2022) / ⚭
+0 @R54@ FAM
+1 HUSB @P186@
+1 WIFE @P195@
+1 MARR
+2 DATE 21/03/2025
+2 PLAC Sidney
+2 NOTE Sidney (21/03/2025) / ⚭
+0 @R55@ FAM
+1 HUSB @P150@
+1 WIFE @P201@
+1 MARR
+2 DATE 23/03/2025
+2 PLAC La Seu d’Urgell
+2 NOTE La Seu d’Urgell (23/03/2025) / ⚭
+0 @R56@ FAM
+1 MARR
+2 NOTE ⚭
 0 TRLR
