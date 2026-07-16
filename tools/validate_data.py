@@ -57,7 +57,7 @@ for link in family.get('directParentLinks',[]):
 missing=ids-set(layout['people'])
 if missing: errors.append('missing layout: '+', '.join(sorted(missing)))
 if len(family['people'])!=202: errors.append(f"expected 202 people, found {len(family['people'])}")
-if len(family['relationships'])!=55: errors.append(f"expected 55 relationships, found {len(family['relationships'])}")
+if len(family['relationships'])!=56: errors.append(f"expected 56 relationships, found {len(family['relationships'])}")
 
 required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js']
 for path in required:

@@ -12,11 +12,13 @@
     "./layout/people-01.json",
     "./layout/people-02.json",
     "./layout/people-03.json",
-    "./layout/people-04.json"
+    "./layout/people-04.json",
+    "./layout/people-05.json"
   ],
   "relationshipParts": [
     "./layout/relationships-01.json",
     "./layout/relationships-02.json",
-    "./layout/relationships-03.json"
+    "./layout/relationships-03.json",
+    "./layout/relationships-04.json"
   ]
 }
