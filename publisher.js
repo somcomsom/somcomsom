@@ -27,6 +27,9 @@ export async function publishChanges(family,layout){
     await putFile('data/family.json',JSON.stringify(family,null,2)+'\n',token,'Actualitza les dades familiars');
     status.textContent='Publicant la disposició…';
     await putFile('data/layout.json',JSON.stringify(layout,null,2)+'\n',token,'Actualitza la disposició de l’arbre');
+    status.textContent='Consolidant els ajustos…';
+    await putFile('data/family-overrides.json','{"people":{},"relationships":{}}\n',token,'Consolida els ajustos familiars');
+    await putFile('data/layout-overrides.json','{"people":{},"relationships":{}}\n',token,'Consolida els ajustos de maquetació');
     status.textContent='Publicant el GEDCOM…';
     await putFile('data/somcomsom.ged',buildGedcom(family),token,'Actualitza la còpia GEDCOM');
     status.textContent='Publicat. GitHub Pages s’actualitzarà automàticament.';
