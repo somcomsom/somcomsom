@@ -29,6 +29,38 @@ function mergePeople(people,overrides){
   });
 }
 
+function mergeRelationships(relationships,overrides){
+  const updates=overrides?.relationships||{};
+  const seen=new Set();
+  const merged=relationships.map(relation=>{
+    const patch=updates[relation.id];
+    if(!patch)return relation;
+    seen.add(relation.id);
+    return {...relation,...patch};
+  });
+  for(const [id,patch] of Object.entries(updates)){
+    if(!seen.has(id) && !relationships.some(relation=>relation.id===id))merged.push({id,...patch});
+  }
+  return merged;
+}
+
+function applyFamilyOverrides(family,overrides){
+  if(!overrides)return family;
+  family.people=mergePeople(family.people||[],overrides);
+  family.relationships=mergeRelationships(family.relationships||[],overrides);
+  family.meta={...(family.meta||{}),...(overrides.meta||{})};
+  if(Array.isArray(overrides.directParentLinks))family.directParentLinks=overrides.directParentLinks;
+  return family;
+}
+
+function applyLayoutOverrides(layout,overrides){
+  if(!overrides)return layout;
+  layout.people={...(layout.people||{}),...(overrides.people||{})};
+  layout.relationships={...(layout.relationships||{}),...(overrides.relationships||{})};
+  if(overrides.canvas)layout.canvas={...(layout.canvas||{}),...overrides.canvas};
+  return layout;
+}
+
 async function loadFamily(){
   const monolith=await optionalJson('./data/family.json');
   let family;
@@ -42,25 +74,30 @@ async function loadFamily(){
     family={version:manifest.version||1,meta:manifest.meta||{},people,relationships,directParentLinks:manifest.directParentLinks||[]};
   }
   const overrides=await optionalJson('./data/family-overrides.json');
-  family.people=mergePeople(family.people||[],overrides);
-  return family;
+  return applyFamilyOverrides(family,overrides);
 }
 
 async function loadLayout(){
   const monolith=await optionalJson('./data/layout.json');
-  if(monolith) return monolith;
-  const path='./data/layout-manifest.json';
-  const manifest=await getJson(path);
-  const peopleParts=await Promise.all((manifest.peopleParts||[]).map(part=>getJson(resolvePart(path,part))));
-  const relationshipParts=await Promise.all((manifest.relationshipParts||[]).map(part=>getJson(resolvePart(path,part))));
-  return {
-    version:manifest.version||1,
-    canvas:manifest.canvas||{},
-    timeline:manifest.timeline||[],
-    title:manifest.title||{},
-    people:Object.assign({},...peopleParts),
-    relationships:Object.assign({},...relationshipParts)
-  };
+  let layout;
+  if(monolith){
+    layout=monolith;
+  }else{
+    const path='./data/layout-manifest.json';
+    const manifest=await getJson(path);
+    const peopleParts=await Promise.all((manifest.peopleParts||[]).map(part=>getJson(resolvePart(path,part))));
+    const relationshipParts=await Promise.all((manifest.relationshipParts||[]).map(part=>getJson(resolvePart(path,part))));
+    layout={
+      version:manifest.version||1,
+      canvas:manifest.canvas||{},
+      timeline:manifest.timeline||[],
+      title:manifest.title||{},
+      people:Object.assign({},...peopleParts),
+      relationships:Object.assign({},...relationshipParts)
+    };
+  }
+  const overrides=await optionalJson('./data/layout-overrides.json');
+  return applyLayoutOverrides(layout,overrides);
 }
 
 export async function loadAll(){
@@ -133,6 +170,6 @@ export function utf8Base64(text){
   const bytes=new TextEncoder().encode(text);
   let binary='';
   const size=0x8000;
-  for(let i=0;i<bytes.length;i+=size) binary+=String.fromCharCode(...bytes.subarray(i,i+size));
+  for(let i=0;i<bytes.length;i+=size)binary+=String.fromCharCode(...bytes.subarray(i,i+size));
   return btoa(binary);
 }
