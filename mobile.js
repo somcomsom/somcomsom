@@ -1,3 +1,5 @@
+import './pinch-zoom.js?v=20260716-1';
+
 const portraitQuery=matchMedia('(max-width: 820px) and (orientation: portrait)');
 const sidebar=document.querySelector('#sidebar');
 const toggle=document.querySelector('#sidebar-toggle');
