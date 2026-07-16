@@ -34,8 +34,8 @@ for link in family.get('directParentLinks',[]):
     if link.get('parent') not in ids or link.get('child') not in ids: errors.append(f'bad direct link {link}')
 missing=ids-set(layout['people'])
 if missing: errors.append('missing layout: '+', '.join(sorted(missing)))
-if len(family['people'])!=193: errors.append(f"expected 193 people, found {len(family['people'])}")
-if len(family['relationships'])!=52: errors.append(f"expected 52 relationships, found {len(family['relationships'])}")
+if len(family['people'])!=200: errors.append(f"expected 200 people, found {len(family['people'])}")
+if len(family['relationships'])!=54: errors.append(f"expected 54 relationships, found {len(family['relationships'])}")
 
 required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js']
 for path in required:
