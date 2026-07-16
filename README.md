@@ -5,6 +5,7 @@ Arbre familiar interactiu **Escorihuela · Magrinyà**, reconstruït en SVG amb 
 ## Arquitectura mantenible
 
 - `data/family-manifest.json` i `data/family/`: 200 persones, naixements, defuncions, pares, fills i 54 relacions.
+- `data/family-overrides.json`: correccions i actualitzacions puntuals aplicades sobre les dades originals sense reescriure fitxers grans.
 - `data/layout-manifest.json` i `data/layout/`: coordenades i mides de cada persona i relació.
 - `app.js`: genera l’SVG, les connexions, la cerca, el zoom i la navegació.
 - `admin.html`: editor visual per afegir o modificar persones, relacions i posicions.
