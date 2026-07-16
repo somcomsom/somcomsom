@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "relationshipCount": 56
+  },
   "people": {
     "p147": {
       "details": ["Sabadell (17/02/1956) - Puig-Reig (18/04/2022)"],
@@ -14,5 +17,27 @@
         "date": "20/12/2020"
       }
     }
-  }
+  },
+  "relationships": {
+    "r36": {
+      "type": "married",
+      "label": "(13/06/2015)\n⚭"
+    },
+    "r55": {
+      "type": "partner",
+      "label": "La Seu d’Urgell (23/03/2025)\n♡"
+    },
+    "r56": {
+      "type": "separated",
+      "label": "○ ○",
+      "partners": ["p202", "p149"],
+      "children": ["p152"],
+      "place": "",
+      "date": "",
+      "renderLabel": true
+    }
+  },
+  "directParentLinks": [
+    {"parent": "p190", "child": "p193"}
+  ]
 }

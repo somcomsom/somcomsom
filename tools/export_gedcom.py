@@ -4,20 +4,32 @@ import json
 root=Path(__file__).resolve().parents[1]
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
 
-def apply_overrides(people):
+def apply_family_overrides(family):
     path=root/'data/family-overrides.json'
-    if not path.exists(): return people
-    updates=load(path).get('people',{})
-    merged=[]
-    for person in people:
-        patch=updates.get(person['id'])
+    if not path.exists(): return family
+    overrides=load(path)
+    people_updates=overrides.get('people',{})
+    people=[]
+    for person in family.get('people',[]):
+        patch=people_updates.get(person['id'])
         if not patch:
-            merged.append(person); continue
+            people.append(person); continue
         item={**person,**patch}
         item['birth']={**person.get('birth',{}),**patch.get('birth',{})}
         item['death']={**person.get('death',{}),**patch.get('death',{})}
-        merged.append(item)
-    return merged
+        people.append(item)
+    family['people']=people
+
+    relation_updates=overrides.get('relationships',{})
+    relationships=[]; seen=set()
+    for relation in family.get('relationships',[]):
+        patch=relation_updates.get(relation['id'])
+        relationships.append({**relation,**patch} if patch else relation)
+        seen.add(relation['id'])
+    for relation_id,patch in relation_updates.items():
+        if relation_id not in seen: relationships.append({'id':relation_id,**patch})
+    family['relationships']=relationships
+    return family
 
 mono=root/'data/family.json'
 if mono.exists(): family=load(mono)
@@ -26,7 +38,7 @@ else:
     for p in m.get('peopleParts',[]): people += load(root/'data'/p.replace('./',''))
     for p in m.get('relationshipParts',[]): relationships += load(root/'data'/p.replace('./',''))
     family={'people':people,'relationships':relationships}
-family['people']=apply_overrides(family.get('people',[]))
+family=apply_family_overrides(family)
 
 lines=['0 HEAD','1 SOUR SOMCOMSOM','1 GEDC','2 VERS 5.5.1','1 CHAR UTF-8']
 for p in family['people']:
