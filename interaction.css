@@ -13,3 +13,8 @@
 .preview svg {
   -webkit-user-drag: none;
 }
+
+.direct-line,
+.preview-direct {
+  stroke-dasharray: none;
+}
