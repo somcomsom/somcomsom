@@ -5,20 +5,35 @@ root=Path(__file__).resolve().parents[1]
 
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
 
-def apply_overrides(people):
+def apply_family_overrides(family):
     path=root/'data/family-overrides.json'
-    if not path.exists(): return people
-    updates=load(path).get('people',{})
+    if not path.exists(): return family
+    overrides=load(path)
+    people_updates=overrides.get('people',{})
     merged=[]
-    for person in people:
-        patch=updates.get(person['id'])
+    for person in family.get('people',[]):
+        patch=people_updates.get(person['id'])
         if not patch:
             merged.append(person); continue
         item={**person,**patch}
         item['birth']={**person.get('birth',{}),**patch.get('birth',{})}
         item['death']={**person.get('death',{}),**patch.get('death',{})}
         merged.append(item)
-    return merged
+    family['people']=merged
+
+    relation_updates=overrides.get('relationships',{})
+    relations=[]; seen=set()
+    for relation in family.get('relationships',[]):
+        patch=relation_updates.get(relation['id'])
+        relations.append({**relation,**patch} if patch else relation)
+        seen.add(relation['id'])
+    for relation_id,patch in relation_updates.items():
+        if relation_id not in seen: relations.append({'id':relation_id,**patch})
+    family['relationships']=relations
+    family['meta']={**family.get('meta',{}),**overrides.get('meta',{})}
+    if isinstance(overrides.get('directParentLinks'),list):
+        family['directParentLinks']=overrides['directParentLinks']
+    return family
 
 def family_data():
     mono=root/'data/family.json'
@@ -30,17 +45,25 @@ def family_data():
         for p in m.get('peopleParts',[]): people += load(root/'data'/p.replace('./',''))
         for p in m.get('relationshipParts',[]): relationships += load(root/'data'/p.replace('./',''))
         family={'version':m.get('version',1),'meta':m.get('meta',{}),'people':people,'relationships':relationships,'directParentLinks':m.get('directParentLinks',[])}
-    family['people']=apply_overrides(family.get('people',[]))
-    return family
+    return apply_family_overrides(family)
 
 def layout_data():
     mono=root/'data/layout.json'
-    if mono.exists(): return load(mono)
-    m=load(root/'data/layout-manifest.json')
-    people={}; relationships={}
-    for p in m.get('peopleParts',[]): people.update(load(root/'data'/p.replace('./','')))
-    for p in m.get('relationshipParts',[]): relationships.update(load(root/'data'/p.replace('./','')))
-    return {'people':people,'relationships':relationships}
+    if mono.exists():
+        layout=load(mono)
+    else:
+        m=load(root/'data/layout-manifest.json')
+        people={}; relationships={}
+        for p in m.get('peopleParts',[]): people.update(load(root/'data'/p.replace('./','')))
+        for p in m.get('relationshipParts',[]): relationships.update(load(root/'data'/p.replace('./','')))
+        layout={'people':people,'relationships':relationships}
+    path=root/'data/layout-overrides.json'
+    if path.exists():
+        overrides=load(path)
+        layout['people']={**layout.get('people',{}),**overrides.get('people',{})}
+        layout['relationships']={**layout.get('relationships',{}),**overrides.get('relationships',{})}
+        if overrides.get('canvas'): layout['canvas']={**layout.get('canvas',{}),**overrides['canvas']}
+    return layout
 
 family=family_data(); layout=layout_data()
 ids={p['id'] for p in family['people']}
@@ -58,6 +81,30 @@ missing=ids-set(layout['people'])
 if missing: errors.append('missing layout: '+', '.join(sorted(missing)))
 if len(family['people'])!=202: errors.append(f"expected 202 people, found {len(family['people'])}")
 if len(family['relationships'])!=56: errors.append(f"expected 56 relationships, found {len(family['relationships'])}")
+
+relations={relation['id']:relation for relation in family['relationships']}
+expected_types={'r36':'married','r55':'partner','r56':'separated'}
+for relation_id,relation_type in expected_types.items():
+    if relations.get(relation_id,{}).get('type')!=relation_type:
+        errors.append(f'{relation_id}: expected type {relation_type}')
+if relations.get('r56',{}).get('children')!=['p152']:
+    errors.append('r56 must connect Irene Armengol Martí as child')
+if any(link.get('child')=='p152' for link in family.get('directParentLinks',[])):
+    errors.append('Irene must be connected through r56, not directParentLinks')
+
+levels={
+    1830.53:['p202','p149'],
+    1998.13:['p153','p152','p201','p150','p151','p155','p148'],
+    2154.94:['p154','p197']
+}
+for expected_y,person_ids in levels.items():
+    for person_id in person_ids:
+        actual=layout['people'].get(person_id,{}).get('y')
+        if actual is None or abs(actual-expected_y)>0.05:
+            errors.append(f'{person_id}: expected y {expected_y}, found {actual}')
+for relation_id in ('r34','r35','r36','r55','r56'):
+    if relation_id not in layout.get('relationships',{}):
+        errors.append(f'missing relationship layout: {relation_id}')
 
 required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js']
 for path in required:
