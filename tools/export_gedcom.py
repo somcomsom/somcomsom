@@ -3,6 +3,22 @@ from pathlib import Path
 import json
 root=Path(__file__).resolve().parents[1]
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
+
+def apply_overrides(people):
+    path=root/'data/family-overrides.json'
+    if not path.exists(): return people
+    updates=load(path).get('people',{})
+    merged=[]
+    for person in people:
+        patch=updates.get(person['id'])
+        if not patch:
+            merged.append(person); continue
+        item={**person,**patch}
+        item['birth']={**person.get('birth',{}),**patch.get('birth',{})}
+        item['death']={**person.get('death',{}),**patch.get('death',{})}
+        merged.append(item)
+    return merged
+
 mono=root/'data/family.json'
 if mono.exists(): family=load(mono)
 else:
@@ -10,6 +26,8 @@ else:
     for p in m.get('peopleParts',[]): people += load(root/'data'/p.replace('./',''))
     for p in m.get('relationshipParts',[]): relationships += load(root/'data'/p.replace('./',''))
     family={'people':people,'relationships':relationships}
+family['people']=apply_overrides(family.get('people',[]))
+
 lines=['0 HEAD','1 SOUR SOMCOMSOM','1 GEDC','2 VERS 5.5.1','1 CHAR UTF-8']
 for p in family['people']:
     lines += [f"0 @{p['id'].upper()}@ INDI",f"1 NAME {p.get('name',p['id'])}"]

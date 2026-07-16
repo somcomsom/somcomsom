@@ -5,14 +5,33 @@ root=Path(__file__).resolve().parents[1]
 
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
 
+def apply_overrides(people):
+    path=root/'data/family-overrides.json'
+    if not path.exists(): return people
+    updates=load(path).get('people',{})
+    merged=[]
+    for person in people:
+        patch=updates.get(person['id'])
+        if not patch:
+            merged.append(person); continue
+        item={**person,**patch}
+        item['birth']={**person.get('birth',{}),**patch.get('birth',{})}
+        item['death']={**person.get('death',{}),**patch.get('death',{})}
+        merged.append(item)
+    return merged
+
 def family_data():
     mono=root/'data/family.json'
-    if mono.exists(): return load(mono)
-    m=load(root/'data/family-manifest.json')
-    people=[]; relationships=[]
-    for p in m.get('peopleParts',[]): people += load(root/'data'/p.replace('./',''))
-    for p in m.get('relationshipParts',[]): relationships += load(root/'data'/p.replace('./',''))
-    return {'version':m.get('version',1),'meta':m.get('meta',{}),'people':people,'relationships':relationships,'directParentLinks':m.get('directParentLinks',[])}
+    if mono.exists():
+        family=load(mono)
+    else:
+        m=load(root/'data/family-manifest.json')
+        people=[]; relationships=[]
+        for p in m.get('peopleParts',[]): people += load(root/'data'/p.replace('./',''))
+        for p in m.get('relationshipParts',[]): relationships += load(root/'data'/p.replace('./',''))
+        family={'version':m.get('version',1),'meta':m.get('meta',{}),'people':people,'relationships':relationships,'directParentLinks':m.get('directParentLinks',[])}
+    family['people']=apply_overrides(family.get('people',[]))
+    return family
 
 def layout_data():
     mono=root/'data/layout.json'

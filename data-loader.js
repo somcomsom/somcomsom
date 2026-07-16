@@ -15,14 +15,35 @@ function resolvePart(manifestPath,part){
   return new URL(part,new URL(manifestPath,location.href)).href;
 }
 
+function mergePeople(people,overrides){
+  const updates=overrides?.people||{};
+  return people.map(person=>{
+    const patch=updates[person.id];
+    if(!patch)return person;
+    return {
+      ...person,
+      ...patch,
+      birth:{...(person.birth||{}),...(patch.birth||{})},
+      death:{...(person.death||{}),...(patch.death||{})}
+    };
+  });
+}
+
 async function loadFamily(){
   const monolith=await optionalJson('./data/family.json');
-  if(monolith) return monolith;
-  const path='./data/family-manifest.json';
-  const manifest=await getJson(path);
-  const people=(await Promise.all((manifest.peopleParts||[]).map(part=>getJson(resolvePart(path,part))))).flat();
-  const relationships=(await Promise.all((manifest.relationshipParts||[]).map(part=>getJson(resolvePart(path,part))))).flat();
-  return {version:manifest.version||1,meta:manifest.meta||{},people,relationships,directParentLinks:manifest.directParentLinks||[]};
+  let family;
+  if(monolith){
+    family=monolith;
+  }else{
+    const path='./data/family-manifest.json';
+    const manifest=await getJson(path);
+    const people=(await Promise.all((manifest.peopleParts||[]).map(part=>getJson(resolvePart(path,part))))).flat();
+    const relationships=(await Promise.all((manifest.relationshipParts||[]).map(part=>getJson(resolvePart(path,part))))).flat();
+    family={version:manifest.version||1,meta:manifest.meta||{},people,relationships,directParentLinks:manifest.directParentLinks||[]};
+  }
+  const overrides=await optionalJson('./data/family-overrides.json');
+  family.people=mergePeople(family.people||[],overrides);
+  return family;
 }
 
 async function loadLayout(){
