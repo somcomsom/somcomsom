@@ -1,0 +1,5137 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "SOM COM SOM",
+    "subtitle": "Arbre familiar Escorihuela - Magrinyà",
+    "peopleCount": 202,
+    "relationshipCount": 55
+  },
+  "people": [
+    {
+      "id": "p1",
+      "name": "Miguel Escorihuela",
+      "details": [
+        "Fortanete"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p2",
+      "name": "Maria Martín Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p3",
+      "name": "Miguel Escorihuela Martín",
+      "details": [
+        "Fortanete (1814)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1814"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p4",
+      "name": "Joaquín Escorihuela Martín",
+      "details": [
+        "Fortanete (1820)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1820"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p5",
+      "name": "Rafael Escorihuela Martín",
+      "details": [
+        "Fortanete (1822) - (28/12/1878)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1822"
+      },
+      "death": {
+        "place": "",
+        "date": "28/12/1878"
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p6",
+      "name": "Maria Apolonia Escorihuela Martín",
+      "details": [
+        "Fortanete (1827)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1827"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p7",
+      "name": "Sixta Escorihuela Martín",
+      "details": [
+        "Fortanete (1829) - (04/02/1886)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1829"
+      },
+      "death": {
+        "place": "",
+        "date": "04/02/1886"
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p8",
+      "name": "Florencia Escorihuela Martín",
+      "details": [
+        "Fortanete (1833) - (10/04/1892)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1833"
+      },
+      "death": {
+        "place": "",
+        "date": "10/04/1892"
+      },
+      "parents": [
+        "p1",
+        "p2"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p9",
+      "name": "Francisco Herrero Cañada",
+      "details": [
+        "Fortanete"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p10",
+      "name": "Marcelina Cano",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p11",
+      "name": "Benigna Herrero Cano",
+      "details": [
+        "Fortanete (1824) - (22/06/1882)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1824"
+      },
+      "death": {
+        "place": "",
+        "date": "22/06/1882"
+      },
+      "parents": [
+        "p9",
+        "p10"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p12",
+      "name": "Rafael Herrero Cano",
+      "details": [
+        "Fortanete (1836)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1836"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p9",
+        "p10"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p13",
+      "name": "? Herrero Cano",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p9",
+        "p10"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p14",
+      "name": "Serafín Escorihuela Herrero",
+      "details": [
+        "Fortanete (17/06/1846)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "17/06/1846"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p15",
+      "name": "Juana Maria Escorihuela Herrero",
+      "details": [
+        "Fortanete (26/02/1847) - (18/02/1849)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "26/02/1847"
+      },
+      "death": {
+        "place": "",
+        "date": "18/02/1849"
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p16",
+      "name": "Ramona Escorihuela Herrero",
+      "details": [
+        "Fortanete (1848) - (Abans 06/1882)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1848"
+      },
+      "death": {
+        "place": "",
+        "date": "Abans 06/1882"
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p17",
+      "name": "Juan Bautista Escorihuela Herrero",
+      "details": [
+        "Fortanete (1852) - (Abans 06/1882)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1852"
+      },
+      "death": {
+        "place": "",
+        "date": "Abans 06/1882"
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p18",
+      "name": "Maria Joaquina Escorihuela Herrero",
+      "details": [
+        "Fortanete (Abans 06/1882)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "Abans 06/1882"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p19",
+      "name": "Francisca Escorihuela Herrero",
+      "details": [
+        "Fortanete (1853)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1853"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p20",
+      "name": "? Escorihuela Herrero",
+      "details": [
+        "Fortanete"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p21",
+      "name": "Rafael Escorihuela Herrero",
+      "details": [
+        "Fortanete (1858) - (17/05/1932)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "1858"
+      },
+      "death": {
+        "place": "",
+        "date": "17/05/1932"
+      },
+      "parents": [
+        "p5",
+        "p11"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p22",
+      "name": "Pasqual Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p23",
+      "name": "Carmela Castel",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p24",
+      "name": "Melchor Oliver Castel",
+      "details": [
+        "(1798/1802) - (18/09/1881)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1798/1802"
+      },
+      "death": {
+        "place": "",
+        "date": "18/09/1881"
+      },
+      "parents": [
+        "p22",
+        "p23"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p25",
+      "name": "Joaquin Buj Gascón",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p26",
+      "name": "Rosa Carod Perez",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p27",
+      "name": "Paula Buj Carod",
+      "details": [
+        "(1802) - (23/07/1877)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1802"
+      },
+      "death": {
+        "place": "",
+        "date": "23/07/1877"
+      },
+      "parents": [
+        "p25",
+        "p26"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p28",
+      "name": "Estefania Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p29",
+      "name": "Mariana Oliver Buj",
+      "details": [
+        "(1825) - (09/06/1885)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1825"
+      },
+      "death": {
+        "place": "",
+        "date": "09/06/1885"
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p30",
+      "name": "Mariano Oliver Buj",
+      "details": [
+        "Cantavieja (1827) - (1897-1900)"
+      ],
+      "birth": {
+        "place": "Cantavieja",
+        "date": "1827"
+      },
+      "death": {
+        "place": "",
+        "date": "1897-1900"
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p31",
+      "name": "Maria Andresa Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p32",
+      "name": "Maria Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p33",
+      "name": "Rafael Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p34",
+      "name": "Pascual Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p35",
+      "name": "? Oliver Buj",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p24",
+        "p27"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p36",
+      "name": "José Altaba",
+      "details": [
+        "Cantavieja"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p37",
+      "name": "Úrsula Mestre",
+      "details": [
+        "Cantavieja"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p38",
+      "name": "Francisca Altaba Mestre",
+      "details": [
+        "Cantavieja (1825)"
+      ],
+      "birth": {
+        "place": "Cantavieja",
+        "date": "1825"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p36",
+        "p37"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p39",
+      "name": "Valero Altaba Mestre",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p36",
+        "p37"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p40",
+      "name": "Miguela Altaba Mestre",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p36",
+        "p37"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p41",
+      "name": "José Altaba Mestre",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p36",
+        "p37"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p42",
+      "name": "...",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p36",
+        "p37"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p43",
+      "name": "Mariano Oliver Altaba",
+      "details": [
+        "Cantavieja (1849) - (03/02/1932)"
+      ],
+      "birth": {
+        "place": "Cantavieja",
+        "date": "1849"
+      },
+      "death": {
+        "place": "",
+        "date": "03/02/1932"
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p44",
+      "name": "Manuel Oliver Altaba",
+      "details": [
+        "Sacerdot"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p45",
+      "name": "Maria Oliver Altaba",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p46",
+      "name": "Miguela Oliver Altaba",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p47",
+      "name": "Andresa Oliver Altaba",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p48",
+      "name": "Josefa Oliver Altaba",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p49",
+      "name": "Rosa Oliver Altaba",
+      "details": [
+        "Cantavieja (1859) - Fortanete (05/02/1939)"
+      ],
+      "birth": {
+        "place": "Cantavieja",
+        "date": "1859"
+      },
+      "death": {
+        "place": "Fortanete",
+        "date": "05/02/1939"
+      },
+      "parents": [
+        "p30",
+        "p38"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p50",
+      "name": "Benigno Escorihuela Oliver",
+      "details": [
+        "Fortanete (13/02/1884) - (18/12/1956)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "13/02/1884"
+      },
+      "death": {
+        "place": "",
+        "date": "18/12/1956"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p51",
+      "name": "Martín Escorihuela Oliver",
+      "details": [
+        "Fortanete (11/11/1885) - (24/03/1890)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "11/11/1885"
+      },
+      "death": {
+        "place": "",
+        "date": "24/03/1890"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p52",
+      "name": "Juan Escorihuela Oliver",
+      "details": [
+        "Fortanete (23/06/1887) - (20/01/1889)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "23/06/1887"
+      },
+      "death": {
+        "place": "",
+        "date": "20/01/1889"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p53",
+      "name": "Maria Escorihuela Oliver",
+      "details": [
+        "Fortanete (26/11/1889) - (31/03/1920)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "26/11/1889"
+      },
+      "death": {
+        "place": "",
+        "date": "31/03/1920"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p54",
+      "name": "Benita Escorihuela Oliver",
+      "details": [
+        "Fortanete (21/03/1893) - Sabadell (29/10/1983)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "21/03/1893"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "29/10/1983"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p55",
+      "name": "Isidre Escorihuela Oliver",
+      "details": [
+        "Fortanete (14/05/1895) - Sabadell (06/05/1967)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "14/05/1895"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "06/05/1967"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p56",
+      "name": "Estanislau Escorihuela Oliver",
+      "details": [
+        "Fortanete (07/05/1897) - Sabadell (01/07/1984)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "07/05/1897"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "01/07/1984"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p57",
+      "name": "Rafael Escorihuela Oliver",
+      "details": [
+        "Fortanete (21/09/1900) - Sabadell (02/02/1977)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "21/09/1900"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "02/02/1977"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p58",
+      "name": "Anunciación Escorihuela Oliver",
+      "details": [
+        "Fortanete (18/11/1902) - Fortanete (12/01/1926)"
+      ],
+      "birth": {
+        "place": "Fortanete",
+        "date": "18/11/1902"
+      },
+      "death": {
+        "place": "Fortanete",
+        "date": "12/01/1926"
+      },
+      "parents": [
+        "p21",
+        "p49"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p59",
+      "name": "Joan Lloberas",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p60",
+      "name": "Catarina Poal",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p61",
+      "name": "Pau Lloberas i Poal",
+      "details": [
+        "Terrassa (27/07/1810)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "27/07/1810"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p62",
+      "name": "Marc Lloberas i Poal",
+      "details": [
+        "Terrassa (04/09/1813)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "04/09/1813"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p63",
+      "name": "Antònia Lloberas i Poal",
+      "details": [
+        "Terrassa (05/06/1816)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "05/06/1816"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p64",
+      "name": "Teresa Lloberas i Poal",
+      "details": [
+        "Terrassa (08/01/1819)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "08/01/1819"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p65",
+      "name": "Jaume Lloberas i Poal",
+      "details": [
+        "Terrassa (01/03/1821)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "01/03/1821"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p66",
+      "name": "Narcís Lloberas i Poal",
+      "details": [
+        "Terrassa (12/12/1823)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "12/12/1823"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p59",
+        "p60"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p67",
+      "name": "Josep Argelaguet",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p68",
+      "name": "Antonia Ramoneda",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p69",
+      "name": "Mª Àngela Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (18/01/1798)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "18/01/1798"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p70",
+      "name": "Anton Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (03/01/1802)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "03/01/1802"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p71",
+      "name": "Baltazar Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (28/02/1804)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "28/02/1804"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p72",
+      "name": "Mª Anna Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (26/05/1806)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "26/05/1806"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p73",
+      "name": "Catarina Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (25/04/1810)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "25/04/1810"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p74",
+      "name": "Pau Argelaguet i Ramoneda",
+      "details": [
+        "Terrassa (18/06/1812)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "18/06/1812"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p67",
+        "p68"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p75",
+      "name": "Joan Lloberas i Argelaguet",
+      "details": [
+        "(1835/1885)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1835/1885"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p61",
+        "p73"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p76",
+      "name": "Josep Badiella",
+      "details": [
+        "Terrassa"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p77",
+      "name": "Mariana Duran",
+      "details": [
+        "Terrassa"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p78",
+      "name": "Jacint Badiella i Duran",
+      "details": [
+        "Terrassa (1814)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "1814"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p76",
+        "p77"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p79",
+      "name": "Ramón Badiella i Duran",
+      "details": [
+        "Terrassa (1821)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "1821"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p76",
+        "p77"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p80",
+      "name": "Elies Badiella i Duran",
+      "details": [
+        "Terrassa (1826)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "1826"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p76",
+        "p77"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p81",
+      "name": "Josep Llongueras",
+      "details": [
+        "Terrassa"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p82",
+      "name": "Ignàsia Santandreu",
+      "details": [
+        "Terrassa"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p83",
+      "name": "Mª Teresa Llongueras i Santandreu",
+      "details": [
+        "Terrassa (1824)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "1824"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p81",
+        "p82"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p84",
+      "name": "Ignàsia Badiella i Llongueras",
+      "details": [
+        "(1839)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1839"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p85",
+      "name": "Rita Badiella i Llongueras",
+      "details": [
+        "Terrassa (1842)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "1842"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p86",
+      "name": "Jacint Badiella i Llongueras",
+      "details": [
+        "Terrassa (30/10/1843)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "30/10/1843"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p87",
+      "name": "Anna Badiella i Llongueras",
+      "details": [
+        "Terrassa (22/06/1851)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "22/06/1851"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p88",
+      "name": "Josep Badiella i Llongueras",
+      "details": [
+        "Terrassa (18/11/1854)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "18/11/1854"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p89",
+      "name": "Mariana Badiella i Llongueras",
+      "details": [
+        "Terrassa (12/1857)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "12/1857"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p78",
+        "p83"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p90",
+      "name": "Pau Lloberas Badiella",
+      "details": [
+        "Terrassa (11/06/1857)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "11/06/1857"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p75",
+        "p84"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p91",
+      "name": "Jacint Lloberas Badiella",
+      "details": [
+        "Terrassa (01/09/1859)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "01/09/1859"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p75",
+        "p84"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p92",
+      "name": "Assumpció Lloberas Badiella",
+      "details": [
+        "Terrassa (11/05/1861)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "11/05/1861"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p75",
+        "p84"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p93",
+      "name": "Josep Lloberas Badiella",
+      "details": [
+        "Terrassa (18/12/1863)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "18/12/1863"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p75",
+        "p84"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p94",
+      "name": "Joan Lloberas Badiella",
+      "details": [
+        "Terrassa (23/06/1870) - (20/06/1936)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "23/06/1870"
+      },
+      "death": {
+        "place": "",
+        "date": "20/06/1936"
+      },
+      "parents": [
+        "p75",
+        "p84"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p95",
+      "name": "Josepa Margarit i Figueras",
+      "details": [
+        "Terrassa (04/1874) - (03/06/1966)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "04/1874"
+      },
+      "death": {
+        "place": "",
+        "date": "03/06/1966"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p96",
+      "name": "Assumpció Lloveras i Margarit",
+      "details": [
+        "Terrassa (12/05/1897) - Sabadell (20/07/1975)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "12/05/1897"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "20/07/1975"
+      },
+      "parents": [
+        "p94",
+        "p95"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p97",
+      "name": "Ramón Magrinyà",
+      "details": [
+        "Valls"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p98",
+      "name": "Maria Vives",
+      "details": [
+        "Puigpelat"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p99",
+      "name": "Ramón Magrinyà Vives",
+      "details": [
+        "Valls"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p97",
+        "p98"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p100",
+      "name": "Pere Brunet",
+      "details": [
+        "Valls"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p101",
+      "name": "Maria Gispert",
+      "details": [
+        "Puigpelat"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p102",
+      "name": "Rosa Brunet Gispert",
+      "details": [
+        "Puigpelat"
+      ],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p100",
+        "p101"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p103",
+      "name": "Francisco Magrinyà Brunet",
+      "details": [
+        "Valls (05/09/1872)"
+      ],
+      "birth": {
+        "place": "Valls",
+        "date": "05/09/1872"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p99",
+        "p102"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p104",
+      "name": "Florentina Salbatella Casamitjana",
+      "details": [
+        "Mas Rampinyo (25/02/1871)"
+      ],
+      "birth": {
+        "place": "Mas Rampinyo",
+        "date": "25/02/1871"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p105",
+      "name": "Francisco Magriñà Salbatella",
+      "details": [
+        "Sabadell (26/03/1901) - Sant Feliu de Llobregat (25/01/1939)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "26/03/1901"
+      },
+      "death": {
+        "place": "Sant Feliu de Llobregat",
+        "date": "25/01/1939"
+      },
+      "parents": [
+        "p103",
+        "p104"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p106",
+      "name": "Jaume Magriñà Salbatella",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p103",
+        "p104"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p107",
+      "name": "Ramón Mallofré Martí",
+      "details": [
+        "(12/08/1907)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "12/08/1907"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p108",
+      "name": "Francisca Capdevila Valls",
+      "details": [
+        "(21/06/1908)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "21/06/1908"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p109",
+      "name": "Joan Mallofré Capdevila",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p107",
+        "p108"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p110",
+      "name": "Ramón Mallofré Capdevila",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p107",
+        "p108"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p111",
+      "name": "Pere Mallofré Capdevila",
+      "details": [
+        "Sabadell (1874) - (05/01/1940)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "1874"
+      },
+      "death": {
+        "place": "",
+        "date": "05/01/1940"
+      },
+      "parents": [
+        "p107",
+        "p108"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p112",
+      "name": "Esperança Marcet Serra",
+      "details": [
+        "Sabadell (1878) - (05/10/1938)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "1878"
+      },
+      "death": {
+        "place": "",
+        "date": "05/10/1938"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p113",
+      "name": "Ramón Mallofré Marcet",
+      "details": [
+        "(04/03/1901) - (15/05/1981)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "04/03/1901"
+      },
+      "death": {
+        "place": "",
+        "date": "15/05/1981"
+      },
+      "parents": [
+        "p111",
+        "p112"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p114",
+      "name": "Francisca Mallofré Marcet",
+      "details": [
+        "Sabadell (13/02/1904) - Sabadell (08/05/1995)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "13/02/1904"
+      },
+      "death": {
+        "place": "Sabadell",
+        "date": "08/05/1995"
+      },
+      "parents": [
+        "p111",
+        "p112"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p115",
+      "name": "Josep Mallofré Marcet",
+      "details": [
+        "(19/03/1908) - (20/07/1995)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "19/03/1908"
+      },
+      "death": {
+        "place": "",
+        "date": "20/07/1995"
+      },
+      "parents": [
+        "p111",
+        "p112"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p116",
+      "name": "Peret Mallofré Marcet",
+      "details": [
+        "(1911) - (22/06/1999)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "1911"
+      },
+      "death": {
+        "place": "",
+        "date": "22/06/1999"
+      },
+      "parents": [
+        "p111",
+        "p112"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p117",
+      "name": "Esperança Magriñà Mallofré",
+      "details": [
+        "Sabadell (08/06/1928) - Barcelona (09/02/1992)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "08/06/1928"
+      },
+      "death": {
+        "place": "Barcelona",
+        "date": "09/02/1992"
+      },
+      "parents": [
+        "p105",
+        "p114"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p118",
+      "name": "Montserrat Magriñà Mallofré",
+      "details": [
+        "Sabadell (29/01/1930)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "29/01/1930"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p105",
+        "p114"
+      ],
+      "notes": "",
+      "focus": true,
+      "renderLabel": true
+    },
+    {
+      "id": "p119",
+      "name": "Roser Magriñà Mallofré",
+      "details": [
+        "Sabadell (11/05/1932)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "11/05/1932"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p105",
+        "p114"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p120",
+      "name": "Ramón Magriñà Mallofré",
+      "details": [
+        "Sabadell (08/05/1935) - Valladolid (25/02/2013)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "08/05/1935"
+      },
+      "death": {
+        "place": "Valladolid",
+        "date": "25/02/2013"
+      },
+      "parents": [
+        "p105",
+        "p114"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p121",
+      "name": "Àngel Homedes Castells",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p122",
+      "name": "Àngel Homedes Magrinyà",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p117",
+        "p121"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p123",
+      "name": "Andreu Capdevila Ustrell",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p124",
+      "name": "Eulàlia",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p125",
+      "name": "Mª Pilar Contreras López",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p126",
+      "name": "Marta Magriñà Contreras",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p120",
+        "p125"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p127",
+      "name": "David Magriñà Contreras",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p120",
+        "p125"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p128",
+      "name": "Pepita Escorihuela Lloveras",
+      "details": [
+        "Sabadell (12/08/1923) - (05/01/2015)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "12/08/1923"
+      },
+      "death": {
+        "place": "",
+        "date": "05/01/2015"
+      },
+      "parents": [
+        "p55",
+        "p96"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p129",
+      "name": "Joan Escorihuela Lloveras",
+      "details": [
+        "Sabadell (24/07/1927) - (14/12/2006)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "24/07/1927"
+      },
+      "death": {
+        "place": "",
+        "date": "14/12/2006"
+      },
+      "parents": [
+        "p55",
+        "p96"
+      ],
+      "notes": "",
+      "focus": true,
+      "renderLabel": true
+    },
+    {
+      "id": "p130",
+      "name": "Rosa Escorihuela Lloveras",
+      "details": [
+        "Sabadell (15/03/1933)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "15/03/1933"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p55",
+        "p96"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p131",
+      "name": "Josep Argelaguet i Badia",
+      "details": [
+        "Sabadell (03/10/1917) - (06/12/2007)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "03/10/1917"
+      },
+      "death": {
+        "place": "",
+        "date": "06/12/2007"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p132",
+      "name": "Susi Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (21/09/1946)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "21/09/1946"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p133",
+      "name": "Mercè Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (02/03/1948)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "02/03/1948"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p134",
+      "name": "Maria Rosa Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (07/10/1949)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "07/10/1949"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p135",
+      "name": "Anna Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (29/10/1953)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "29/10/1953"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p136",
+      "name": "Joan Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (04/09/1955)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "04/09/1955"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p137",
+      "name": "Pepe Argelaguet Escorihuela",
+      "details": [
+        "Sabadell (03/08/1965)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "03/08/1965"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p128",
+        "p131"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p138",
+      "name": "Joan Borràs Massagué",
+      "details": [
+        "Sabadell (16/08/1932)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "16/08/1932"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p139",
+      "name": "Susi Borràs Escorihuela",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p130",
+        "p138"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p140",
+      "name": "Toni Borràs Escorihuela",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p130",
+        "p138"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p141",
+      "name": "Joan Escorihuela Magriñà",
+      "details": [
+        "Sabadell (14/03/1953)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "14/03/1953"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p142",
+      "name": "Sisco Escorihuela Magriñà",
+      "details": [
+        "Sabadell (15/01/1955)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "15/01/1955"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p143",
+      "name": "Montse Escorihuela Magriñà",
+      "details": [
+        "Sabadell (22/04/1957)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "22/04/1957"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p144",
+      "name": "Jordi Escorihuela Magriñà",
+      "details": [
+        "Sabadell (22/02/1962)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "22/02/1962"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p145",
+      "name": "Isidre Escorihuela Magriñà",
+      "details": [
+        "Sabadell (15/11/1964)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "15/11/1964"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p146",
+      "name": "Isabel Escorihuela Magriñà",
+      "details": [
+        "Sabadell (22/01/1973)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "22/01/1973"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p129",
+        "p118"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p147",
+      "name": "Encarnita Navarro Zafra",
+      "details": [
+        "Sabadell (17/02/1956) - Puig-Reig (18/04/2022)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "17/02/1956"
+      },
+      "death": {
+        "place": "Puig-Reig",
+        "date": "18/04/2022"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p148",
+      "name": "Francesc Escorihuela Navarro",
+      "details": [
+        "Sabadell (30/10/1976)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "30/10/1976"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p141",
+        "p147"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p149",
+      "name": "Dolors Martí Monrabà",
+      "details": [
+        "Sabadell (23/03/1959)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "23/03/1959"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p150",
+      "name": "Joan Escorihuela Martí",
+      "details": [
+        "Sabadell (13/04/1983)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "13/04/1983"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p141",
+        "p149"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p151",
+      "name": "Anna Escorihuela Martí",
+      "details": [
+        "La Seu d’Urgell (09/10/1990)"
+      ],
+      "birth": {
+        "place": "La Seu d’Urgell",
+        "date": "09/10/1990"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p141",
+        "p149"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p152",
+      "name": "Irene Armengol Martí",
+      "details": [
+        "Sabadell (17/03/1980)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "17/03/1980"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p149",
+        "p202"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p153",
+      "name": "Sebastià Domenjó Solé",
+      "details": [
+        "Lleida (16/06/1977)"
+      ],
+      "birth": {
+        "place": "Lleida",
+        "date": "16/06/1977"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p154",
+      "name": "Clàudia Domenjó Armengol",
+      "details": [
+        "Lleida (25/11/2013)"
+      ],
+      "birth": {
+        "place": "Lleida",
+        "date": "25/11/2013"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p152",
+        "p153"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p155",
+      "name": "Ramón Segarra Oromí",
+      "details": [
+        "Montoliu de Segarra (28/07/1986)"
+      ],
+      "birth": {
+        "place": "Montoliu de Segarra",
+        "date": "28/07/1986"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p156",
+      "name": "Montse Auladell Garriga",
+      "details": [
+        "Sabadell (14/11/1954) - (20/12/2020)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "14/11/1954"
+      },
+      "death": {
+        "place": "",
+        "date": "20/12/2020"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p157",
+      "name": "Cristina Escorihuela Auladell",
+      "details": [
+        "Sabadell (07/12/1981)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "07/12/1981"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p142",
+        "p156"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p158",
+      "name": "Albert Escorihuela Auladell",
+      "details": [
+        "Sabadell (16/08/1983)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "16/08/1983"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p142",
+        "p156"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p159",
+      "name": "Toni Vila Perdiguero",
+      "details": [
+        "Tona (03/10/1963)"
+      ],
+      "birth": {
+        "place": "Tona",
+        "date": "03/10/1963"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p160",
+      "name": "Lia Vila Escorihuela",
+      "details": [
+        "Barcelona (20/01/2016)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "20/01/2016"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p157",
+        "p159"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p161",
+      "name": "Noah Vila Escorihuela",
+      "details": [
+        "Barcelona (20/01/2016)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "20/01/2016"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p157",
+        "p159"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p162",
+      "name": "Genevieve Thibault",
+      "details": [
+        "Montreal (10/10/1982)"
+      ],
+      "birth": {
+        "place": "Montreal",
+        "date": "10/10/1982"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p163",
+      "name": "Alexandre Escorihuela Thibault",
+      "details": [
+        "Terrassa (26/04/2015)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "26/04/2015"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p158",
+        "p162"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p164",
+      "name": "Chloé Escorihuela Thibault",
+      "details": [
+        "Terrassa (21/05/2017)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "21/05/2017"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p158",
+        "p162"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p165",
+      "name": "Santi Casamada Molins",
+      "details": [
+        "Barcelona (01/08/1949) - (?)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "01/08/1949"
+      },
+      "death": {
+        "place": "",
+        "date": "?"
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p166",
+      "name": "Glòria Escorihuela Casamada",
+      "details": [
+        "Sabadell (09/04/1980)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "09/04/1980"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p143",
+        "p165"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p167",
+      "name": "Marta Escorihuela Casamada",
+      "details": [
+        "Sabadell (07/08/1984)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "07/08/1984"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p143",
+        "p165"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p168",
+      "name": "Conxa Cequiel Casañas",
+      "details": [
+        "Barcelona (04/07/1949)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "04/07/1949"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p169",
+      "name": "Josep Mª Cercuns Parés",
+      "details": [
+        "Vic (21/03/1975)"
+      ],
+      "birth": {
+        "place": "Vic",
+        "date": "21/03/1975"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p170",
+      "name": "Laia Cercuns Escorihuela",
+      "details": [
+        "Vic (26/01/2005)"
+      ],
+      "birth": {
+        "place": "Vic",
+        "date": "26/01/2005"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p166",
+        "p169"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p171",
+      "name": "Clara Cercuns Escorihuela",
+      "details": [
+        "Vic (15/02/2008)"
+      ],
+      "birth": {
+        "place": "Vic",
+        "date": "15/02/2008"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p166",
+        "p169"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p172",
+      "name": "Paulí Vela Muñoz",
+      "details": [
+        "Torelló (16/09/1958)"
+      ],
+      "birth": {
+        "place": "Torelló",
+        "date": "16/09/1958"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p173",
+      "name": "Toni Valor Mena",
+      "details": [
+        "(20/03/1984)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "20/03/1984"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p174",
+      "name": "Georgina Valor Escorihuela",
+      "details": [
+        "Sant Pere de Vilamajor (27/04/2009)"
+      ],
+      "birth": {
+        "place": "Sant Pere de Vilamajor",
+        "date": "27/04/2009"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p167",
+        "p173"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p175",
+      "name": "Oriol Valor Escorihuela",
+      "details": [
+        "Sant Pere de Vilamajor (28/02/2012)"
+      ],
+      "birth": {
+        "place": "Sant Pere de Vilamajor",
+        "date": "28/02/2012"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p167",
+        "p173"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p176",
+      "name": "Andreu Bonet Fort",
+      "details": [
+        "(12/09/1984)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "12/09/1984"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p177",
+      "name": "Mariana Sánchez Villarejo",
+      "details": [
+        "Antequera (09/02/1966)"
+      ],
+      "birth": {
+        "place": "Antequera",
+        "date": "09/02/1966"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p178",
+      "name": "Marc Escorihuela Sánchez",
+      "details": [
+        "Sabadell (26/02/1992)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "26/02/1992"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p144",
+        "p177"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p179",
+      "name": "Clara Escorihuela Sànchez",
+      "details": [
+        "Sabadell (08/04/1994)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "08/04/1994"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p144",
+        "p177"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p180",
+      "name": "Sergi Escorihuela Sánchez",
+      "details": [
+        "Sabadell (29/11/2002)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "29/11/2002"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p144",
+        "p177"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p181",
+      "name": "Edith Hilares Guillen",
+      "details": [
+        "Lima (23/06/1972)"
+      ],
+      "birth": {
+        "place": "Lima",
+        "date": "23/06/1972"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p182",
+      "name": "Arlet Escorihuela Hilares",
+      "details": [
+        "Sabadell (26/08/2019)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "26/08/2019"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p144",
+        "p181"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p183",
+      "name": "Laura del Paso Martínez",
+      "details": [
+        "Manresa (10/04/1993)"
+      ],
+      "birth": {
+        "place": "Manresa",
+        "date": "10/04/1993"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p184",
+      "name": "Roger Guil Ribera",
+      "details": [
+        "Rellinars (05/10/1988)"
+      ],
+      "birth": {
+        "place": "Rellinars",
+        "date": "05/10/1988"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p185",
+      "name": "Sara Cabestany Chifoni",
+      "details": [
+        "Zurich (12/10/1963)"
+      ],
+      "birth": {
+        "place": "Zurich",
+        "date": "12/10/1963"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p186",
+      "name": "Bernat Escorihuela Cabestany",
+      "details": [
+        "La Bastida d’Hortons (21/06/1994)"
+      ],
+      "birth": {
+        "place": "La Bastida d’Hortons",
+        "date": "21/06/1994"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p145",
+        "p185"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p187",
+      "name": "Ester Segura Lanao",
+      "details": [
+        "Escaldes-Engordany (27/09/1976)"
+      ],
+      "birth": {
+        "place": "Escaldes-Engordany",
+        "date": "27/09/1976"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p188",
+      "name": "Gil Escorihuela Segura",
+      "details": [
+        "Anyós (24/03/2012)"
+      ],
+      "birth": {
+        "place": "Anyós",
+        "date": "24/03/2012"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p145",
+        "p187"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p189",
+      "name": "Martí Escorihuela Segura",
+      "details": [
+        "Anyós (28/02/2015)"
+      ],
+      "birth": {
+        "place": "Anyós",
+        "date": "28/02/2015"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p145",
+        "p187"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p190",
+      "name": "Josep Rovira Pastor",
+      "details": [
+        "(19/03/1962)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "19/03/1962"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p191",
+      "name": "Pau Rovira Escorihuela",
+      "details": [
+        "Sabadell (28/05/2002)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "28/05/2002"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p146",
+        "p190"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p192",
+      "name": "Marta Rovira Escorihuela",
+      "details": [
+        "Sabadell (07/07/2005)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "07/07/2005"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p146",
+        "p190"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p193",
+      "name": "Clàudia Rovira Vives",
+      "details": [
+        "Barcelona (21/09/1995)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "21/09/1995"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p190"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p194",
+      "name": "Cristian Pérez Ponce",
+      "details": [
+        "(22/11/1994)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "22/11/1994"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p195",
+      "name": "Judith Albaladejo de la Torre",
+      "details": [
+        "Sabadell (24/02/1994)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "24/02/1994"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p196",
+      "name": "Oliver Rovira Pérez",
+      "details": [
+        "Barcelona (14/02/2024)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "14/02/2024"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p193",
+        "p194"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p197",
+      "name": "Biel Segarra Escorihuela",
+      "details": [
+        "(30/07/2023)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "30/07/2023"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p151",
+        "p155"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p198",
+      "name": "Bruna Escorihuela del Paso",
+      "details": [
+        "(30/10/2021)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "30/10/2021"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p178",
+        "p183"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p199",
+      "name": "Roc Escorihuela del Paso",
+      "details": [
+        "(27/02/2024)"
+      ],
+      "birth": {
+        "place": "",
+        "date": "27/02/2024"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p178",
+        "p183"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p200",
+      "name": "Pep Guil Escorihuela",
+      "details": [
+        "Terrassa (17/07/2024)"
+      ],
+      "birth": {
+        "place": "Terrassa",
+        "date": "17/07/2024"
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [
+        "p179",
+        "p184"
+      ],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p201",
+      "name": "Meritxell Melero M",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    },
+    {
+      "id": "p202",
+      "name": "Esteve Armengol",
+      "details": [],
+      "birth": {
+        "place": "",
+        "date": ""
+      },
+      "death": {
+        "place": "",
+        "date": ""
+      },
+      "parents": [],
+      "notes": "",
+      "focus": false,
+      "renderLabel": true
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r1",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p1",
+        "p2"
+      ],
+      "children": [
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r2",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p9",
+        "p10"
+      ],
+      "children": [
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r3",
+      "type": "married",
+      "label": "24/03/1845\n⚭",
+      "partners": [
+        "p5",
+        "p11"
+      ],
+      "children": [
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r4",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p22",
+        "p23"
+      ],
+      "children": [
+        "p24"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r5",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p25",
+        "p26"
+      ],
+      "children": [
+        "p27"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r6",
+      "type": "married",
+      "label": "23/12/1818\n⚭",
+      "partners": [
+        "p24",
+        "p27"
+      ],
+      "children": [
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r7",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p36",
+        "p37"
+      ],
+      "children": [
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r8",
+      "type": "married",
+      "label": "02/12/1848\n⚭",
+      "partners": [
+        "p30",
+        "p38"
+      ],
+      "children": [
+        "p43",
+        "p44",
+        "p45",
+        "p46",
+        "p47",
+        "p48",
+        "p49"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r9",
+      "type": "married",
+      "label": "22/11/1882\n⚭",
+      "partners": [
+        "p21",
+        "p49"
+      ],
+      "children": [
+        "p50",
+        "p51",
+        "p52",
+        "p53",
+        "p54",
+        "p55",
+        "p56",
+        "p57",
+        "p58"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r10",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p59",
+        "p60"
+      ],
+      "children": [
+        "p61",
+        "p62",
+        "p63",
+        "p64",
+        "p65",
+        "p66"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r11",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p67",
+        "p68"
+      ],
+      "children": [
+        "p69",
+        "p70",
+        "p71",
+        "p72",
+        "p73",
+        "p74"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r12",
+      "type": "married",
+      "label": "(09/05/1817)\n⚭",
+      "partners": [
+        "p61",
+        "p73"
+      ],
+      "children": [
+        "p75"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r13",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p76",
+        "p77"
+      ],
+      "children": [
+        "p78",
+        "p79",
+        "p80"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r14",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p81",
+        "p82"
+      ],
+      "children": [
+        "p83"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r15",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p78",
+        "p83"
+      ],
+      "children": [
+        "p84",
+        "p85",
+        "p86",
+        "p87",
+        "p88",
+        "p89"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r16",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p75",
+        "p84"
+      ],
+      "children": [
+        "p90",
+        "p91",
+        "p92",
+        "p93",
+        "p94"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r17",
+      "type": "married",
+      "label": "11/10/1894\n⚭",
+      "partners": [
+        "p94",
+        "p95"
+      ],
+      "children": [
+        "p96"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r18",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p97",
+        "p98"
+      ],
+      "children": [
+        "p99"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r19",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p100",
+        "p101"
+      ],
+      "children": [
+        "p102"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r20",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p99",
+        "p102"
+      ],
+      "children": [
+        "p103"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r21",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p103",
+        "p104"
+      ],
+      "children": [
+        "p105",
+        "p106"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r22",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p107",
+        "p108"
+      ],
+      "children": [
+        "p109",
+        "p110",
+        "p111"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r23",
+      "type": "married",
+      "label": "⚭",
+      "partners": [
+        "p111",
+        "p112"
+      ],
+      "children": [
+        "p113",
+        "p114",
+        "p115",
+        "p116"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r24",
+      "type": "married",
+      "label": "La Salut (24/01/1927)\n⚭",
+      "partners": [
+        "p105",
+        "p114"
+      ],
+      "children": [
+        "p117",
+        "p118",
+        "p119",
+        "p120"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r25",
+      "type": "married",
+      "label": "La Salut (10/05/1958)\n⚭",
+      "partners": [
+        "p117",
+        "p121"
+      ],
+      "children": [
+        "p122"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r26",
+      "type": "married",
+      "label": "(15/05/1976)\n⚭",
+      "partners": [
+        "p119",
+        "p123"
+      ],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r27",
+      "type": "partner",
+      "label": "♡",
+      "partners": [
+        "p120",
+        "p124"
+      ],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r28",
+      "type": "separated",
+      "label": "Saragossa (30/05/1961)\n○ ○",
+      "partners": [
+        "p120",
+        "p125"
+      ],
+      "children": [
+        "p126",
+        "p127"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r29",
+      "type": "married",
+      "label": "St. Julià d’Altura (15/12/1920)\n⚭",
+      "partners": [
+        "p55",
+        "p96"
+      ],
+      "children": [
+        "p128",
+        "p129",
+        "p130"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r30",
+      "type": "married",
+      "label": "12/08/1945\n⚭",
+      "partners": [
+        "p128",
+        "p131"
+      ],
+      "children": [
+        "p132",
+        "p133",
+        "p134",
+        "p135",
+        "p136",
+        "p137"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r31",
+      "type": "married",
+      "label": "10/07/1964\n⚭",
+      "partners": [
+        "p130",
+        "p138"
+      ],
+      "children": [
+        "p139",
+        "p140"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r32",
+      "type": "married",
+      "label": "La Salut (07/05/1952)\n⚭",
+      "partners": [
+        "p129",
+        "p118"
+      ],
+      "children": [
+        "p141",
+        "p142",
+        "p143",
+        "p144",
+        "p145",
+        "p146"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r33",
+      "type": "separated",
+      "label": "La Creu Alta (Maig 1976)\n○ ○",
+      "partners": [
+        "p141",
+        "p147"
+      ],
+      "children": [
+        "p148"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r34",
+      "type": "partner",
+      "label": "1981\n♡",
+      "partners": [
+        "p141",
+        "p149"
+      ],
+      "children": [
+        "p150",
+        "p151"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r35",
+      "type": "married",
+      "label": "Bellvís (19/06/2016)\n⚭",
+      "partners": [
+        "p152",
+        "p153"
+      ],
+      "children": [
+        "p154"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r36",
+      "type": "partner",
+      "label": "(13/06/2015)\n♡",
+      "partners": [
+        "p151",
+        "p155"
+      ],
+      "children": [
+        "p197"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r37",
+      "type": "married",
+      "label": "La Saut (18/04/1979)\n⚭",
+      "partners": [
+        "p142",
+        "p156"
+      ],
+      "children": [
+        "p157",
+        "p158"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r38",
+      "type": "partner",
+      "label": "(15/04/2010)\n♡",
+      "partners": [
+        "p157",
+        "p159"
+      ],
+      "children": [
+        "p160",
+        "p161"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r39",
+      "type": "married",
+      "label": "Matadepera (05/12/2007)\n⚭",
+      "partners": [
+        "p158",
+        "p162"
+      ],
+      "children": [
+        "p163",
+        "p164"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r40",
+      "type": "separated",
+      "label": "Seva (09/09/1978)\n○ ○",
+      "partners": [
+        "p143",
+        "p165"
+      ],
+      "children": [
+        "p166",
+        "p167"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r41",
+      "type": "partner",
+      "label": "(04/08/1988)\n♡",
+      "partners": [
+        "p143",
+        "p168"
+      ],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r42",
+      "type": "separated",
+      "label": "(11/09/2001)\n○ ○",
+      "partners": [
+        "p166",
+        "p169"
+      ],
+      "children": [
+        "p170",
+        "p171"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r43",
+      "type": "partner",
+      "label": "(23/04/2014)\n♡",
+      "partners": [
+        "p166",
+        "p172"
+      ],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r44",
+      "type": "separated",
+      "label": "(10/03/2007)\n○ ○",
+      "partners": [
+        "p167",
+        "p173"
+      ],
+      "children": [
+        "p174",
+        "p175"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r45",
+      "type": "separated",
+      "label": "(15/07/2016)\n○ ○",
+      "partners": [
+        "p167",
+        "p176"
+      ],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r46",
+      "type": "separated",
+      "label": "El Brull (15/07/1989)\n○ ○",
+      "partners": [
+        "p144",
+        "p177"
+      ],
+      "children": [
+        "p178",
+        "p179",
+        "p180"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r47",
+      "type": "married",
+      "label": "Sabadell 05/04/2019\n⚭",
+      "partners": [
+        "p144",
+        "p181"
+      ],
+      "children": [
+        "p182"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r48",
+      "type": "partner",
+      "label": "(08/03/2018)\n♡",
+      "partners": [
+        "p178",
+        "p183"
+      ],
+      "children": [
+        "p198",
+        "p199"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r49",
+      "type": "partner",
+      "label": "(19/08/2012)\n♡",
+      "partners": [
+        "p179",
+        "p184"
+      ],
+      "children": [
+        "p200"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r50",
+      "type": "separated",
+      "label": "Arsèguel (07/07/1990)\n○ ○",
+      "partners": [
+        "p145",
+        "p185"
+      ],
+      "children": [
+        "p186"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r51",
+      "type": "married",
+      "label": "La Cortinada 02/10/2009\n⚭",
+      "partners": [
+        "p145",
+        "p187"
+      ],
+      "children": [
+        "p188",
+        "p189"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r52",
+      "type": "married",
+      "label": "St. Vicenç de Montalt (17/06/2001)\n⚭",
+      "partners": [
+        "p146",
+        "p190"
+      ],
+      "children": [
+        "p191",
+        "p192"
+      ],
+      "place": "",
+      "date": "",
+      "renderLabel": false
+    },
+    {
+      "id": "r53",
+      "type": "married",
+      "label": "Vilafranca del Penedès (19/06/2022)\n⚭",
+      "partners": [
+        "p193",
+        "p194"
+      ],
+      "children": [
+        "p196"
+      ],
+      "place": "Vilafranca del Penedès",
+      "date": "19/06/2022",
+      "renderLabel": true
+    },
+    {
+      "id": "r54",
+      "type": "married",
+      "label": "Sidney (21/03/2025)\n⚭",
+      "partners": [
+        "p186",
+        "p195"
+      ],
+      "children": [],
+      "place": "Sidney",
+      "date": "21/03/2025",
+      "renderLabel": true
+    },
+    {
+      "id": "r55",
+      "type": "partner",
+      "label": "La Seu d’Urgell (23/03/2025)\n⚭",
+      "partners": [
+        "p150",
+        "p201"
+      ],
+      "children": [],
+      "place": "La Seu d’Urgell",
+      "date": "23/03/2025",
+      "renderLabel": true
+    },
+    {
+      "id": "r56",
+      "type": "married",
+      "label": "⚭",
+      "partners": [],
+      "children": [],
+      "place": "",
+      "date": "",
+      "renderLabel": true
+    }
+  ],
+  "directParentLinks": [
+    {
+      "parent": "p149",
+      "child": "p152"
+    },
+    {
+      "parent": "p202",
+      "child": "p152"
+    },
+    {
+      "parent": "p190",
+      "child": "p193"
+    }
+  ]
+}
