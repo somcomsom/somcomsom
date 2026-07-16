@@ -46,6 +46,9 @@ family=family_data(); layout=layout_data()
 ids={p['id'] for p in family['people']}
 errors=[]
 if len(ids)!=len(family['people']): errors.append('duplicate person IDs')
+for person in family['people']:
+    for pid in person.get('parents',[]):
+        if pid not in ids: errors.append(f"{person['id']}: unknown parent {pid}")
 for rel in family['relationships']:
     for pid in rel.get('partners',[])+rel.get('children',[]):
         if pid not in ids: errors.append(f"{rel['id']}: unknown {pid}")
@@ -53,8 +56,8 @@ for link in family.get('directParentLinks',[]):
     if link.get('parent') not in ids or link.get('child') not in ids: errors.append(f'bad direct link {link}')
 missing=ids-set(layout['people'])
 if missing: errors.append('missing layout: '+', '.join(sorted(missing)))
-if len(family['people'])!=200: errors.append(f"expected 200 people, found {len(family['people'])}")
-if len(family['relationships'])!=54: errors.append(f"expected 54 relationships, found {len(family['relationships'])}")
+if len(family['people'])!=202: errors.append(f"expected 202 people, found {len(family['people'])}")
+if len(family['relationships'])!=55: errors.append(f"expected 55 relationships, found {len(family['relationships'])}")
 
 required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js']
 for path in required:
