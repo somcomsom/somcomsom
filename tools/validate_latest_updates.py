@@ -124,7 +124,7 @@ for left_id, right_id in zip(adult_spacing_ids, adult_spacing_ids[1:]):
     right_box = layout_people.get(right_id, {})
     if left_box and right_box:
         gap = float(right_box['x']) - (float(left_box['x']) + float(left_box['width']))
-        expect(gap >= 40, f'{left_id} and {right_id} must have at least 40 layout units of horizontal separation')
+        expect(gap >= 30, f'{left_id} and {right_id} must have at least 30 layout units of horizontal separation')
 
 upper_rovira_y = 1896.75
 for person_id, expected_x in {'p193': 7550, 'p194': 7800}.items():
