@@ -75,12 +75,25 @@ for group_name, person_ids in master_line_groups.items():
         )
 
 isidre_level_y = 1830.54
-for person_id in ['p145', 'p187']:
-    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
-    expect(
-        abs(float(layout_people.get(person_id, {}).get('y', -1)) - isidre_level_y) < 0.001,
-        f'{person_id} must be aligned with Isidre at y={isidre_level_y}',
-    )
+expect(
+    abs(float(layout_people.get('p145', {}).get('y', -1)) - isidre_level_y) < 0.001,
+    f'p145 must remain at y={isidre_level_y}',
+)
+conxa_level_y = float(layout_people.get('p168', {}).get('y', -1))
+expect(abs(conxa_level_y - 1866.77) < 0.001, 'Conxa must remain at y=1866.77')
+expect(
+    abs(float(layout_people.get('p187', {}).get('y', -1)) - conxa_level_y) < 0.001,
+    'Ester must be aligned with Conxa Cequiel Casañas',
+)
+
+r34 = relations.get('r34', {})
+r51 = relations.get('r51', {})
+expect(r34.get('partners') == ['p141', 'p149'], 'r34 must connect Joan Escorihuela Magriñà and Dolors Martí Monrabà')
+expect(r51.get('partners') == ['p145', 'p187'], 'r51 must connect Isidre Escorihuela Magriñà and Ester Segura Lanao')
+r34_y = float(layout_relationships.get('r34', {}).get('y', -1))
+r51_y = float(layout_relationships.get('r51', {}).get('y', -1))
+expect(abs(r34_y - 1930) < 0.001, 'r34 must remain at y=1930')
+expect(abs(r51_y - r34_y) < 0.001, 'r51 must be aligned vertically with r34')
 
 adult_level_y = 1997.37
 adult_level_ids = ['p180', 'p186', 'p188', 'p189', 'p191', 'p195']
@@ -163,4 +176,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, separated adult labels, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, separated adult labels, master lines and La Salut couple position')
