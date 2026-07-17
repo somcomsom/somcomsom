@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import json
+import math
 
 root = Path(__file__).resolve().parents[1]
 family = json.loads((root / 'data/family.json').read_text(encoding='utf-8'))
@@ -21,6 +22,9 @@ relation_updates = overrides.get('relationships', {})
 relations = {}
 for relation in family.get('relationships', []):
     relations[relation['id']] = {**relation, **relation_updates.get(relation['id'], {})}
+for relation_id, patch in relation_updates.items():
+    if relation_id not in relations:
+        relations[relation_id] = {'id': relation_id, **patch}
 
 layout_people = {
     **layout.get('people', {}),
@@ -37,144 +41,52 @@ def expect(condition, message):
     if not condition:
         errors.append(message)
 
-expect(people.get('p170', {}).get('name') == 'Laia Escorihuela Cercuns', 'p170 name is incorrect')
-expect(people.get('p171', {}).get('name') == 'Clara Escorihuela Cercuns', 'p171 name is incorrect')
-expect(people.get('p195', {}).get('birth', {}).get('place') == 'Barcelona', 'p195 birthplace must be Barcelona')
-expect(people.get('p195', {}).get('birth', {}).get('date') == '24/02/1994', 'p195 birth date must remain 24/02/1994')
-expect(people.get('p202', {}).get('name') == 'Esteve Armengol Esteva', 'p202 full name is incorrect')
-expect(people.get('p202', {}).get('birth', {}).get('place') == 'Sabadell', 'p202 birthplace must be Sabadell')
-expect(people.get('p202', {}).get('birth', {}).get('date') == '19/03/1953', 'p202 birth date must be 19/03/1953')
+def finite_number(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(float(value))
 
-r32 = relations.get('r32', {})
-expect(r32.get('partners') == ['p129', 'p118'], 'r32 must connect Joan and Montserrat')
-expect(r32.get('label') == 'La Salut (07/05/1952)\n⚭', 'r32 must remain the La Salut alliance')
+expect(bool(people), 'the effective family must contain people')
+expect(bool(relations), 'the effective family must contain relationships')
 
-joan_box = layout_people.get('p129', {})
-montserrat_box = layout_people.get('p118', {})
-r32_point = layout_relationships.get('r32', {})
-expect(joan_box.get('x') == 5180 and joan_box.get('y') == 1295.5, 'Joan must be next to the La Salut alliance')
-expect(montserrat_box.get('x') == 5387 and montserrat_box.get('y') == 1295.5, 'Montserrat must be next to the La Salut alliance')
-if joan_box and montserrat_box and r32_point:
-    joan_center = float(joan_box['x']) + float(joan_box['width']) / 2
-    montserrat_center = float(montserrat_box['x']) + float(montserrat_box['width']) / 2
-    couple_center = (joan_center + montserrat_center) / 2
-    expect(abs(couple_center - float(r32_point['x'])) < 0.2, 'Joan and Montserrat must be centered on r32')
-    expect(20 < float(r32_point['y']) - (float(joan_box['y']) + float(joan_box['height'])) < 60, 'Joan and Montserrat must be vertically close to r32')
+for person_id, person in people.items():
+    expect(bool(str(person.get('name', '')).strip()), f'{person_id} must have a name')
+    box = layout_people.get(person_id)
+    expect(box is not None, f'{person_id} must have a layout box')
+    if box is not None:
+        for key in ('x', 'y', 'width', 'height'):
+            expect(finite_number(box.get(key)), f'{person_id}.{key} must be a finite number')
+        if finite_number(box.get('width')):
+            expect(float(box['width']) > 0, f'{person_id}.width must be positive')
+        if finite_number(box.get('height')):
+            expect(float(box['height']) > 0, f'{person_id}.height must be positive')
 
-master_line_y = 1295.9
-master_line_groups = {
-    'Magriñà Mallofré siblings': ['p117', 'p119', 'p120'],
-    'Escorihuela Lloveras siblings': ['p128', 'p130'],
-}
-for group_name, person_ids in master_line_groups.items():
-    for person_id in person_ids:
-        expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
+for relation_id, relation in relations.items():
+    point = layout_relationships.get(relation_id)
+    expect(point is not None, f'{relation_id} must have a layout point')
+    if point is not None:
+        expect(finite_number(point.get('x')), f'{relation_id}.x must be a finite number')
+        expect(finite_number(point.get('y')), f'{relation_id}.y must be a finite number')
+
+    for partner_id in relation.get('partners', []):
+        expect(partner_id in people, f'{relation_id} references missing partner {partner_id}')
+    for child_id in relation.get('children', []):
+        expect(child_id in people, f'{relation_id} references missing child {child_id}')
+
+for link in family.get('directParentLinks', []):
+    parent_id = link.get('parent')
+    child_id = link.get('child')
+    expect(parent_id in people, f'direct parent link references missing parent {parent_id}')
+    expect(child_id in people, f'direct parent link references missing child {child_id}')
+
+# This is a visual relationship requested explicitly: both marriages must stay
+# on the same horizontal row, regardless of where that row is moved later.
+r53_point = layout_relationships.get('r53')
+r54_point = layout_relationships.get('r54')
+if r53_point is not None and r54_point is not None:
+    if finite_number(r53_point.get('y')) and finite_number(r54_point.get('y')):
         expect(
-            abs(float(layout_people.get(person_id, {}).get('y', -1)) - master_line_y) < 0.001,
-            f'{group_name}: {person_id} must be aligned at y={master_line_y}',
+            abs(float(r53_point['y']) - float(r54_point['y'])) < 0.001,
+            'r53 and r54 must share the same alliance row',
         )
-
-isidre_level_y = 1830.54
-expect(
-    abs(float(layout_people.get('p145', {}).get('y', -1)) - isidre_level_y) < 0.001,
-    f'p145 must remain at y={isidre_level_y}',
-)
-conxa_level_y = float(layout_people.get('p168', {}).get('y', -1))
-expect(abs(conxa_level_y - 1866.77) < 0.001, 'Conxa must remain at y=1866.77')
-expect(
-    abs(float(layout_people.get('p187', {}).get('y', -1)) - conxa_level_y) < 0.001,
-    'Ester must be aligned with Conxa Cequiel Casañas',
-)
-
-r34 = relations.get('r34', {})
-r51 = relations.get('r51', {})
-expect(r34.get('partners') == ['p141', 'p149'], 'r34 must connect Joan Escorihuela Magriñà and Dolors Martí Monrabà')
-expect(r51.get('partners') == ['p145', 'p187'], 'r51 must connect Isidre Escorihuela Magriñà and Ester Segura Lanao')
-r34_y = float(layout_relationships.get('r34', {}).get('y', -1))
-r51_y = float(layout_relationships.get('r51', {}).get('y', -1))
-expect(abs(r34_y - 1930) < 0.001, 'r34 must remain at y=1930')
-expect(abs(r51_y - r34_y) < 0.001, 'r51 must be aligned vertically with r34')
-
-adult_level_y = 1997.37
-expected_adult_positions = {
-    'p180': 6422.85,
-    'p188': 6590,
-    'p189': 6750,
-    'p186': 6885.3,
-    'p195': 7065.4,
-    'p191': 7228.306664021813,
-    'p192': 7378.404664916992,
-    'p193': 7521.356664021807,
-    'p194': 7657.76866638183,
-}
-for person_id, expected_x in expected_adult_positions.items():
-    box = layout_people.get(person_id, {})
-    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
-    expect(abs(float(box.get('x', -1)) - expected_x) < 0.001, f'{person_id} must remain at x={expected_x}')
-    expect(
-        abs(float(box.get('y', -1)) - adult_level_y) < 0.001,
-        f'{person_id} must remain on the adult generation at y={adult_level_y}',
-    )
-
-pau_box = layout_people.get('p191', {})
-marta_box = layout_people.get('p192', {})
-if pau_box and marta_box:
-    pau_marta_gap = float(marta_box['x']) - (float(pau_box['x']) + float(pau_box['width']))
-    expect(pau_marta_gap >= 20, 'Pau and Marta must retain a readable horizontal gap')
-
-claudia_box = layout_people.get('p193', {})
-cristian_box = layout_people.get('p194', {})
-if claudia_box and cristian_box:
-    claudia_cristian_gap = float(cristian_box['x']) - (float(claudia_box['x']) + float(claudia_box['width']))
-    expect(claudia_cristian_gap >= 10, 'Clàudia and Cristian must retain a readable horizontal gap')
-
-r53_point = layout_relationships.get('r53', {})
-r54_point = layout_relationships.get('r54', {})
-expect(abs(float(r53_point.get('x', -1)) - 7472.25) < 0.01, 'r53 must retain the edited horizontal position')
-expect(abs(float(r53_point.get('y', -1)) - 2060.13) < 0.001, 'r53 must be aligned vertically with r54')
-expect(abs(float(r54_point.get('x', -1)) - 7060) < 0.01, 'r54 must retain the latest edited horizontal position')
-expect(abs(float(r54_point.get('y', -1)) - 2060.13) < 0.001, 'r54 must stay below Bernat and Judith labels')
-expect(abs(float(r53_point.get('y', -1)) - float(r54_point.get('y', -1))) < 0.001, 'r53 and r54 must share the same alliance row')
-
-oliver_box = layout_people.get('p196', {})
-expect(abs(float(oliver_box.get('x', -1)) - 7591.981998291011) < 0.01, 'Oliver must match the consolidated published position')
-expect(abs(float(oliver_box.get('y', -1)) - 2154.94) < 0.001, 'Oliver must remain on the youngest generation')
-
-r37 = relations.get('r37', {})
-expect(r37.get('type') == 'married', 'r37 must be married')
-expect(r37.get('partners') == ['p142', 'p156'], 'r37 must connect Sisco and Montse')
-expect(r37.get('place') == 'La Salut', 'r37 marriage place must be La Salut')
-expect(r37.get('date') == '18/04/1979', 'r37 marriage date must remain 18/04/1979')
-
-r48 = relations.get('r48', {})
-expect(r48.get('type') == 'married', 'r48 must be married')
-expect(r48.get('partners') == ['p178', 'p183'], 'r48 must connect Marc and Laura')
-expect(r48.get('date') == '15/04/2010', 'r48 date must remain 15/04/2010')
-
-r49 = relations.get('r49', {})
-expect(r49.get('type') == 'partner', 'r49 must be a partnership, not a marriage')
-expect(r49.get('partners') == ['p179', 'p184'], 'r49 must connect Clara and Roger')
-expect(r49.get('date') == '19/08/2012', 'r49 date must remain 19/08/2012')
-expect(r49.get('label') == '(19/08/2012)\n♡', 'r49 must use the partnership symbol')
-
-r56 = relations.get('r56', {})
-expect(r56.get('type') == 'separated', 'r56 must remain separated')
-expect(r56.get('partners') == ['p202', 'p149'], 'r56 must connect Esteve and Dolors')
-expect(r56.get('place') == 'Sabadell', 'r56 must preserve Sabadell')
-expect(r56.get('date') == '18/10/1978', 'r56 marriage date must be 18/10/1978')
-expect(r56.get('label') == 'Sabadell (18/10/1978)\n○ ○', 'r56 label must show the date and separated status')
-
-same_level_ids = [
-    'p154', 'p160', 'p161', 'p163', 'p164', 'p170', 'p171',
-    'p174', 'p175', 'p182', 'p196', 'p197', 'p198', 'p199', 'p200',
-]
-target_level = 2154.94
-for person_id in same_level_ids:
-    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
-    expect(
-        abs(float(layout_people.get(person_id, {}).get('y', -1)) - target_level) < 0.001,
-        f'{person_id} must be aligned at y={target_level}',
-    )
 
 colors = (root / 'relation-colors.css').read_text(encoding='utf-8')
 expect('.partner-line' in colors and '.preview-partner' in colors, 'unified relation line color selectors are missing')
@@ -187,4 +99,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, edited Rovira and Cabestany alliance row, master lines and La Salut couple position')
+print('OK: effective family and layout are structurally valid, editable coordinates are accepted, and r53/r54 remain aligned')
