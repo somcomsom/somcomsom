@@ -130,10 +130,11 @@ if claudia_box and cristian_box:
 
 r53_point = layout_relationships.get('r53', {})
 r54_point = layout_relationships.get('r54', {})
-expect(abs(float(r53_point.get('x', -1)) - 7472.25) < 0.01, 'r53 must retain the consolidated published position')
-expect(abs(float(r53_point.get('y', -1)) - 2025) < 0.001, 'r53 must match the consolidated published row')
-expect(abs(float(r54_point.get('x', -1)) - 7125.63) < 0.01, 'r54 must remain centered between Bernat and Judith')
+expect(abs(float(r53_point.get('x', -1)) - 7472.25) < 0.01, 'r53 must retain the edited horizontal position')
+expect(abs(float(r53_point.get('y', -1)) - 2060.13) < 0.001, 'r53 must be aligned vertically with r54')
+expect(abs(float(r54_point.get('x', -1)) - 7060) < 0.01, 'r54 must retain the latest edited horizontal position')
 expect(abs(float(r54_point.get('y', -1)) - 2060.13) < 0.001, 'r54 must stay below Bernat and Judith labels')
+expect(abs(float(r53_point.get('y', -1)) - float(r54_point.get('y', -1))) < 0.001, 'r53 and r54 must share the same alliance row')
 
 oliver_box = layout_people.get('p196', {})
 expect(abs(float(oliver_box.get('x', -1)) - 7591.981998291011) < 0.01, 'Oliver must match the consolidated published position')
@@ -186,4 +187,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, consolidated published layout, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, edited Rovira and Cabestany alliance row, master lines and La Salut couple position')
