@@ -91,6 +91,31 @@ for person_id in adult_level_ids:
         f'{person_id} must be aligned with Sergi and Pau at y={adult_level_y}',
     )
 
+adult_spacing_ids = ['p180', 'p188', 'p189', 'p186', 'p195', 'p191', 'p192']
+expected_adult_x = {
+    'p180': 6422.85,
+    'p188': 6590,
+    'p189': 6750,
+    'p186': 6920,
+    'p195': 7135,
+    'p191': 7345,
+    'p192': 7505,
+}
+for person_id, expected_x in expected_adult_x.items():
+    expect(
+        abs(float(layout_people.get(person_id, {}).get('x', -1)) - expected_x) < 0.001,
+        f'{person_id} must remain at x={expected_x}',
+    )
+for left_id, right_id in zip(adult_spacing_ids, adult_spacing_ids[1:]):
+    left_box = layout_people.get(left_id, {})
+    right_box = layout_people.get(right_id, {})
+    if left_box and right_box:
+        gap = float(right_box['x']) - (float(left_box['x']) + float(left_box['width']))
+        expect(gap >= 30, f'{left_id} and {right_id} must have at least 30 layout units of horizontal separation')
+
+r54_point = layout_relationships.get('r54', {})
+expect(abs(float(r54_point.get('x', -1)) - 7113.13) < 0.01, 'r54 must remain centered between Bernat and Judith')
+
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
 expect(r37.get('partners') == ['p142', 'p156'], 'r37 must connect Sisco and Montse')
@@ -138,4 +163,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, separated adult labels, master lines and La Salut couple position')
