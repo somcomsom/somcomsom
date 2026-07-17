@@ -33,6 +33,18 @@
     }
   },
   "relationships": {
+    "r34": {
+      "type": "separated",
+      "label": "Ajuntats a Sabadell (1981)\n○ ○",
+      "place": "Sabadell",
+      "date": "1981"
+    },
+    "r35": {
+      "type": "married",
+      "label": "(16/06/2026)\n⚭",
+      "place": "",
+      "date": "16/06/2026"
+    },
     "r36": {
       "type": "married",
       "label": "Montoliu de Segarra (12/06/2021)\n⚭",
