@@ -17,6 +17,13 @@
         "date": "20/12/2020"
       }
     },
+    "p197": {
+      "details": ["Montoliu de Segarra (30/07/2023)"],
+      "birth": {
+        "place": "Montoliu de Segarra",
+        "date": "30/07/2023"
+      }
+    },
     "p201": {
       "details": ["Escaldes-Engordany"],
       "birth": {
@@ -28,9 +35,9 @@
   "relationships": {
     "r36": {
       "type": "married",
-      "label": "La Guàrdia Lada (13/06/2015)\n⚭",
-      "place": "La Guàrdia Lada",
-      "date": "13/06/2015"
+      "label": "Montoliu de Segarra (12/06/2021)\n⚭",
+      "place": "Montoliu de Segarra",
+      "date": "12/06/2021"
     },
     "r55": {
       "type": "partner",
