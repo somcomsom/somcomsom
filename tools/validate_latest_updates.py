@@ -61,6 +61,19 @@ if joan_box and montserrat_box and r32_point:
     expect(abs(couple_center - float(r32_point['x'])) < 0.2, 'Joan and Montserrat must be centered on r32')
     expect(20 < float(r32_point['y']) - (float(joan_box['y']) + float(joan_box['height'])) < 60, 'Joan and Montserrat must be vertically close to r32')
 
+master_line_y = 1295.9
+master_line_groups = {
+    'Magriñà Mallofré siblings': ['p117', 'p119', 'p120'],
+    'Escorihuela Lloveras siblings': ['p128', 'p130'],
+}
+for group_name, person_ids in master_line_groups.items():
+    for person_id in person_ids:
+        expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
+        expect(
+            abs(float(layout_people.get(person_id, {}).get('y', -1)) - master_line_y) < 0.001,
+            f'{group_name}: {person_id} must be aligned at y={master_line_y}',
+        )
+
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
 expect(r37.get('partners') == ['p142', 'p156'], 'r37 must connect Sisco and Montse')
@@ -109,4 +122,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned descendants and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned descendants, master lines and La Salut couple position')
