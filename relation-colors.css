@@ -2,3 +2,8 @@
 .preview-partner {
   stroke: #d99a7b;
 }
+
+.relation-label.partner,
+.preview-relation-label.partner {
+  fill: #9c7c5c;
+}
