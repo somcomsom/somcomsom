@@ -16,12 +16,21 @@
         "place": "",
         "date": "20/12/2020"
       }
+    },
+    "p201": {
+      "details": ["Escaldes-Engordany"],
+      "birth": {
+        "place": "Escaldes-Engordany",
+        "date": ""
+      }
     }
   },
   "relationships": {
     "r36": {
       "type": "married",
-      "label": "(13/06/2015)\n⚭"
+      "label": "La Guàrdia Lada (13/06/2015)\n⚭",
+      "place": "La Guàrdia Lada",
+      "date": "13/06/2015"
     },
     "r55": {
       "type": "partner",
@@ -29,10 +38,10 @@
     },
     "r56": {
       "type": "separated",
-      "label": "○ ○",
+      "label": "Sabadell\n○ ○",
       "partners": ["p202", "p149"],
       "children": ["p152"],
-      "place": "",
+      "place": "Sabadell",
       "date": "",
       "renderLabel": true
     }
