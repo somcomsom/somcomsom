@@ -84,10 +84,15 @@ if len(family['relationships'])!=56: errors.append(f"expected 56 relationships, 
 
 relations={relation['id']:relation for relation in family['relationships']}
 people={person['id']:person for person in family['people']}
-expected_types={'r34':'separated','r35':'married','r36':'married','r55':'partner','r56':'separated'}
+expected_types={'r32':'married','r34':'separated','r35':'married','r36':'married','r55':'partner','r56':'separated'}
 for relation_id,relation_type in expected_types.items():
     if relations.get(relation_id,{}).get('type')!=relation_type:
         errors.append(f'{relation_id}: expected type {relation_type}')
+expected_r32_children=['p141','p142','p143','p144','p145','p146']
+if relations.get('r32',{}).get('children')!=expected_r32_children:
+    errors.append('r32 must connect the six Escorihuela Magriñà siblings')
+if relations.get('r32',{}).get('individualChildLinks') is not True:
+    errors.append('r32 must render six individual child links')
 if relations.get('r34',{}).get('place')!='Sabadell':
     errors.append('r34 must use Sabadell as the 1981 partnership place')
 if relations.get('r34',{}).get('date')!='1981':
@@ -125,13 +130,13 @@ for expected_y,person_ids in levels.items():
         actual=layout['people'].get(person_id,{}).get('y')
         if actual is None or abs(actual-expected_y)>0.05:
             errors.append(f'{person_id}: expected y {expected_y}, found {actual}')
-for relation_id in ('r34','r35','r36','r55','r56'):
+for relation_id in ('r32','r34','r35','r36','r55','r56'):
     if relation_id not in layout.get('relationships',{}):
         errors.append(f'missing relationship layout: {relation_id}')
 
-required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js']
+required=[root/'admin.html',root/'admin.css',root/'admin.js',root/'admin-editor.js',root/'admin-preview.js',root/'publisher.js',root/'relation-router-six-links.js']
 for path in required:
-    if not path.is_file() or path.stat().st_size==0: errors.append(f'missing editor file: {path.name}')
+    if not path.is_file() or path.stat().st_size==0: errors.append(f'missing required file: {path.name}')
 if not errors:
     html=(root/'admin.html').read_text(encoding='utf-8')
     ids_in_html=set(re.findall(r'id="([^"]+)"',html))
@@ -141,9 +146,12 @@ if not errors:
         refs.update(re.findall(r"\$\('#([^']+)'\)",text))
     missing_refs=refs-ids_in_html
     if missing_refs: errors.append('editor IDs missing from HTML: '+', '.join(sorted(missing_refs)))
-    for name in ('admin.js','admin-editor.js','admin-preview.js','publisher.js'):
+    for name in ('admin.js','admin-editor.js','admin-preview.js','publisher.js','relation-router-six-links.js'):
         result=subprocess.run(['node','--check',str(root/name)],capture_output=True,text=True)
         if result.returncode: errors.append(f'{name}: {result.stderr.strip()}')
+    public_html=(root/'index.html').read_text(encoding='utf-8')
+    if 'relation-router-six-links.js' not in public_html:
+        errors.append('public view must load relation-router-six-links.js')
 
 if errors:
     print('\n'.join(errors),file=sys.stderr); raise SystemExit(1)
