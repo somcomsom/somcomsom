@@ -43,6 +43,14 @@
         "place": "Escaldes-Engordany",
         "date": ""
       }
+    },
+    "p202": {
+      "name": "Esteve Armengol Esteva",
+      "details": ["Sabadell (19/03/1953)"],
+      "birth": {
+        "place": "Sabadell",
+        "date": "19/03/1953"
+      }
     }
   },
   "relationships": {
@@ -80,8 +88,8 @@
       "date": "15/04/2010"
     },
     "r49": {
-      "type": "married",
-      "label": "(19/08/2012)\n⚭",
+      "type": "partner",
+      "label": "(19/08/2012)\n♡",
       "place": "",
       "date": "19/08/2012"
     },
@@ -91,11 +99,11 @@
     },
     "r56": {
       "type": "separated",
-      "label": "Sabadell\n○ ○",
+      "label": "Sabadell (18/10/1978)\n○ ○",
       "partners": ["p202", "p149"],
       "children": ["p152"],
       "place": "Sabadell",
-      "date": "",
+      "date": "18/10/1978",
       "renderLabel": true
     }
   },
