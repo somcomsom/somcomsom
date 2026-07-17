@@ -96,7 +96,7 @@ expect(abs(r34_y - 1930) < 0.001, 'r34 must remain at y=1930')
 expect(abs(r51_y - r34_y) < 0.001, 'r51 must be aligned vertically with r34')
 
 adult_level_y = 1997.37
-adult_level_ids = ['p180', 'p186', 'p188', 'p189', 'p191', 'p195']
+adult_level_ids = ['p180', 'p186', 'p188', 'p189', 'p191', 'p192', 'p195']
 for person_id in adult_level_ids:
     expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
     expect(
@@ -110,9 +110,9 @@ expected_adult_x = {
     'p188': 6590,
     'p189': 6750,
     'p186': 6920,
-    'p195': 7135,
-    'p191': 7345,
-    'p192': 7505,
+    'p195': 7160,
+    'p191': 7480,
+    'p192': 7690,
 }
 for person_id, expected_x in expected_adult_x.items():
     expect(
@@ -124,10 +124,24 @@ for left_id, right_id in zip(adult_spacing_ids, adult_spacing_ids[1:]):
     right_box = layout_people.get(right_id, {})
     if left_box and right_box:
         gap = float(right_box['x']) - (float(left_box['x']) + float(left_box['width']))
-        expect(gap >= 30, f'{left_id} and {right_id} must have at least 30 layout units of horizontal separation')
+        expect(gap >= 40, f'{left_id} and {right_id} must have at least 40 layout units of horizontal separation')
 
+upper_rovira_y = 1896.75
+for person_id, expected_x in {'p193': 7550, 'p194': 7800}.items():
+    box = layout_people.get(person_id, {})
+    expect(abs(float(box.get('x', -1)) - expected_x) < 0.001, f'{person_id} must remain at x={expected_x}')
+    expect(abs(float(box.get('y', -1)) - upper_rovira_y) < 0.001, f'{person_id} must remain at y={upper_rovira_y}')
+
+r53_point = layout_relationships.get('r53', {})
 r54_point = layout_relationships.get('r54', {})
-expect(abs(float(r54_point.get('x', -1)) - 7113.13) < 0.01, 'r54 must remain centered between Bernat and Judith')
+expect(abs(float(r53_point.get('x', -1)) - 7738.58) < 0.01, 'r53 must be centered between Clàudia and Cristian')
+expect(abs(float(r53_point.get('y', -1)) - 1960) < 0.001, 'r53 must stay clear of Pau and Marta labels')
+expect(abs(float(r54_point.get('x', -1)) - 7125.63) < 0.01, 'r54 must be centered between Bernat and Judith')
+expect(abs(float(r54_point.get('y', -1)) - 2060.13) < 0.001, 'r54 must stay below Bernat and Judith labels')
+
+oliver_box = layout_people.get('p196', {})
+expect(abs(float(oliver_box.get('x', -1)) - 7671.33) < 0.01, 'Oliver must be centered below r53')
+expect(abs((float(oliver_box.get('x', 0)) + float(oliver_box.get('width', 0)) / 2) - float(r53_point.get('x', -1))) < 0.02, 'Oliver must stay centered under the Clàudia and Cristian alliance')
 
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
@@ -176,4 +190,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, separated adult labels, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, rebalanced Rovira and Cabestany blocks, master lines and La Salut couple position')
