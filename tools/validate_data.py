@@ -88,12 +88,16 @@ expected_types={'r36':'married','r55':'partner','r56':'separated'}
 for relation_id,relation_type in expected_types.items():
     if relations.get(relation_id,{}).get('type')!=relation_type:
         errors.append(f'{relation_id}: expected type {relation_type}')
-if relations.get('r36',{}).get('place')!='La Guàrdia Lada':
-    errors.append('r36 must use La Guàrdia Lada as marriage place')
-if relations.get('r36',{}).get('date')!='13/06/2015':
-    errors.append('r36 must preserve the marriage date 13/06/2015')
+if relations.get('r36',{}).get('place')!='Montoliu de Segarra':
+    errors.append('r36 must use Montoliu de Segarra as marriage place')
+if relations.get('r36',{}).get('date')!='12/06/2021':
+    errors.append('r36 must use 12/06/2021 as marriage date')
 if relations.get('r56',{}).get('place')!='Sabadell':
     errors.append('r56 must use Sabadell as separation place')
+if people.get('p197',{}).get('birth',{}).get('place')!='Montoliu de Segarra':
+    errors.append('p197 must use Montoliu de Segarra as birthplace')
+if people.get('p197',{}).get('birth',{}).get('date')!='30/07/2023':
+    errors.append('p197 must preserve the birth date 30/07/2023')
 if people.get('p201',{}).get('birth',{}).get('place')!='Escaldes-Engordany':
     errors.append('p201 must use Escaldes-Engordany as birthplace')
 if relations.get('r56',{}).get('children')!=['p152']:
