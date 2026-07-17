@@ -17,6 +17,19 @@
         "date": "20/12/2020"
       }
     },
+    "p170": {
+      "name": "Laia Escorihuela Cercuns"
+    },
+    "p171": {
+      "name": "Clara Escorihuela Cercuns"
+    },
+    "p195": {
+      "details": ["Barcelona (24/02/1994)"],
+      "birth": {
+        "place": "Barcelona",
+        "date": "24/02/1994"
+      }
+    },
     "p197": {
       "details": ["Montoliu de Segarra (30/07/2023)"],
       "birth": {
@@ -53,6 +66,24 @@
       "label": "Montoliu de Segarra (12/06/2021)\n⚭",
       "place": "Montoliu de Segarra",
       "date": "12/06/2021"
+    },
+    "r37": {
+      "type": "married",
+      "label": "La Salut (18/04/1979)\n⚭",
+      "place": "La Salut",
+      "date": "18/04/1979"
+    },
+    "r48": {
+      "type": "married",
+      "label": "(15/04/2010)\n⚭",
+      "place": "",
+      "date": "15/04/2010"
+    },
+    "r49": {
+      "type": "married",
+      "label": "(19/08/2012)\n⚭",
+      "place": "",
+      "date": "19/08/2012"
     },
     "r55": {
       "type": "partner",
