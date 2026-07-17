@@ -4,7 +4,7 @@
     "title": "SOM COM SOM",
     "subtitle": "Arbre familiar Escorihuela - Magrinyà",
     "peopleCount": 202,
-    "relationshipCount": 55
+    "relationshipCount": 56
   },
   "people": [
     {
@@ -3524,7 +3524,7 @@
     },
     {
       "id": "p170",
-      "name": "Laia Cercuns Escorihuela",
+      "name": "Laia Escorihuela Cercuns",
       "details": [
         "Vic (26/01/2005)"
       ],
@@ -3546,7 +3546,7 @@
     },
     {
       "id": "p171",
-      "name": "Clara Cercuns Escorihuela",
+      "name": "Clara Escorihuela Cercuns",
       "details": [
         "Vic (15/02/2008)"
       ],
@@ -4042,10 +4042,10 @@
       "id": "p195",
       "name": "Judith Albaladejo de la Torre",
       "details": [
-        "Sabadell (24/02/1994)"
+        "Barcelona (24/02/1994)"
       ],
       "birth": {
-        "place": "Sabadell",
+        "place": "Barcelona",
         "date": "24/02/1994"
       },
       "death": {
@@ -4083,10 +4083,10 @@
       "id": "p197",
       "name": "Biel Segarra Escorihuela",
       "details": [
-        "(30/07/2023)"
+        "Montoliu de Segarra (30/07/2023)"
       ],
       "birth": {
-        "place": "",
+        "place": "Montoliu de Segarra",
         "date": "30/07/2023"
       },
       "death": {
@@ -4170,9 +4170,11 @@
     {
       "id": "p201",
       "name": "Meritxell Melero M",
-      "details": [],
+      "details": [
+        "Escaldes-Engordany"
+      ],
       "birth": {
-        "place": "",
+        "place": "Escaldes-Engordany",
         "date": ""
       },
       "death": {
@@ -4186,11 +4188,13 @@
     },
     {
       "id": "p202",
-      "name": "Esteve Armengol",
-      "details": [],
+      "name": "Esteve Armengol Esteva",
+      "details": [
+        "Sabadell (19/03/1953)"
+      ],
       "birth": {
-        "place": "",
-        "date": ""
+        "place": "Sabadell",
+        "date": "19/03/1953"
       },
       "death": {
         "place": "",
@@ -4760,7 +4764,8 @@
       ],
       "place": "",
       "date": "",
-      "renderLabel": false
+      "renderLabel": false,
+      "individualChildLinks": true
     },
     {
       "id": "r33",
@@ -4779,8 +4784,8 @@
     },
     {
       "id": "r34",
-      "type": "partner",
-      "label": "1981\n♡",
+      "type": "separated",
+      "label": "Sabadell (1981)\n○ ○",
       "partners": [
         "p141",
         "p149"
@@ -4789,14 +4794,14 @@
         "p150",
         "p151"
       ],
-      "place": "",
-      "date": "",
+      "place": "Sabadell",
+      "date": "1981",
       "renderLabel": false
     },
     {
       "id": "r35",
       "type": "married",
-      "label": "Bellvís (19/06/2016)\n⚭",
+      "label": "(16/06/2026)\n⚭",
       "partners": [
         "p152",
         "p153"
@@ -4805,13 +4810,13 @@
         "p154"
       ],
       "place": "",
-      "date": "",
+      "date": "16/06/2026",
       "renderLabel": false
     },
     {
       "id": "r36",
-      "type": "partner",
-      "label": "(13/06/2015)\n♡",
+      "type": "married",
+      "label": "Montoliu de Segarra (12/06/2021)\n⚭",
       "partners": [
         "p151",
         "p155"
@@ -4819,14 +4824,14 @@
       "children": [
         "p197"
       ],
-      "place": "",
-      "date": "",
+      "place": "Montoliu de Segarra",
+      "date": "12/06/2021",
       "renderLabel": false
     },
     {
       "id": "r37",
       "type": "married",
-      "label": "La Saut (18/04/1979)\n⚭",
+      "label": "La Salut (18/04/1979)\n⚭",
       "partners": [
         "p142",
         "p156"
@@ -4835,8 +4840,8 @@
         "p157",
         "p158"
       ],
-      "place": "",
-      "date": "",
+      "place": "La Salut",
+      "date": "18/04/1979",
       "renderLabel": false
     },
     {
@@ -4992,8 +4997,8 @@
     },
     {
       "id": "r48",
-      "type": "partner",
-      "label": "(08/03/2018)\n♡",
+      "type": "married",
+      "label": "(15/04/2010)\n⚭",
       "partners": [
         "p178",
         "p183"
@@ -5003,7 +5008,7 @@
         "p199"
       ],
       "place": "",
-      "date": "",
+      "date": "15/04/2010",
       "renderLabel": false
     },
     {
@@ -5018,7 +5023,7 @@
         "p200"
       ],
       "place": "",
-      "date": "",
+      "date": "19/08/2012",
       "renderLabel": false
     },
     {
@@ -5099,7 +5104,7 @@
     {
       "id": "r55",
       "type": "partner",
-      "label": "La Seu d’Urgell (23/03/2025)\n⚭",
+      "label": "La Seu d’Urgell (23/03/2025)\n♡",
       "partners": [
         "p150",
         "p201"
@@ -5111,24 +5116,21 @@
     },
     {
       "id": "r56",
-      "type": "married",
-      "label": "⚭",
-      "partners": [],
-      "children": [],
-      "place": "",
-      "date": "",
+      "type": "separated",
+      "label": "Sabadell (18/10/1978)\n○ ○",
+      "partners": [
+        "p202",
+        "p149"
+      ],
+      "children": [
+        "p152"
+      ],
+      "place": "Sabadell",
+      "date": "18/10/1978",
       "renderLabel": true
     }
   ],
   "directParentLinks": [
-    {
-      "parent": "p149",
-      "child": "p152"
-    },
-    {
-      "parent": "p202",
-      "child": "p152"
-    },
     {
       "parent": "p190",
       "child": "p193"
