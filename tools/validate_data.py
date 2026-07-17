@@ -92,8 +92,8 @@ if relations.get('r34',{}).get('place')!='Sabadell':
     errors.append('r34 must use Sabadell as the 1981 partnership place')
 if relations.get('r34',{}).get('date')!='1981':
     errors.append('r34 must preserve 1981 as the partnership year')
-if 'Ajuntats a Sabadell' not in relations.get('r34',{}).get('label',''):
-    errors.append('r34 label must state that Joan and Dolors joined in Sabadell')
+if relations.get('r34',{}).get('label')!='Sabadell (1981)\n○ ○':
+    errors.append('r34 label must be Sabadell (1981)')
 if relations.get('r35',{}).get('date')!='16/06/2026':
     errors.append('r35 must use 16/06/2026 as marriage date')
 if relations.get('r35',{}).get('place')!='':
