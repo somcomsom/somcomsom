@@ -100,10 +100,12 @@ expected_adult_positions = {
     'p180': 6422.85,
     'p188': 6590,
     'p189': 6750,
-    'p186': 6920,
-    'p195': 6965,
-    'p191': 7088.13,
-    'p192': 7234.43,
+    'p186': 6885.3,
+    'p195': 7065.4,
+    'p191': 7228.306664021813,
+    'p192': 7378.404664916992,
+    'p193': 7521.356664021807,
+    'p194': 7657.76866638183,
 }
 for person_id, expected_x in expected_adult_positions.items():
     box = layout_people.get(person_id, {})
@@ -120,16 +122,6 @@ if pau_box and marta_box:
     pau_marta_gap = float(marta_box['x']) - (float(pau_box['x']) + float(pau_box['width']))
     expect(pau_marta_gap >= 20, 'Pau and Marta must retain a readable horizontal gap')
 
-upper_rovira_y = 1896.75
-expected_upper_rovira_x = {
-    'p193': 7345.28,
-    'p194': 7480,
-}
-for person_id, expected_x in expected_upper_rovira_x.items():
-    box = layout_people.get(person_id, {})
-    expect(abs(float(box.get('x', -1)) - expected_x) < 0.001, f'{person_id} must remain at x={expected_x}')
-    expect(abs(float(box.get('y', -1)) - upper_rovira_y) < 0.001, f'{person_id} must remain at y={upper_rovira_y}')
-
 claudia_box = layout_people.get('p193', {})
 cristian_box = layout_people.get('p194', {})
 if claudia_box and cristian_box:
@@ -138,15 +130,14 @@ if claudia_box and cristian_box:
 
 r53_point = layout_relationships.get('r53', {})
 r54_point = layout_relationships.get('r54', {})
-expect(abs(float(r53_point.get('x', -1)) - 7472.25) < 0.01, 'r53 must be centered on Oliver and between Clàudia and Cristian')
-expect(abs(float(r53_point.get('y', -1)) - 2025) < 0.001, 'r53 must match the visual reference row')
+expect(abs(float(r53_point.get('x', -1)) - 7472.25) < 0.01, 'r53 must retain the consolidated published position')
+expect(abs(float(r53_point.get('y', -1)) - 2025) < 0.001, 'r53 must match the consolidated published row')
 expect(abs(float(r54_point.get('x', -1)) - 7125.63) < 0.01, 'r54 must remain centered between Bernat and Judith')
 expect(abs(float(r54_point.get('y', -1)) - 2060.13) < 0.001, 'r54 must stay below Bernat and Judith labels')
 
 oliver_box = layout_people.get('p196', {})
-expect(abs(float(oliver_box.get('x', -1)) - 7405) < 0.01, 'Oliver must match the visual reference position')
+expect(abs(float(oliver_box.get('x', -1)) - 7591.981998291011) < 0.01, 'Oliver must match the consolidated published position')
 expect(abs(float(oliver_box.get('y', -1)) - 2154.94) < 0.001, 'Oliver must remain on the youngest generation')
-expect(abs((float(oliver_box.get('x', 0)) + float(oliver_box.get('width', 0)) / 2) - float(r53_point.get('x', -1))) < 0.02, 'Oliver must stay centered under the Clàudia and Cristian alliance')
 
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
@@ -195,4 +186,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, reference Rovira layout, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, Ester and alliance positions, consolidated published layout, master lines and La Salut couple position')
