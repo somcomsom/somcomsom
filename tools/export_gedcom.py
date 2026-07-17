@@ -55,6 +55,11 @@ for r in family['relationships']:
     lines += [f"0 @{r['id'].upper()}@ FAM"]
     for tag,pid in zip(('HUSB','WIFE'),r.get('partners',[])[:2]): lines += [f"1 {tag} @{pid.upper()}@"]
     for child in r.get('children',[]): lines += [f"1 CHIL @{child.upper()}@"]
+    if r.get('date') or r.get('place') or r.get('label'):
+        lines += ['1 MARR']
+        if r.get('date'): lines += [f"2 DATE {r['date']}"]
+        if r.get('place'): lines += [f"2 PLAC {r['place']}"]
+        if r.get('label'): lines += [f"2 NOTE {str(r['label']).replace(chr(10),' / ')}"]
 lines += ['0 TRLR','']
 (root/'data/somcomsom.ged').write_text('\n'.join(lines),encoding='utf-8')
 print(root/'data/somcomsom.ged')
