@@ -5,6 +5,8 @@ import json
 root = Path(__file__).resolve().parents[1]
 family = json.loads((root / 'data/family.json').read_text(encoding='utf-8'))
 overrides = json.loads((root / 'data/family-overrides.json').read_text(encoding='utf-8'))
+layout = json.loads((root / 'data/layout.json').read_text(encoding='utf-8'))
+layout_overrides = json.loads((root / 'data/layout-overrides.json').read_text(encoding='utf-8'))
 
 people_updates = overrides.get('people', {})
 people = {}
@@ -19,6 +21,11 @@ relation_updates = overrides.get('relationships', {})
 relations = {}
 for relation in family.get('relationships', []):
     relations[relation['id']] = {**relation, **relation_updates.get(relation['id'], {})}
+
+layout_people = {
+    **layout.get('people', {}),
+    **layout_overrides.get('people', {}),
+}
 
 errors = []
 
@@ -58,6 +65,18 @@ expect(r56.get('place') == 'Sabadell', 'r56 must preserve Sabadell')
 expect(r56.get('date') == '18/10/1978', 'r56 marriage date must be 18/10/1978')
 expect(r56.get('label') == 'Sabadell (18/10/1978)\n○ ○', 'r56 label must show the date and separated status')
 
+same_level_ids = [
+    'p154', 'p160', 'p161', 'p163', 'p164', 'p170', 'p171',
+    'p174', 'p175', 'p196', 'p197', 'p198', 'p199', 'p200',
+]
+target_level = 2154.94
+for person_id in same_level_ids:
+    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
+    expect(
+        abs(float(layout_people.get(person_id, {}).get('y', -1)) - target_level) < 0.001,
+        f'{person_id} must be aligned at y={target_level}',
+    )
+
 colors = (root / 'relation-colors.css').read_text(encoding='utf-8')
 expect('.partner-line' in colors and '.preview-partner' in colors, 'unified relation line color selectors are missing')
 expect('#d99a7b' in colors, 'partner lines must use the standard relation color')
@@ -69,4 +88,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections and unified relation colors')
+print('OK: latest family corrections, unified relation colors and aligned descendant level')
