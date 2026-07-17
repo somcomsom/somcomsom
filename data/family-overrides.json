@@ -33,6 +33,9 @@
     }
   },
   "relationships": {
+    "r32": {
+      "individualChildLinks": true
+    },
     "r34": {
       "type": "separated",
       "label": "Sabadell (1981)\n○ ○",
