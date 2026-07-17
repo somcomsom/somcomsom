@@ -5,20 +5,28 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Generate GEDCOM
         run: python3 tools/export_gedcom.py
-      - name: Upload generated GEDCOM
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-gedcom
-          path: data/somcomsom.ged
+      - name: Commit generated GEDCOM
+        run: |
+          if git diff --quiet -- data/somcomsom.ged; then
+            echo "GEDCOM ja està sincronitzat"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/somcomsom.ged
+          git commit -m "Regenera la còpia GEDCOM"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
