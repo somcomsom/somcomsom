@@ -74,6 +74,23 @@ for group_name, person_ids in master_line_groups.items():
             f'{group_name}: {person_id} must be aligned at y={master_line_y}',
         )
 
+isidre_level_y = 1830.54
+for person_id in ['p145', 'p187']:
+    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
+    expect(
+        abs(float(layout_people.get(person_id, {}).get('y', -1)) - isidre_level_y) < 0.001,
+        f'{person_id} must be aligned with Isidre at y={isidre_level_y}',
+    )
+
+adult_level_y = 1997.37
+adult_level_ids = ['p180', 'p186', 'p188', 'p189', 'p191', 'p195']
+for person_id in adult_level_ids:
+    expect(person_id in layout_people, f'{person_id} must exist in the effective layout')
+    expect(
+        abs(float(layout_people.get(person_id, {}).get('y', -1)) - adult_level_y) < 0.001,
+        f'{person_id} must be aligned with Sergi and Pau at y={adult_level_y}',
+    )
+
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
 expect(r37.get('partners') == ['p142', 'p156'], 'r37 must connect Sisco and Montse')
@@ -100,8 +117,7 @@ expect(r56.get('label') == 'Sabadell (18/10/1978)\n○ ○', 'r56 label must sho
 
 same_level_ids = [
     'p154', 'p160', 'p161', 'p163', 'p164', 'p170', 'p171',
-    'p174', 'p175', 'p182', 'p188', 'p189', 'p196', 'p197',
-    'p198', 'p199', 'p200',
+    'p174', 'p175', 'p182', 'p196', 'p197', 'p198', 'p199', 'p200',
 ]
 target_level = 2154.94
 for person_id in same_level_ids:
@@ -122,4 +138,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified colors, aligned descendants, master lines and La Salut couple position')
+print('OK: latest family corrections, unified colors, aligned generations, master lines and La Salut couple position')
