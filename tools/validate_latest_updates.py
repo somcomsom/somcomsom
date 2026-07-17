@@ -67,7 +67,8 @@ expect(r56.get('label') == 'Sabadell (18/10/1978)\n○ ○', 'r56 label must sho
 
 same_level_ids = [
     'p154', 'p160', 'p161', 'p163', 'p164', 'p170', 'p171',
-    'p174', 'p175', 'p196', 'p197', 'p198', 'p199', 'p200',
+    'p174', 'p175', 'p182', 'p188', 'p189', 'p196', 'p197',
+    'p198', 'p199', 'p200',
 ]
 target_level = 2154.94
 for person_id in same_level_ids:
