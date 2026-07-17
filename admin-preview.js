@@ -1,4 +1,4 @@
-import {relationGeometry} from './relation-router.js?v=20260715-1';
+import {relationGeometry} from './relation-router-six-links.js?v=20260717-1';
 
 const NS='http://www.w3.org/2000/svg';
 const el=(name,attrs={})=>{
