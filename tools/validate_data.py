@@ -84,10 +84,20 @@ if len(family['relationships'])!=56: errors.append(f"expected 56 relationships, 
 
 relations={relation['id']:relation for relation in family['relationships']}
 people={person['id']:person for person in family['people']}
-expected_types={'r36':'married','r55':'partner','r56':'separated'}
+expected_types={'r34':'separated','r35':'married','r36':'married','r55':'partner','r56':'separated'}
 for relation_id,relation_type in expected_types.items():
     if relations.get(relation_id,{}).get('type')!=relation_type:
         errors.append(f'{relation_id}: expected type {relation_type}')
+if relations.get('r34',{}).get('place')!='Sabadell':
+    errors.append('r34 must use Sabadell as the 1981 partnership place')
+if relations.get('r34',{}).get('date')!='1981':
+    errors.append('r34 must preserve 1981 as the partnership year')
+if 'Ajuntats a Sabadell' not in relations.get('r34',{}).get('label',''):
+    errors.append('r34 label must state that Joan and Dolors joined in Sabadell')
+if relations.get('r35',{}).get('date')!='16/06/2026':
+    errors.append('r35 must use 16/06/2026 as marriage date')
+if relations.get('r35',{}).get('place')!='':
+    errors.append('r35 marriage place must remain unspecified')
 if relations.get('r36',{}).get('place')!='Montoliu de Segarra':
     errors.append('r36 must use Montoliu de Segarra as marriage place')
 if relations.get('r36',{}).get('date')!='12/06/2021':
