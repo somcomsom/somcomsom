@@ -59,8 +59,10 @@ expect(r56.get('date') == '18/10/1978', 'r56 marriage date must be 18/10/1978')
 expect(r56.get('label') == 'Sabadell (18/10/1978)\n○ ○', 'r56 label must show the date and separated status')
 
 colors = (root / 'relation-colors.css').read_text(encoding='utf-8')
-expect('.partner-line' in colors and '.preview-partner' in colors, 'unified relation color selectors are missing')
+expect('.partner-line' in colors and '.preview-partner' in colors, 'unified relation line color selectors are missing')
 expect('#d99a7b' in colors, 'partner lines must use the standard relation color')
+expect('.relation-label.partner' in colors and '.preview-relation-label.partner' in colors, 'unified partner label color selectors are missing')
+expect('#9c7c5c' in colors, 'partner heart and text must use the standard relation label color')
 expect('relation-colors.css' in (root / 'index.html').read_text(encoding='utf-8'), 'public tree must load relation-colors.css')
 expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'), 'editor must load relation-colors.css')
 
