@@ -26,6 +26,10 @@ layout_people = {
     **layout.get('people', {}),
     **layout_overrides.get('people', {}),
 }
+layout_relationships = {
+    **layout.get('relationships', {}),
+    **layout_overrides.get('relationships', {}),
+}
 
 errors = []
 
@@ -40,6 +44,22 @@ expect(people.get('p195', {}).get('birth', {}).get('date') == '24/02/1994', 'p19
 expect(people.get('p202', {}).get('name') == 'Esteve Armengol Esteva', 'p202 full name is incorrect')
 expect(people.get('p202', {}).get('birth', {}).get('place') == 'Sabadell', 'p202 birthplace must be Sabadell')
 expect(people.get('p202', {}).get('birth', {}).get('date') == '19/03/1953', 'p202 birth date must be 19/03/1953')
+
+r32 = relations.get('r32', {})
+expect(r32.get('partners') == ['p129', 'p118'], 'r32 must connect Joan and Montserrat')
+expect(r32.get('label') == 'La Salut (07/05/1952)\n⚭', 'r32 must remain the La Salut alliance')
+
+joan_box = layout_people.get('p129', {})
+montserrat_box = layout_people.get('p118', {})
+r32_point = layout_relationships.get('r32', {})
+expect(joan_box.get('x') == 5180 and joan_box.get('y') == 1295.5, 'Joan must be next to the La Salut alliance')
+expect(montserrat_box.get('x') == 5387 and montserrat_box.get('y') == 1295.5, 'Montserrat must be next to the La Salut alliance')
+if joan_box and montserrat_box and r32_point:
+    joan_center = float(joan_box['x']) + float(joan_box['width']) / 2
+    montserrat_center = float(montserrat_box['x']) + float(montserrat_box['width']) / 2
+    couple_center = (joan_center + montserrat_center) / 2
+    expect(abs(couple_center - float(r32_point['x'])) < 0.2, 'Joan and Montserrat must be centered on r32')
+    expect(20 < float(r32_point['y']) - (float(joan_box['y']) + float(joan_box['height'])) < 60, 'Joan and Montserrat must be vertically close to r32')
 
 r37 = relations.get('r37', {})
 expect(r37.get('type') == 'married', 'r37 must be married')
@@ -89,4 +109,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: latest family corrections, unified relation colors and aligned descendant level')
+print('OK: latest family corrections, unified colors, aligned descendants and La Salut couple position')
