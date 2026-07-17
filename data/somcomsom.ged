@@ -774,12 +774,12 @@
 2 DATE 21/03/1975
 2 PLAC Vic
 0 @P170@ INDI
-1 NAME Laia Cercuns Escorihuela
+1 NAME Laia Escorihuela Cercuns
 1 BIRT
 2 DATE 26/01/2005
 2 PLAC Vic
 0 @P171@ INDI
-1 NAME Clara Cercuns Escorihuela
+1 NAME Clara Escorihuela Cercuns
 1 BIRT
 2 DATE 15/02/2008
 2 PLAC Vic
@@ -898,7 +898,7 @@
 1 NAME Judith Albaladejo de la Torre
 1 BIRT
 2 DATE 24/02/1994
-2 PLAC Sabadell
+2 PLAC Barcelona
 0 @P196@ INDI
 1 NAME Oliver Rovira Pérez
 1 BIRT
@@ -908,6 +908,7 @@
 1 NAME Biel Segarra Escorihuela
 1 BIRT
 2 DATE 30/07/2023
+2 PLAC Montoliu de Segarra
 0 @P198@ INDI
 1 NAME Bruna Escorihuela del Paso
 1 BIRT
@@ -923,8 +924,13 @@
 2 PLAC Terrassa
 0 @P201@ INDI
 1 NAME Meritxell Melero M
+1 BIRT
+2 PLAC Escaldes-Engordany
 0 @P202@ INDI
-1 NAME Esteve Armengol
+1 NAME Esteve Armengol Esteva
+1 BIRT
+2 DATE 19/03/1953
+2 PLAC Sabadell
 0 @R1@ FAM
 1 HUSB @P1@
 1 WIFE @P2@
@@ -1210,26 +1216,33 @@
 1 CHIL @P150@
 1 CHIL @P151@
 1 MARR
-2 NOTE 1981 / ♡
+2 DATE 1981
+2 PLAC Sabadell
+2 NOTE Sabadell (1981) / ○ ○
 0 @R35@ FAM
 1 HUSB @P152@
 1 WIFE @P153@
 1 CHIL @P154@
 1 MARR
-2 NOTE Bellvís (19/06/2016) / ⚭
+2 DATE 16/06/2026
+2 NOTE (16/06/2026) / ⚭
 0 @R36@ FAM
 1 HUSB @P151@
 1 WIFE @P155@
 1 CHIL @P197@
 1 MARR
-2 NOTE (13/06/2015) / ♡
+2 DATE 12/06/2021
+2 PLAC Montoliu de Segarra
+2 NOTE Montoliu de Segarra (12/06/2021) / ⚭
 0 @R37@ FAM
 1 HUSB @P142@
 1 WIFE @P156@
 1 CHIL @P157@
 1 CHIL @P158@
 1 MARR
-2 NOTE La Saut (18/04/1979) / ⚭
+2 DATE 18/04/1979
+2 PLAC La Salut
+2 NOTE La Salut (18/04/1979) / ⚭
 0 @R38@ FAM
 1 HUSB @P157@
 1 WIFE @P159@
@@ -1300,12 +1313,14 @@
 1 CHIL @P198@
 1 CHIL @P199@
 1 MARR
-2 NOTE (08/03/2018) / ♡
+2 DATE 15/04/2010
+2 NOTE (15/04/2010) / ⚭
 0 @R49@ FAM
 1 HUSB @P179@
 1 WIFE @P184@
 1 CHIL @P200@
 1 MARR
+2 DATE 19/08/2012
 2 NOTE (19/08/2012) / ♡
 0 @R50@ FAM
 1 HUSB @P145@
@@ -1348,8 +1363,13 @@
 1 MARR
 2 DATE 23/03/2025
 2 PLAC La Seu d’Urgell
-2 NOTE La Seu d’Urgell (23/03/2025) / ⚭
+2 NOTE La Seu d’Urgell (23/03/2025) / ♡
 0 @R56@ FAM
+1 HUSB @P202@
+1 WIFE @P149@
+1 CHIL @P152@
 1 MARR
-2 NOTE ⚭
+2 DATE 18/10/1978
+2 PLAC Sabadell
+2 NOTE Sabadell (18/10/1978) / ○ ○
 0 TRLR
