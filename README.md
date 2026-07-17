@@ -1,6 +1,6 @@
 # SOM COM SOM
 
-Arbre familiar interactiu **Escorihuela · Magrinyà**, reconstruït en SVG amb la distribució i les coordenades extretes del PDF original.
+Arbre familiar interactiu **Escorihuela · Magriñà**, reconstruït en SVG amb la distribució i les coordenades extretes del PDF original.
 
 ## Arquitectura mantenible
 
