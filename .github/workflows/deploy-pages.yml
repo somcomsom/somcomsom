@@ -32,6 +32,7 @@ jobs:
           set -euo pipefail
           test -s index.html
           test -s styles.css
+          test -s relation-colors.css
           test -s interaction.css
           test -s mobile.css
           test -s desktop-layout-guard.css
@@ -48,7 +49,9 @@ jobs:
           test -s admin-editor.js
           test -s admin-preview.js
           test -s publisher.js
+          test -s tools/validate_latest_updates.py
           python3 tools/validate_data.py
+          python3 tools/validate_latest_updates.py
           python3 tools/export_gedcom.py
           node --check data-loader.js
           node --check relation-router.js
@@ -70,11 +73,13 @@ jobs:
           grep -q 'grid-template-columns:minmax(0,1fr)' desktop-layout-guard.css
           grep -q 'sidebar.open' desktop-layout-guard.css
           grep -q 'pinch-zoom.js' mobile.js
+          grep -q 'relation-colors.css' index.html
+          grep -q 'relation-colors.css' admin.html
           test -s data/somcomsom.ged
           test -s assets/background-manifest.json
           test -s assets/background-01.svgpart
           forbidden='jan''dboxing'
-          ! grep -R "$forbidden" index.html admin.html app.js export.js drag-guard.js mobile.js pinch-zoom.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css interaction.css mobile.css desktop-layout-guard.css admin.css README.md data assets
+          ! grep -R "$forbidden" index.html admin.html app.js export.js drag-guard.js mobile.js pinch-zoom.js relation-router.js admin.js admin-editor.js admin-preview.js publisher.js data-loader.js styles.css relation-colors.css interaction.css mobile.css desktop-layout-guard.css admin.css README.md data assets
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
