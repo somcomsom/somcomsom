@@ -83,10 +83,19 @@ if len(family['people'])!=202: errors.append(f"expected 202 people, found {len(f
 if len(family['relationships'])!=56: errors.append(f"expected 56 relationships, found {len(family['relationships'])}")
 
 relations={relation['id']:relation for relation in family['relationships']}
+people={person['id']:person for person in family['people']}
 expected_types={'r36':'married','r55':'partner','r56':'separated'}
 for relation_id,relation_type in expected_types.items():
     if relations.get(relation_id,{}).get('type')!=relation_type:
         errors.append(f'{relation_id}: expected type {relation_type}')
+if relations.get('r36',{}).get('place')!='La Guàrdia Lada':
+    errors.append('r36 must use La Guàrdia Lada as marriage place')
+if relations.get('r36',{}).get('date')!='13/06/2015':
+    errors.append('r36 must preserve the marriage date 13/06/2015')
+if relations.get('r56',{}).get('place')!='Sabadell':
+    errors.append('r56 must use Sabadell as separation place')
+if people.get('p201',{}).get('birth',{}).get('place')!='Escaldes-Engordany':
+    errors.append('p201 must use Escaldes-Engordany as birthplace')
 if relations.get('r56',{}).get('children')!=['p152']:
     errors.append('r56 must connect Irene Armengol Martí as child')
 if any(link.get('child')=='p152' for link in family.get('directParentLinks',[])):
