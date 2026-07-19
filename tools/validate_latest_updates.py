@@ -47,6 +47,12 @@ def finite_number(value):
 expect(bool(people), 'the effective family must contain people')
 expect(bool(relations), 'the effective family must contain relationships')
 
+arlet = people.get('p182', {})
+expect(arlet.get('name') == 'Arlet Escorihuela Hilares', 'p182 must remain Arlet Escorihuela Hilares')
+expect(arlet.get('birth', {}).get('place') == 'Barcelona', 'Arlet birthplace must be Barcelona')
+expect(arlet.get('birth', {}).get('date') == '26/08/2019', 'Arlet birth date must remain 26/08/2019')
+expect(arlet.get('details') == ['Barcelona (26/08/2019)'], 'Arlet display details must match the corrected birth data')
+
 judith = people.get('p195', {})
 expect(judith.get('name') == 'Judith Albaladejo de la Torre', 'p195 must remain Judith Albaladejo de la Torre')
 expect(judith.get('birth', {}).get('place') == 'Barcelona', 'Judith birthplace must remain Barcelona')
@@ -123,4 +129,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: effective family and layout are structurally valid, Judith, Marc/Laura, Bruna and Roc corrections are preserved, editable coordinates are accepted, and r53/r54 remain aligned')
+print('OK: effective family and layout are structurally valid, Arlet, Judith, Marc/Laura, Bruna and Roc corrections are preserved, editable coordinates are accepted, and r53/r54 remain aligned')
