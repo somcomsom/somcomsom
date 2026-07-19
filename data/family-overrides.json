@@ -1,1 +1,19 @@
-{"people":{},"relationships":{}}
+{
+  "people": {
+    "p198": {
+      "details": [
+        "Sabadell (03/10/2021)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "03/10/2021"
+      }
+    }
+  },
+  "relationships": {
+    "r48": {
+      "label": "(16/10/2020)\n⚭",
+      "date": "16/10/2020"
+    }
+  }
+}
