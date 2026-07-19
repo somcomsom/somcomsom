@@ -1,5 +1,14 @@
 {
   "people": {
+    "p195": {
+      "details": [
+        "Barcelona (28/02/1994)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "28/02/1994"
+      }
+    },
     "p198": {
       "details": [
         "Sabadell (03/10/2021)"
@@ -7,6 +16,15 @@
       "birth": {
         "place": "Sabadell",
         "date": "03/10/2021"
+      }
+    },
+    "p199": {
+      "details": [
+        "Sabadell (27/02/2024)"
+      ],
+      "birth": {
+        "place": "Sabadell",
+        "date": "27/02/2024"
       }
     }
   },

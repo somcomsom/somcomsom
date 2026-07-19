@@ -47,11 +47,23 @@ def finite_number(value):
 expect(bool(people), 'the effective family must contain people')
 expect(bool(relations), 'the effective family must contain relationships')
 
+judith = people.get('p195', {})
+expect(judith.get('name') == 'Judith Albaladejo de la Torre', 'p195 must remain Judith Albaladejo de la Torre')
+expect(judith.get('birth', {}).get('place') == 'Barcelona', 'Judith birthplace must remain Barcelona')
+expect(judith.get('birth', {}).get('date') == '28/02/1994', 'Judith birth date must be 28/02/1994')
+expect(judith.get('details') == ['Barcelona (28/02/1994)'], 'Judith display details must match the corrected birth data')
+
 bruna = people.get('p198', {})
 expect(bruna.get('name') == 'Bruna Escorihuela del Paso', 'p198 must remain Bruna Escorihuela del Paso')
 expect(bruna.get('birth', {}).get('place') == 'Sabadell', 'Bruna birthplace must be Sabadell')
 expect(bruna.get('birth', {}).get('date') == '03/10/2021', 'Bruna birth date must be 03/10/2021')
 expect(bruna.get('details') == ['Sabadell (03/10/2021)'], 'Bruna display details must match the corrected birth data')
+
+roc = people.get('p199', {})
+expect(roc.get('name') == 'Roc Escorihuela del Paso', 'p199 must remain Roc Escorihuela del Paso')
+expect(roc.get('birth', {}).get('place') == 'Sabadell', 'Roc birthplace must be Sabadell')
+expect(roc.get('birth', {}).get('date') == '27/02/2024', 'Roc birth date must remain 27/02/2024')
+expect(roc.get('details') == ['Sabadell (27/02/2024)'], 'Roc display details must match the corrected birth data')
 
 marc_laura = relations.get('r48', {})
 expect(marc_laura.get('type') == 'married', 'r48 must remain a marriage')
@@ -111,4 +123,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: effective family and layout are structurally valid, Marc/Laura and Bruna corrections are preserved, editable coordinates are accepted, and r53/r54 remain aligned')
+print('OK: effective family and layout are structurally valid, Judith, Marc/Laura, Bruna and Roc corrections are preserved, editable coordinates are accepted, and r53/r54 remain aligned')
