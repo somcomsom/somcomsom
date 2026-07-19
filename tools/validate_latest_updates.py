@@ -47,6 +47,18 @@ def finite_number(value):
 expect(bool(people), 'the effective family must contain people')
 expect(bool(relations), 'the effective family must contain relationships')
 
+bruna = people.get('p198', {})
+expect(bruna.get('name') == 'Bruna Escorihuela del Paso', 'p198 must remain Bruna Escorihuela del Paso')
+expect(bruna.get('birth', {}).get('place') == 'Sabadell', 'Bruna birthplace must be Sabadell')
+expect(bruna.get('birth', {}).get('date') == '03/10/2021', 'Bruna birth date must be 03/10/2021')
+expect(bruna.get('details') == ['Sabadell (03/10/2021)'], 'Bruna display details must match the corrected birth data')
+
+marc_laura = relations.get('r48', {})
+expect(marc_laura.get('type') == 'married', 'r48 must remain a marriage')
+expect(marc_laura.get('partners') == ['p178', 'p183'], 'r48 must connect Marc Escorihuela Sánchez and Laura del Paso Martínez')
+expect(marc_laura.get('date') == '16/10/2020', 'Marc and Laura marriage date must be 16/10/2020')
+expect(marc_laura.get('label') == '(16/10/2020)\n⚭', 'Marc and Laura marriage label must show 16/10/2020')
+
 for person_id, person in people.items():
     expect(bool(str(person.get('name', '')).strip()), f'{person_id} must have a name')
     box = layout_people.get(person_id)
@@ -99,4 +111,4 @@ expect('relation-colors.css' in (root / 'admin.html').read_text(encoding='utf-8'
 if errors:
     raise SystemExit('\n'.join(errors))
 
-print('OK: effective family and layout are structurally valid, editable coordinates are accepted, and r53/r54 remain aligned')
+print('OK: effective family and layout are structurally valid, Marc/Laura and Bruna corrections are preserved, editable coordinates are accepted, and r53/r54 remain aligned')
