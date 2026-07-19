@@ -1,5 +1,14 @@
 {
   "people": {
+    "p182": {
+      "details": [
+        "Barcelona (26/08/2019)"
+      ],
+      "birth": {
+        "place": "Barcelona",
+        "date": "26/08/2019"
+      }
+    },
     "p195": {
       "details": [
         "Barcelona (28/02/1994)"
